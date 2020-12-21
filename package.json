@@ -4,7 +4,9 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "analyze": "BUNDLE_ANALYZE=both yarn build",
+    "find:unused": "next-unused"
   },
   "dependencies": {
     "@chakra-ui/icons": "^1.0.0",
@@ -12,16 +14,90 @@
     "@chakra-ui/theme-tools": "1.0.0",
     "@emotion/react": "11.1.1",
     "@emotion/styled": "11.0.0",
+    "@iconify/core": "^1.0.0-beta.2",
+    "@iconify/icons-brandico": "^1.0.7",
+    "@iconify/icons-cib": "^1.0.3",
+    "@iconify/icons-clarity": "^1.0.0",
+    "@iconify/icons-el": "^1.0.5",
+    "@iconify/icons-entypo": "^1.0.5",
+    "@iconify/icons-fa-brands": "^1.0.14",
+    "@iconify/icons-heroicons-outline": "^1.0.1",
+    "@iconify/icons-logos": "^1.0.12",
+    "@iconify/icons-ls": "^1.0.3",
+    "@iconify/icons-mdi": "^1.0.123",
+    "@iconify/icons-simple-icons": "^1.0.43",
+    "@iconify/icons-whh": "^1.0.3",
+    "@iconify/react": "^2.0.0-beta.2",
+    "body-scroll-lock": "^3.1.5",
+    "email-validator": "^2.0.4",
+    "formik": "^2.2.6",
     "framer-motion": "^2.9.4",
+    "lodash.throttle": "^4.1.1",
     "next": "latest",
+    "next-seo": "^4.17.0",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-headroom": "^3.1.0",
+    "react-intersection-observer": "^8.31.0",
+    "react-scroll-section": "^3.0.2"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^10.0.3",
+    "@types/body-scroll-lock": "^2.6.1",
     "@types/node": "^14.6.0",
     "@types/react": "^16.9.46",
     "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^4.10.0",
+    "@typescript-eslint/parser": "^4.10.0",
+    "eslint": "^7.16.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.0",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "next-unused": "^0.0.3",
+    "prettier": "^2.2.1",
+    "prop-types": "^15.7.2",
     "typescript": "4.0.5"
+  },
+  "next-unused": {
+    "alias": {
+      "@components/common/*": [
+        "components/common/*"
+      ],
+      "@components/sections/*": [
+        "components/sections/*"
+      ],
+      "@components/UI/*": [
+        "components/ui/*"
+      ],
+      "@data/*": [
+        "data/*"
+      ],
+      "@data/images*": [
+        "data/images/*"
+      ],
+      "@data/videos/*": [
+        "data/videos/*"
+      ],
+      "@pages/*": [
+        "pages/*"
+      ]
+    },
+    "debug": true,
+    "include": [
+      "components",
+      "pages"
+    ],
+    "exclude": [],
+    "entrypoints": [
+      "pages"
+    ]
+  },
+  "resolutions": {
+    "webpack": "^5.0.0-beta.30"
   },
   "license": "MIT"
 }

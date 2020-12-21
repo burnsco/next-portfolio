@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "allowJs": true,
     "alwaysStrict": true,
     "esModuleInterop": true,
@@ -16,8 +17,18 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "esnext"
+    "target": "esnext",
+    "paths": {
+      "@components/common/*": ["components/sections/common/*"],
+      "@components/sections/*": ["components/sections/*"],
+      "@components/UI/*": ["components/ui/*"],
+      "@data/*": ["data/*"],
+      "@data/images": ["data/images"],
+      "@data/videos": ["data/videos"],
+      "@pages/*": ["pages/*"],
+      "@styles/*": ["styles/*"]
+    }
   },
-  "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js"],
+  "exclude": ["node_modules"]
 }
