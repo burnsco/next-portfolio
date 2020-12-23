@@ -2,7 +2,7 @@ import { ChakraProvider } from "@chakra-ui/react"
 import theme from "@styles/theme"
 import { AppProps } from "next/app"
 import Head from "next/head"
-import FontFace from "./../components/ui/FontFace/fontFace"
+import FontFace from "../components/ui/FontFace/fontFace"
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

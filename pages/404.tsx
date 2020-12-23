@@ -1,4 +1,4 @@
-import { SEO } from "@components/UI/index"
+import { SEO } from "@components/ui/index"
 import React from "react"
 
 const NotFoundPage = () => (

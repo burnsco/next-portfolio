@@ -1,19 +1,20 @@
-import { Flex } from "@chakra-ui/react"
+import { Box, Flex } from "@chakra-ui/react"
 import { NextChakraLink } from "@components/common/index"
 import Headroom from "react-headroom"
 import { ScrollingProvider, useScrollSections } from "react-scroll-section"
 
-const HeaderContainer = () => {
+const Header = () => {
   const sections = useScrollSections()
 
   return (
     <ScrollingProvider>
-      <Headroom
+      <Box
+        as={Headroom}
         style={{
-          zIndex: "9999"
+          zIndex: 9
         }}
         sx={{
-          zIndex: "9999",
+          zIndex: 9,
           bg: "primary",
           "*": {
             transition: "background-color 0.1s ease"
@@ -48,8 +49,8 @@ const HeaderContainer = () => {
             </NextChakraLink>
           ))}
         </Flex>
-      </Headroom>
+      </Box>
     </ScrollingProvider>
   )
 }
-export default HeaderContainer
+export default Header

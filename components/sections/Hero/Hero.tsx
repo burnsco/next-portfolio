@@ -1,6 +1,6 @@
 import { Flex, Heading, Image } from "@chakra-ui/react"
 import { SectionContainer } from "@components/common/index"
-import Header from "@components/UI/Header/Header"
+import { Header } from "@components/ui/index"
 import PropTypes from "prop-types"
 
 const Hero: React.FC<{ id: string }> = ({ id }) => (
