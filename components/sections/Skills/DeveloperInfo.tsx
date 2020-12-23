@@ -1,46 +1,31 @@
-import { graphql, useStaticQuery } from 'gatsby'
-/** @jsx jsx */
-import { jsx, Heading, Text, Flex } from 'theme-ui'
-import CustomContainer from '../../components/Containers/CustomContainer'
-import RenderIcon from '../../components/SocialIcons/RenderIcon'
+import { Flex, Heading, Text } from "@chakra-ui/react"
+import RenderIcon from "@components/common/icons/socials"
+import { CustomContainer } from "@components/common/index"
+import data from "@data/more-about-me"
+import React from "react"
 
 export default function DeveloperInfo() {
-  const { data } = useStaticQuery(graphql`
-    {
-      data: allDeveloperInfoJson {
-        nodes {
-          delay
-          iconName
-          title
-          excerpt {
-            text
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <CustomContainer>
-      <Flex sx={{ flexDirection: 'column', flexWrap: 'wrap' }}>
+      <Flex sx={{ flexDirection: "column", flexWrap: "wrap" }}>
         <Heading
           data-sal="slide-left"
-          data-sal-delay={data.nodes[0].delay}
+          data-sal-delay={data.delay}
           data-sal-easing="ease"
           sx={{
             fontSize: [2, 3],
-            mb: 2,
+            mb: 2
           }}
         >
-          <RenderIcon iconname={data.nodes[0].iconName} />
-          <span sx={{ ml: 2 }}>{data.nodes[0].title}</span>
+          <RenderIcon iconname={data.iconName} />
+          <Text ml={2}>{data.title}</Text>
         </Heading>
 
-        {data.nodes[0].excerpt.map((paragraph, i) => (
+        {data.excerpt.map((paragraph, i) => (
           <Text
             key={`DeveloperInfo-Paragraph-${i}`}
             sx={{
-              fontSize: [0, 1],
+              fontSize: [0, 1]
             }}
           >
             {paragraph.text}

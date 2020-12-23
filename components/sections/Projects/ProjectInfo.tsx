@@ -1,41 +1,40 @@
-/** @jsx jsx */
-import { jsx, Text, Flex, Link, Heading } from 'theme-ui'
+import { Button, Flex, Heading, Link, Text } from "@chakra-ui/react"
+import RenderIcon from "@components/common/icons/socials"
+import { ProjectInfoType } from "@data/types/projects"
 
-import CoolButton from '../../components/Buttons/CoolButton'
-import RenderIcon from '../../components/SocialIcons/RenderIcon'
-
-const ProjectInfo = ({ description, webUrl, gitUrl, title, builtWith }) => (
+const ProjectInfo: React.FC<ProjectInfoType> = ({
+  description,
+  webUrl,
+  gitUrl,
+  title,
+  builtWith
+}) => (
   <Flex
     sx={{
-      flexDirection: 'column',
-      fontSize: [0, 1],
+      flexDirection: "column",
+      fontSize: [0, 1]
     }}
   >
-    {' '}
     <Flex sx={{ my: 2 }}>
       <Heading
         sx={{
-          color: 'black',
-          fontWeight: '800',
+          color: "black",
+          fontWeight: "800"
         }}
       >
-        <span
-          sx={{
-            color: 'blackolive',
-          }}
-        >
+        <Text fontSize="xs" color="oliveBlack">
           {title}
-        </span>
+        </Text>
       </Heading>
     </Flex>
-    <Flex sx={{ my: [1, 2], flexWrap: 'wrap' }}>
+    <Flex my={[1, 2]} flexWrap="wrap">
       {builtWith.map((item, i) => (
-        <span
+        <Text
           key={`BuiltWith-${item.title}-${i}`}
           sx={{ ml: 2, fontSize: [0, 1, 2, 3] }}
         >
           <RenderIcon iconname={item.iconName} />
-        </span>
+        </Text>
       ))}
     </Flex>
     {description.map(p => (
@@ -46,56 +45,34 @@ const ProjectInfo = ({ description, webUrl, gitUrl, title, builtWith }) => (
     <Flex
       sx={{
         mt: 3,
-        justifyContent: 'space-evenly',
+        justifyContent: "space-evenly"
       }}
     >
       <Link
         href={gitUrl}
         target="_blank"
         rel="noopener noreferrer"
-        sx={{ color: 'background' }}
+        sx={{ color: "background" }}
       >
-        <CoolButton
-          sx={{
-            fontSize: [0, 1],
-            backgroundColor: 'white',
-            color: 'text',
-            alignSelf: 'flex-start',
-            border: '2px solid #e7e7e7',
-            m: 2,
-
-            ':hover': {
-              backgroundColor: '#e7e7e7',
-            },
+        <Button
+          _hover={{
+            backgroundColor: "#e7e7e7"
           }}
-          title="Source"
         >
-          <RenderIcon width="1.4em" height="1.5em" iconname="gitAlt" />
-        </CoolButton>
+          Source
+          <RenderIcon iconname="gitAlt" />
+        </Button>
       </Link>
       <Link
         href={webUrl}
         target="_blank"
         rel="noopener noreferrer"
-        sx={{ color: 'background' }}
+        sx={{ color: "background" }}
       >
-        <CoolButton
-          sx={{
-            fontSize: [0, 1],
-            backgroundColor: 'white',
-            color: 'text',
-            alignSelf: 'flex-start',
-            border: '2px solid #e7e7e7',
-            m: 2,
-
-            ':hover': {
-              backgroundColor: '#e7e7e7',
-            },
-          }}
-          title="Demo"
-        >
-          <RenderIcon width="1.4em" height="1.5em" iconname="webIcon" />
-        </CoolButton>
+        <Button bg="#e7e7e7" border="2px solid #e7e7e7">
+          Demo
+          <RenderIcon iconname="webIcon" />
+        </Button>
       </Link>
     </Flex>
   </Flex>

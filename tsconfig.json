@@ -19,7 +19,7 @@
     "strict": true,
     "target": "esnext",
     "paths": {
-      "@components/common/*": ["components/sections/common/*"],
+      "@components/common/*": ["components/common/*"],
       "@components/sections/*": ["components/sections/*"],
       "@components/UI/*": ["components/ui/*"],
       "@data/*": ["data/*"],

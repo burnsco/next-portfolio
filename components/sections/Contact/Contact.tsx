@@ -1,16 +1,13 @@
-import { Box, Flex, Heading } from "@chakra-ui/react"
+import { Button, Flex, Heading } from "@chakra-ui/react"
 import { ChakraField, SectionContainer } from "@components/common/index"
 import mailOpen from "@iconify/icons-heroicons-outline/mail-open"
 import { Icon } from "@iconify/react"
-import { Formik } from 'formik'
+import { Formik } from "formik"
+import PropTypes from "prop-types"
 
 const Contact: React.FC<{ id: string }> = ({ id }) => {
-
-  const handleSubmit = () => {
-    console.log('test')
-  }
   return (
-  <SectionContainer background="black" id={id} aria-label={`${id} Section`}>
+    <SectionContainer background="black" id={id} aria-label={`${id} Section`}>
       <Flex
         sx={{
           width: "100%",
@@ -22,7 +19,6 @@ const Contact: React.FC<{ id: string }> = ({ id }) => {
         }}
       >
         <Heading
-          variant="textStyles.projectTitle"
           sx={{
             display: "flex",
             fontSize: [7, 8],
@@ -37,62 +33,60 @@ const Contact: React.FC<{ id: string }> = ({ id }) => {
           Contact
         </Heading>
         <Formik
-        initialValues={{ name: '', email: '', message: ''}}
-        onSubmit={handleSubmit}>
-          {({ isSubmitting => (</Formik>
-          })}
-        <Form>
-        <Flex
-          sx={{
-            width: ["95%", "75%", "65%", "50%"],
-            flexDirection: "column",
-            justifyContent: "center",
-            justifyItems: "center",
-            alignItems: "center"
+          initialValues={{ name: "", email: "", message: "" }}
+          onSubmit={() => {
+            console.log("testing")
           }}
-          as="form"
-          name="contact"
-          method="POST"
-          action="/success"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
         >
-          <input type="hidden" name="bot-field" />
-          <input type="hidden" name="form-name" value="contact" />
+          {({ isSubmitting }) => (
+            <Flex
+              sx={{
+                width: ["95%", "75%", "65%", "50%"],
+                flexDirection: "column",
+                justifyContent: "center",
+                justifyItems: "center",
+                alignItems: "center"
+              }}
+              as="form"
+              name="contact"
+              method="POST"
+              action="/success"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+            >
+              <input type="hidden" name="bot-field" />
+              <input type="hidden" name="form-name" value="contact" />
 
-         <ChakraField name="name" placeholder="name" label="Name">
+              <ChakraField name="name" placeholder="name" label="Name" />
 
-         <ChakraField name="email" type="email" placeholder="email" label="email">
+              <ChakraField
+                name="email"
+                type="email"
+                placeholder="email"
+                label="email"
+              />
 
-          <ChakraField name="message" placeholder="write me a short message!" label="Name" textarea>
+              <ChakraField
+                name="message"
+                placeholder="write me a short message!"
+                label="Name"
+                textarea
+              />
 
-          <CoolButton
-            sx={{
-              border: "2px dashed",
-              cursor: `pointer`,
-              fontSize: `100%`,
-              lineHeight: `inherit`,
-              alignSelf: "flex-end",
-              mt: 2,
-              bg: "blueDark",
-              ":hover": { bg: "carolinablue" }
-            }}
-            title="Send"
-            type="submit"
-          >
-            <Icon icon={mailOpen} height="1.2em" width="1.2em" />
-          </CoolButton>
-        </Flex>
+              <Button type="submit" isLoading={isSubmitting}>
+                Submit
+              </Button>
+              <Icon icon={mailOpen} height="1.2em" width="1.2em" />
+            </Flex>
+          )}
+        </Formik>
       </Flex>
-      </Form>
-      </Formik>
-    </Box>
-  </SectionContainer>
-)
+    </SectionContainer>
+  )
 }
 
 Contact.propTypes = {
-  title: PropTypes.string.isRequired
+  id: PropTypes.string.isRequired
 }
 
 export default Contact

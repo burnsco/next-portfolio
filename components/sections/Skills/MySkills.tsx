@@ -1,35 +1,19 @@
-/** @jsx jsx */
-import { jsx, Heading, Badge, Grid } from 'theme-ui'
-import { graphql, useStaticQuery } from 'gatsby'
-import CustomContainer from '../../components/Containers/CustomContainer'
-import RenderIcon from '../../components/SocialIcons/RenderIcon'
+import { Badge, Grid, Heading, List, ListItem, Text } from "@chakra-ui/react"
+import RenderIcon from "@components/common/icons/socials"
+import { CustomContainer } from "@components/common/index"
+import data from "@data/my-skills"
 
 export default function MySkills() {
-  const { data } = useStaticQuery(graphql`
-    {
-      data: allMySkillsJson {
-        nodes {
-          delay
-          iconName
-          title
-          skills {
-            title
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <Grid
       sx={{
-        height: '100%',
+        height: "100%"
       }}
     >
-      {data.nodes.map((item, i) => (
+      {data.map((item, i) => (
         <CustomContainer key={`my-skills-${item.title}-${i}`}>
-          <ul sx={{ m: 0, p: 0, listStyleType: 'none' }}>
-            <li
+          <List>
+            <ListItem
               data-sal="slide-up"
               data-sal-delay={item.delay}
               data-sal-easing="ease"
@@ -37,11 +21,11 @@ export default function MySkills() {
               <Heading
                 sx={{
                   fontSize: [2, 3],
-                  mb: 1,
+                  mb: 1
                 }}
               >
                 <RenderIcon iconname={item.iconName} />
-                <span sx={{ ml: 2 }}>{item.title}</span>
+                <Text ml={2}>{item.title}</Text>
               </Heading>
 
               {item.skills.map((skill, d) => (
@@ -50,13 +34,11 @@ export default function MySkills() {
                   variant="outline"
                   sx={{ m: [0, 1], ml: [1, null, null, null] }}
                 >
-                  <small sx={{ fontSize: ['8px', '10px'], color: 'text' }}>
-                    {skill.title}
-                  </small>
+                  <Text sx={{ fontSize: ["8px", "10px"] }}>{skill.title}</Text>
                 </Badge>
               ))}
-            </li>
-          </ul>
+            </ListItem>
+          </List>
         </CustomContainer>
       ))}
     </Grid>

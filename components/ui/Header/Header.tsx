@@ -37,16 +37,9 @@ const HeaderContainer = () => {
         >
           {sections.map(({ id, onClick, selected }) => (
             <NextChakraLink
+              key={`nextlink-${id}`}
               href={`${id}`}
               passHref
-              sx={{
-                fontSize: [0, 1, 2],
-                color: selected ? `accent3` : `white`,
-                fontWeight: 500,
-                ":hover": {
-                  cursor: "pointer"
-                }
-              }}
               aria-label={`nav-${id}`}
               onClick={onClick}
               scroll={selected}

@@ -1,24 +1,24 @@
-import Layout from "@components/Layout"
 import {
-  About,
-  Contact,
-  Footer,
-  Hero,
-  MiniApps,
-  Projects,
-  Skills
-} from "@sections"
+  AboutSection,
+  ContactSection,
+  FooterSection,
+  HeroSection,
+  MiniAppsSection,
+  ProjectsSection,
+  SkillsSection
+} from "@components/sections/index"
+import Layout from "@components/ui/Layout"
 
 export default function IndexPage() {
   return (
     <Layout>
-      <Hero title="Home" />
-      <Skills title="Skills" />
-      <Projects title="Projects" />
-      <MiniApps title="Apps" />
-      <About title="About" />
-      <Contact title="Contact" />
-      <Footer />
+      <HeroSection title="Home" />
+      <SkillsSection title="Skills" />
+      <ProjectsSection title="Projects" />
+      <MiniAppsSection title="Apps" />
+      <AboutSection title="About" />
+      <ContactSection title="Contact" />
+      <FooterSection />
     </Layout>
   )
 }

@@ -13,7 +13,7 @@ const SectionHeading: React.FC<{ title: string }> = ({ title }) => (
       fontSize: [6, 7, 8],
       fontFamily: "Roboto Slab",
       fontWeight: 900,
-      my: 2,
+      my: 2
     }}
     variant="textStyles.projectTitle"
   >
@@ -27,8 +27,8 @@ const SectionHeading: React.FC<{ title: string }> = ({ title }) => (
         backgroundPosition: "0 88%",
         transition: "background-size 0.25s ease-in",
         "&:hover": {
-          backgroundSize: "100% 88%",
-        },
+          backgroundSize: "100% 88%"
+        }
       }}
     >
       {title}
@@ -37,7 +37,7 @@ const SectionHeading: React.FC<{ title: string }> = ({ title }) => (
 )
 
 SectionHeading.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired
 }
 
 export default SectionHeading

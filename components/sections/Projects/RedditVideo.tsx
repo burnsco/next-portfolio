@@ -1,22 +1,19 @@
-/** @jsx jsx */
-import { Box, jsx } from 'theme-ui'
-import redditmp4 from '../../data/videos/reddit.mp4'
-import redditwebm from '../../data/videos/redditclonedemo.webm'
+import { Box } from "@chakra-ui/react"
 
 const RedditCloneVideo = () => (
   <Box>
     <video
       style={{
-        height: 'auto',
-        width: '100%',
+        height: "auto",
+        width: "100%"
       }}
       controls
       autoPlay
       loop
       muted
     >
-      <source src={redditwebm} type="video/webm" />
-      <source src={redditmp4} type="video/mp4" />
+      <source src="/videos/redditclonedemo.webm" type="video/webm" />
+      <source src="/videos/reddit.mp4" type="video/mp4" />
     </video>
   </Box>
 )
