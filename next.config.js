@@ -6,7 +6,6 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 
 const defaultConfig = {
   reactStrictMode: true,
-  target: "serverless",
   webpack: config => ({
     ...config,
     externals: [...config.externals, "sharp"]

@@ -1,10 +1,10 @@
 import { ChakraProvider } from "@chakra-ui/react"
-import theme from "@styles/theme"
+import FontFace from "@components/ui/FontFace/fontFace"
+import theme from "@styles/index"
 import { AppProps } from "next/app"
 import Head from "next/head"
-import FontFace from "../components/ui/FontFace/fontFace"
 
-function MyApp({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
@@ -22,5 +22,3 @@ function MyApp({ Component, pageProps }: AppProps) {
     </>
   )
 }
-
-export default MyApp

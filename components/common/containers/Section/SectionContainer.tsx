@@ -1,5 +1,5 @@
+import { Section } from "@components/ui/ScrollSections"
 import PropTypes from "prop-types"
-import { Section } from "react-scroll-section"
 
 const SectionContainer: React.FC<{
   id: string

@@ -1,7 +1,7 @@
 import { Box, Flex } from "@chakra-ui/react"
 import { NextChakraLink } from "@components/common/index"
 import Headroom from "react-headroom"
-import { ScrollingProvider, useScrollSections } from "react-scroll-section"
+import { ScrollingProvider, useScrollSections } from "../ScrollSections"
 
 const Header = () => {
   const sections = useScrollSections()
