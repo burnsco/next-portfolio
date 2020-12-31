@@ -11,7 +11,9 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     minHeight="100vh"
     wordBreak="break-word"
   >
-    <ScrollingProvider>{children}</ScrollingProvider>
+    <ScrollingProvider debounceDelay={50} scrollBehavior="smooth" offset={0}>
+      {children}
+    </ScrollingProvider>
   </Flex>
 )
 
