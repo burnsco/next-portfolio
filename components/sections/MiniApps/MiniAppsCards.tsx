@@ -1,106 +1,49 @@
-import {
-  Button,
-  Flex,
-  Grid,
-  Heading,
-  Image,
-  Link,
-  Text
-} from "@chakra-ui/react"
-import data from "@data/mini-apps"
-import React from "react"
-
-const styles = {
-  position: "absolute",
-  top: "unset",
-  width: "100%",
-  objectFit: "contain",
-  objectPosition: "center",
-  userSelect: "none"
-}
+import { Box, Button, Grid, HStack, Img, Text } from "@chakra-ui/react"
+import MiniAppCard from "@common/Cards/Small"
+import data from "@configs/mini-apps"
 
 export default function MiniAppsCards() {
   return (
-    <Grid
-      sx={{
-        gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))"
-      }}
-    >
-      {data.map((app, i) => (
-        <Flex
-          boxShadow="md"
-          flexDirection="column"
-          key={`mini-apps-${app.title}-${i}`}
-        >
-          <Heading p={1} textAlign="center" fontSize={[1, 2]}>
+    <Grid gap={2} gridTemplateColumns="repeat(auto-fit, minmax(180px, 1fr))">
+      {data.map(app => (
+        <MiniAppCard key={`mini-apps-${app.title}`}>
+          <Text fontWeight="bold" p={1} textAlign="center">
             {app.title}
-          </Heading>
+          </Text>
 
-          <Image
-            objectFit="cover"
-            objectPosition="50% 50%"
-            alt="Coins"
+          <Img
+            w="100%"
+            h="140px"
             src={app.image}
-            sx={{
-              ...styles
-            }}
+            alt={`mini app ${app.title}`}
+            objectFit="cover"
           />
 
-          <Text>{app.excerpt}</Text>
+          <Box p={4}>
+            <Text opacity={0.8}>{app.excerpt}</Text>
 
-          <Flex
-            sx={{
-              mt: 1,
-              justifyContent: "space-evenly"
-            }}
-          >
-            <Link
-              href={app.gitUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={{ color: "background" }}
-            >
+            <HStack spacing={4} align="flex-end" mt={1}>
               <Button
-                sx={{
-                  fontSize: [0, 1],
-                  fontWeight: 500,
-                  backgroundColor: "white",
-                  color: "text",
-                  transition: "all 0.3s ease",
-                  border: "1px solid #e7e7e7",
-                  ":hover": {
-                    backgroundColor: "#e7e7e7"
-                  }
-                }}
+                variant="outline"
+                as="a"
+                href={app.gitUrl}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Source
               </Button>
-            </Link>
-            <Link
-              href={app.webUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={{ color: "background" }}
-            >
+
               <Button
-                sx={{
-                  fontSize: [0, 1],
-                  fontWeight: 500,
-                  backgroundColor: "white",
-                  color: "text",
-                  transition: "all 0.3s ease",
-                  border: theme => `1px solid ${theme.colors.gray[5]}`,
-                  ":hover": {
-                    color: "white",
-                    bg: "gray.5"
-                  }
-                }}
+                as="a"
+                href={app.webUrl}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Demo
               </Button>
-            </Link>
-          </Flex>
-        </Flex>
+            </HStack>
+          </Box>
+        </MiniAppCard>
       ))}
     </Grid>
   )

@@ -1,1 +1,1 @@
-export { default } from "./Container"
+export { SkillsContainer as default } from "./Container"

@@ -1,66 +1,32 @@
 import {
   FormControl,
   FormErrorMessage,
-  FormHelperText,
   FormLabel,
-  Input,
-  Textarea,
-  useColorModeValue
+  Input
 } from "@chakra-ui/react"
 import { useField } from "formik"
+import type { InputHTMLAttributes } from "react"
 
-type ChakraFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
+type ChakraFieldProps = InputHTMLAttributes<HTMLInputElement> & {
+  label: string
   name: string
   textarea?: boolean
-  label: string
-  helperText?: string
-  size?: string
 }
 
-const InputField: React.FC<ChakraFieldProps> = ({
+const ChakraField: React.FC<ChakraFieldProps> = ({
   label,
-  type,
-  size,
-  textarea = false,
-  helperText,
+  textarea,
+  size: _,
   ...props
 }) => {
-  const [field, { error, touched }] = useField(props)
-  const bg = useColorModeValue("gray.100", "black")
-
+  const [field, { error }] = useField(props)
   return (
     <FormControl isInvalid={!!error}>
-      <FormLabel fontSize={`${size}` || "sm"} htmlFor={props.name}>
-        {label}
-      </FormLabel>
-      {textarea ? (
-        <Textarea
-          {...field}
-          opacity={0.5}
-          bg={bg}
-          focusBorderColor="red.300"
-          aria-describedby={`${props.id}-feedback ${props.id}-help`}
-          type={type}
-          id={field.name}
-          placeholder={props.placeholder}
-        />
-      ) : (
-        <Input
-          {...field}
-          {...props}
-          focusBorderColor="red.300"
-          aria-describedby={`${props.id}-feedback ${props.id}-help`}
-          type={type}
-          id={field.name}
-          placeholder={props.placeholder}
-        />
-      )}
-
-      {helperText && <FormHelperText>{helperText}</FormHelperText>}
-
-      {error && touched ? <FormErrorMessage>{error}</FormErrorMessage> : null}
+      <FormLabel htmlFor={field.name}>{label}</FormLabel>
+      <Input {...field} {...props} id={field.name} />
+      {error ? <FormErrorMessage>{error}</FormErrorMessage> : null}
     </FormControl>
   )
 }
 
-export default InputField
+export default ChakraField

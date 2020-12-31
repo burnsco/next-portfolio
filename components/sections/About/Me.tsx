@@ -1,33 +1,21 @@
-import { Flex, Heading } from "@chakra-ui/react"
-import RenderIcon from "@components/common/icons/socials"
-import aboutMeData from "@data/aboutMe"
+import { Flex, Heading, Text } from "@chakra-ui/react"
+import { Container } from "@common/index"
+import RenderIcon from "@common/render-icon/RenderIcon"
+import data from "configs/about-me"
 
 export default function AboutMe() {
   return (
-    <Flex sx={{ flexDirection: "column", flexWrap: "wrap" }}>
-      <Heading
-        data-sal="slide-right"
-        data-sal-delay={aboutMeData.delay}
-        data-sal-easing="ease"
-        sx={{
-          fontSize: [2, 3],
-          mb: 2
-        }}
-      >
-        <RenderIcon iconname={aboutMeData.iconName} />
-        <Heading sx={{ ml: 2 }}>{aboutMeData.title}</Heading>
-      </Heading>
-
-      {aboutMeData.excerpt.map((paragraph, i) => (
-        <Heading
-          key={`p-${paragraph}-${i}`}
-          sx={{
-            fontSize: [0, 1]
-          }}
-        >
-          {paragraph.text}
+    <Container>
+      <Flex flexDir="column" flexWrap="wrap">
+        <Heading mb="2" fontSize="sm">
+          <RenderIcon height="1.5em" width="1.5em" iconname={data.iconName} />
+          {data.title}
         </Heading>
-      ))}
-    </Flex>
+
+        {data.excerpt.map(paragraph => (
+          <Text key={`p-${paragraph}`}>{paragraph.text}</Text>
+        ))}
+      </Flex>
+    </Container>
   )
 }

@@ -10,7 +10,6 @@ export type NextChakraLinkProps = PropsWithChildren<
   NextLinkProps & Omit<ChakraLinkProps, "as">
 >
 
-//  Has to be a new component because both chakra and next share the `as` keyword
 const NextChakraLink = ({
   href,
   as,
@@ -20,20 +19,18 @@ const NextChakraLink = ({
   prefetch,
   children,
   ...chakraProps
-}: NextChakraLinkProps) => {
-  return (
-    <NextLink
-      passHref={true}
-      href={href}
-      as={as}
-      replace={replace}
-      scroll={scroll}
-      shallow={shallow}
-      prefetch={prefetch}
-    >
-      <ChakraLink {...chakraProps}>{children}</ChakraLink>
-    </NextLink>
-  )
-}
+}: NextChakraLinkProps) => (
+  <NextLink
+    passHref
+    href={href}
+    as={as}
+    replace={replace}
+    scroll={scroll}
+    shallow={shallow}
+    prefetch={prefetch}
+  >
+    <ChakraLink {...chakraProps}>{children}</ChakraLink>
+  </NextLink>
+)
 
 export default NextChakraLink

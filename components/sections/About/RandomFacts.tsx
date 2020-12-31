@@ -1,34 +1,21 @@
 import { Heading, List, ListItem } from "@chakra-ui/react"
-import RenderIcon from "@components/common/icons/socials"
-import { CustomContainer } from "@components/common/index"
-import randomFacts from "@data/randomFacts"
+import { Container } from "@common/index"
+import RenderIcon from "@common/render-icon/RenderIcon"
+import data from "configs/random-facts"
 
 export default function RandomFacts() {
   return (
-    <CustomContainer>
-      <Heading
-        sx={{
-          fontSize: [2, 3],
-          mb: 2
-        }}
-      >
-        <RenderIcon iconname={randomFacts.iconName} />
-        <Heading fontSize="tiny" sx={{ ml: 2 }}>
-          {randomFacts.title}
-        </Heading>
+    <Container>
+      <RenderIcon height="1.5em" width="1.5em" iconname={data.iconName} />
+      <Heading fontSize="md" ml="2">
+        {data.title}
       </Heading>
-      <List sx={{ m: 0, p: 0, fontSize: [0, 1, 2] }}>
-        {randomFacts.facts.map((fact, i) => (
-          <ListItem
-            data-sal="slide-up"
-            key={`random-fact-${fact}-${i}`}
-            data-sal-delay={randomFacts.delay}
-            data-sal-easing="ease"
-          >
-            {fact.title}
-          </ListItem>
+
+      <List m="0" p="0">
+        {data.facts.map(fact => (
+          <ListItem key={`random-fact-${fact}`}>{fact.title}</ListItem>
         ))}
       </List>
-    </CustomContainer>
+    </Container>
   )
 }

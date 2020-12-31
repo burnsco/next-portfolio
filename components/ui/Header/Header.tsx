@@ -1,56 +1,55 @@
-import { Box, Flex } from "@chakra-ui/react"
-import { NextChakraLink } from "@components/common/index"
+import { Box, Button, chakra, Flex } from "@chakra-ui/react"
+import { useScrollSections } from "@common/scroll-sections/useScrollSection"
 import Headroom from "react-headroom"
-import { ScrollingProvider, useScrollSections } from "../ScrollSections"
 
-const Header = () => {
+function capitalizedTitle(title: string) {
+  return title.charAt(0).toUpperCase() + title.slice(1)
+}
+
+function HeaderContent() {
   const sections = useScrollSections()
-
   return (
-    <ScrollingProvider>
-      <Box
-        as={Headroom}
-        style={{
-          zIndex: 9
-        }}
-        sx={{
-          zIndex: 9,
-          bg: "primary",
-          "*": {
-            transition: "background-color 0.1s ease"
-          },
-
-          ".headroom--pinned": {
-            bg: "primary",
-            zIndex: "9999"
-          },
-          width: "100%"
-        }}
+    <Box
+      as={Headroom}
+      zIndex={9}
+      transition="background-color 0.1s ease"
+      width="100%"
+    >
+      <Flex
+        aria-label="Primary"
+        as="nav"
+        justifyContent="space-evenly"
+        alignItems="center"
+        p={[1, 2, 3]}
       >
-        <Flex
-          as="nav"
-          role="navigation"
-          sx={{
-            justifyContent: "space-evenly",
-            alignItems: "center",
-            p: [1, 2, 3]
-          }}
-        >
-          {sections.map(({ id, onClick, selected }) => (
-            <NextChakraLink
-              key={`nextlink-${id}`}
-              href={`${id}`}
-              passHref
-              aria-label={`nav-${id}`}
-              onClick={onClick}
-              scroll={selected}
-            >
-              {id}
-            </NextChakraLink>
-          ))}
-        </Flex>
-      </Box>
-    </ScrollingProvider>
+        {sections.map(({ id, onClick, selected }) => (
+          <Button
+            fontSize={["xs", "sm", "md"]}
+            aria-label={`nav-${id}`}
+            onClick={onClick}
+            selected={selected}
+            fontWeight={500}
+            _hover={{
+              color: "oranget3"
+            }}
+            display="block"
+            transition="all 0.3s"
+            color={selected ? `oranget3` : "gainsboro"}
+            key={id}
+          >
+            {capitalizedTitle(id)}
+          </Button>
+        ))}
+      </Flex>
+    </Box>
+  )
+}
+
+function Header(props: any) {
+  return (
+    <chakra.header bg="hero1" width="full" {...props}>
+      <HeaderContent />
+    </chakra.header>
   )
 }
 export default Header

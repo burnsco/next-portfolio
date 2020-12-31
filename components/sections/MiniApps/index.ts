@@ -1,1 +1,1 @@
-export { default } from "./MiniApps"
+export { MiniApps as default } from "./MiniApps"

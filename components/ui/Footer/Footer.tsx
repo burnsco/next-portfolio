@@ -1,10 +1,11 @@
-import { Flex, Text } from "@chakra-ui/react"
+import { Box, Text } from "@chakra-ui/react"
 
 const Footer = () => (
-  <Flex
+  <Box
+    color="p3"
     as="footer"
     width="100%"
-    bg="eerieblack"
+    bg="hero2"
     flexDirection="column"
     justifyContent="center"
     alignItems="center"
@@ -15,7 +16,7 @@ const Footer = () => (
         © {new Date().getFullYear()}
       </Text>
     </Text>
-  </Flex>
+  </Box>
 )
 
 export default Footer

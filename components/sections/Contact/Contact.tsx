@@ -1,52 +1,45 @@
-import { Button, Flex, Heading } from "@chakra-ui/react"
-import { ChakraField, SectionContainer } from "@components/common/index"
+import { Button, chakra, Flex, Heading } from "@chakra-ui/react"
+import {
+  AnimatedWave,
+  ChakraField,
+  Container,
+  SectionContainer
+} from "@common/index"
 import mailOpen from "@iconify/icons-heroicons-outline/mail-open"
 import { Icon } from "@iconify/react"
 import { Formik } from "formik"
 import PropTypes from "prop-types"
 
-const Contact: React.FC<{ id: string }> = ({ id }) => {
-  return (
-    <SectionContainer background="black" id={id} aria-label={`${id} Section`}>
+const Contact: React.FC<{ id: string }> = ({ id }) => (
+  <SectionContainer background="primary" id={id} aria-label={`${id} Section`}>
+    <Container as="article" bg="primary">
       <Flex
-        sx={{
-          width: "100%",
-          flexDirection: "column",
-          px: 3,
-          py: 3,
-          justifyContent: "center",
-          alignItems: "center"
-        }}
+        width="100%"
+        flexDirection="column"
+        px={3}
+        py={3}
+        justifyContent="center"
+        alignItems="center"
       >
-        <Heading
-          sx={{
-            display: "flex",
-            fontSize: [7, 8],
-            fontFamily: "Roboto Slab",
-            color: "white",
-            width: "100",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            justifyItems: "center"
-          }}
-        >
+        <AnimatedWave />
+        <Heading my={5} fontFamily="Roboto Slab" color="white" width="100">
           Contact
         </Heading>
         <Formik
           initialValues={{ name: "", email: "", message: "" }}
-          onSubmit={() => {
-            console.log("testing")
+          onSubmit={(_, actions) => {
+            setTimeout(() => {
+              actions.setSubmitting(false)
+            }, 1000)
           }}
         >
-          {({ isSubmitting }) => (
-            <Flex
-              sx={{
-                width: ["95%", "75%", "65%", "50%"],
-                flexDirection: "column",
-                justifyContent: "center",
-                justifyItems: "center",
-                alignItems: "center"
-              }}
+          {props => (
+            <chakra.form
+              width={["95%", "75%", "65%", "50%"]}
+              flexDirection="column"
+              justifyContent="center"
+              justifyItems="center"
+              alignItems="center"
               as="form"
               name="contact"
               method="POST"
@@ -57,36 +50,25 @@ const Contact: React.FC<{ id: string }> = ({ id }) => {
               <input type="hidden" name="bot-field" />
               <input type="hidden" name="form-name" value="contact" />
 
-              <ChakraField name="name" placeholder="name" label="Name" />
+              <ChakraField type="text" name="name" label="Name" />
 
-              <ChakraField
-                name="email"
-                type="email"
-                placeholder="email"
-                label="email"
-              />
+              <ChakraField name="email" type="email" label="email" />
 
-              <ChakraField
-                name="message"
-                placeholder="write me a short message!"
-                label="Name"
-                textarea
-              />
+              <ChakraField name="message" label="Name" textarea />
 
-              <Button type="submit" isLoading={isSubmitting}>
+              <Button type="submit" isLoading={props.isSubmitting}>
                 Submit
               </Button>
               <Icon icon={mailOpen} height="1.2em" width="1.2em" />
-            </Flex>
+            </chakra.form>
           )}
         </Formik>
       </Flex>
-    </SectionContainer>
-  )
-}
+    </Container>
+  </SectionContainer>
+)
+export default Contact
 
 Contact.propTypes = {
   id: PropTypes.string.isRequired
 }
-
-export default Contact

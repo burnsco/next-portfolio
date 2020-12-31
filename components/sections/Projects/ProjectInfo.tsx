@@ -1,6 +1,8 @@
-import { Button, Flex, Heading, Link, Text } from "@chakra-ui/react"
-import RenderIcon from "@components/common/icons/socials"
-import { ProjectInfoType } from "@data/types/projects"
+import { Button, chakra, Flex, Heading, Stack, Text } from "@chakra-ui/react"
+import GitButtonIcon from "@common/icons/socials/github-icon"
+import WebIcon from "@common/icons/socials/web-icon"
+import RenderIcon from "@common/render-icon/RenderIcon"
+import { ProjectInfoType } from "configs/types/projects"
 
 const ProjectInfo: React.FC<ProjectInfoType> = ({
   description,
@@ -9,72 +11,54 @@ const ProjectInfo: React.FC<ProjectInfoType> = ({
   title,
   builtWith
 }) => (
-  <Flex
-    sx={{
-      flexDirection: "column",
-      fontSize: [0, 1]
-    }}
-  >
-    <Flex sx={{ my: 2 }}>
-      <Heading
-        sx={{
-          color: "black",
-          fontWeight: "800"
-        }}
-      >
-        <Text fontSize="xs" color="oliveBlack">
-          {title}
-        </Text>
-      </Heading>
-    </Flex>
-    <Flex my={[1, 2]} flexWrap="wrap">
-      {builtWith.map((item, i) => (
-        <Text
-          key={`BuiltWith-${item.title}-${i}`}
-          sx={{ ml: 2, fontSize: [0, 1, 2, 3] }}
+  <Flex flexDirection="column" p={[3, 4, 5]}>
+    <Heading as="h3" color="black" fontWeight="800">
+      {title}
+    </Heading>
+
+    <Flex p={[2, 3]} my={[1, 2]} flexWrap="wrap">
+      {builtWith.map(item => (
+        <chakra.span
+          key={`BuiltWith-${item.title}`}
+          ml={2}
+          fontSize={{ base: "xs", md: "sm" }}
         >
-          <RenderIcon iconname={item.iconName} />
-        </Text>
+          <RenderIcon iconname={item.iconName} height="1.2em" width="1.2em" />
+        </chakra.span>
       ))}
     </Flex>
+
     {description.map(p => (
       <Text key={`paragraph-${p.text}`} my="2">
         {p.text}
       </Text>
     ))}
-    <Flex
-      sx={{
-        mt: 3,
-        justifyContent: "space-evenly"
-      }}
-    >
-      <Link
+
+    <Stack mt={3} dir="row" spacing={4} align="center">
+      <Button
+        colorScheme="facebook"
+        leftIcon={<GitButtonIcon />}
+        variant="outline"
+        as="a"
         href={gitUrl}
         target="_blank"
         rel="noopener noreferrer"
-        sx={{ color: "background" }}
       >
-        <Button
-          _hover={{
-            backgroundColor: "#e7e7e7"
-          }}
-        >
-          Source
-          <RenderIcon iconname="gitAlt" />
-        </Button>
-      </Link>
-      <Link
+        Source
+      </Button>
+
+      <Button
+        colorScheme="twitter"
+        leftIcon={<WebIcon />}
+        variant="solid"
+        as="a"
         href={webUrl}
         target="_blank"
         rel="noopener noreferrer"
-        sx={{ color: "background" }}
       >
-        <Button bg="#e7e7e7" border="2px solid #e7e7e7">
-          Demo
-          <RenderIcon iconname="webIcon" />
-        </Button>
-      </Link>
-    </Flex>
+        Demo
+      </Button>
+    </Stack>
   </Flex>
 )
 

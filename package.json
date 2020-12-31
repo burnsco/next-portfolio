@@ -1,6 +1,28 @@
 {
   "name": "next-portfolio",
+  "description": "My Portfolio Site",
+  "author": {
+    "email": "coreyburns@outlook.com",
+    "name": "Corey Burns",
+    "url": "https://coreyburns.dev"
+  },
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://https://github.com/burnsco/next-portfolio.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "gatsby",
+    "portfolio",
+    "react",
+    "graphql",
+    "full-stack",
+    "emotion",
+    "chakra-ui",
+    "theme-ui",
+    "styled-system"
+  ],
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -25,58 +47,49 @@
   },
   "dependencies": {
     "@chakra-ui/icons": "^1.0.2",
-    "@chakra-ui/react": "^1.0.4",
+    "@chakra-ui/react": "^1.1.0",
     "@chakra-ui/theme-tools": "1.0.2",
     "@emotion/react": "11.1.4",
     "@emotion/styled": "11.0.0",
-    "@iconify/core": "^1.0.0-beta.2",
-    "@iconify/icons-brandico": "^1.0.7",
-    "@iconify/icons-cib": "^1.0.3",
-    "@iconify/icons-clarity": "^1.0.0",
-    "@iconify/icons-el": "^1.0.5",
-    "@iconify/icons-entypo": "^1.0.5",
-    "@iconify/icons-fa-brands": "^1.0.14",
-    "@iconify/icons-heroicons-outline": "^1.0.1",
-    "@iconify/icons-logos": "^1.0.12",
-    "@iconify/icons-ls": "^1.0.3",
-    "@iconify/icons-mdi": "^1.0.123",
-    "@iconify/icons-simple-icons": "^1.0.43",
-    "@iconify/icons-whh": "^1.0.3",
+    "@iconify/core": "^1.0.0-rc.4",
+    "@iconify/icons-brandico": "^1.1.0",
+    "@iconify/icons-cib": "^1.1.0",
+    "@iconify/icons-clarity": "^1.1.0",
+    "@iconify/icons-el": "^1.1.0",
+    "@iconify/icons-entypo": "^1.1.0",
+    "@iconify/icons-fa-brands": "^1.1.0",
+    "@iconify/icons-heroicons-outline": "^1.1.0",
+    "@iconify/icons-logos": "^1.1.0",
+    "@iconify/icons-ls": "^1.1.0",
+    "@iconify/icons-mdi": "^1.1.0",
+    "@iconify/icons-simple-icons": "^1.1.0",
+    "@iconify/icons-whh": "^1.1.0",
     "@iconify/react": "^2.0.0-rc.3",
-    "body-scroll-lock": "^3.1.5",
-    "email-validator": "^2.0.4",
+    "@next/bundle-analyzer": "^10.0.4",
     "formik": "^2.2.6",
     "framer-motion": "^3.1.1",
-    "lodash.throttle": "^4.1.1",
-    "next": "10.0.4",
+    "next": "latest",
     "next-compose-plugins": "^2.2.1",
     "next-seo": "^4.17.0",
+    "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-headroom": "^3.1.0",
-    "react-intersection-observer": "^8.31.0",
+    "react-remove-scroll": "^2.4.1",
     "smoothscroll-polyfill": "^0.4.4",
+    "webpack": "^5.11.1",
     "yup": "^0.32.8"
   },
   "devDependencies": {
-    "@babel/cli": "7.12.10",
-    "@babel/core": "7.12.10",
-    "@babel/plugin-proposal-class-properties": "7.12.1",
-    "@babel/preset-env": "7.12.11",
-    "@babel/preset-react": "7.12.10",
-    "@babel/preset-typescript": "7.12.7",
-    "@babel/runtime": "7.12.5",
-    "@next/bundle-analyzer": "^10.0.4",
-    "@types/body-scroll-lock": "^2.6.1",
-    "@types/node": "^14.6.0",
+    "@types/node": "^14.14.17",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/react-headroom": "^2.2.1",
     "@types/sharp": "^0.26.1",
     "@types/smoothscroll-polyfill": "^0.3.1",
     "@types/yup": "^0.29.11",
-    "@typescript-eslint/eslint-plugin": "^4.11.0",
-    "@typescript-eslint/parser": "^4.11.0",
+    "@typescript-eslint/eslint-plugin": "^4.11.1",
+    "@typescript-eslint/parser": "^4.11.1",
     "eslint": "^7.16.0",
     "eslint-config-airbnb-typescript": "^12.0.0",
     "eslint-config-prettier": "^7.1.0",
@@ -84,28 +97,27 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.3.0",
-    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^4.3.6",
     "lint-staged": "^10.5.3",
     "next-unused": "^0.0.3",
     "prettier": "^2.2.1",
-    "prop-types": "^15.7.2",
     "typescript": "4.1.3"
   },
   "next-unused": {
     "alias": {
-      "@components/common/*": [
+      "@common/*": [
         "components/common/*"
       ],
-      "@components/sections/*": [
+      "@sections/*": [
         "components/sections/*"
       ],
-      "@components/ui/*": [
+      "@ui/*": [
         "components/ui/*"
       ],
-      "@data/*": [
-        "data/*"
+      "@configs/*": [
+        "configs/*"
       ],
       "@pages/*": [
         "pages/*"
@@ -123,6 +135,5 @@
   },
   "resolutions": {
     "webpack": "^5.0.0-beta.30"
-  },
-  "license": "MIT"
+  }
 }
