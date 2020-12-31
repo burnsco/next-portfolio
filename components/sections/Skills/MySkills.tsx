@@ -15,6 +15,7 @@ export default function MySkills() {
           <ListItem>
             {item.skills.map(skill => (
               <Badge
+                m={1}
                 variant="solid"
                 colorScheme="green"
                 key={`MySkills-badge-${skill.title}`}

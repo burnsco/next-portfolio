@@ -6,14 +6,15 @@ import MySkills from "./MySkills"
 
 const SkillsContainer: React.FC<{ id: string }> = ({ id }) => (
   <SectionContainer id={id} background="linear-gradient(white,#F9F9F9)">
-    <SectionHeading title="Skills" />
-    <Container>
+    <Container as="article">
+      <SectionHeading title="Skills" />
       <Grid
         gap={2}
         mb={[4, 5, 6]}
         gridTemplateColumns="repeat(auto-fit, minmax(320px, 1fr))"
       >
         <DeveloperInfo />
+
         <MySkills />
       </Grid>
     </Container>

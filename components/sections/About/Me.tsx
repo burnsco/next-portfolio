@@ -13,7 +13,12 @@ export default function AboutMe() {
         </ListItem>
 
         {data.excerpt.map(paragraph => (
-          <ListItem key={`p-${paragraph.text}`}>{paragraph.text}</ListItem>
+          <ListItem
+            fontSize={{ base: "xs", md: "sm" }}
+            key={`p-${paragraph.text}`}
+          >
+            {paragraph.text}
+          </ListItem>
         ))}
       </List>
     </Container>

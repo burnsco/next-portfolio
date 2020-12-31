@@ -39,7 +39,7 @@ const textStyles = {
     opacity: 0.8,
     color: "oliveblack",
     fontSize: { base: "md", md: "lg" },
-    mb: 2
+    mb: 1
   },
   "heading-2": {
     textAlign: "center",
@@ -63,10 +63,16 @@ const colors = {
   oranget2: "rgba(255,193,135,1)",
   oranget3: "rgba(255,172, 93,1)",
   oranget4: "rgba(215,113, 16,1)",
-  grayDark: "#2d3748",
+  b1: "#2d3748",
   hero1: "#252323",
   hero2: "#292a2d",
   hero3: "#3b3d42",
+  bt1: "rgba(0,0,0,0.7)",
+  bt2: "rgba(0,0,0,0.75)",
+  bt3: "rgba(0,0,0,0.8)",
+  bt4: "rgba(0,0,0,0.85)",
+  bt5: "rgba(0,0,0,0.9)",
+  bt6: "rgba(0,0,0,0.95)",
   primary: "#292a2d",
   secondary: "#3b3d42",
   blackolive: "#36382E",
@@ -93,24 +99,31 @@ const colors = {
   p4: "#855C92",
   p5: "#4A567D",
   p6: "#2F4858",
+  lime: "#bfff00",
   info: "#63b3ed",
-  warning: "#faf089",
-  danger: "#feb2b2",
-  purple1: "#772ce8",
-  purple2: "#451093",
-  purple3: "#a970ff",
   skyblue: "#5BC3EB",
   blueDark: "rgba(25, 130, 196, 1)",
   carolinablue: "#00A5E0",
   lightblue: "#39A9DB",
   bluegreen: "#40BCD8",
-  bluegreenlight: "#60cde5"
+  blue1: "#009cde",
+  bluegreenlight: "#60cde5",
+  warning: "#faf089",
+  danger: "#feb2b2",
+  purple1: "#772ce8",
+  purple2: "#451093",
+  purple3: "#a970ff"
 }
 
 const theme = extendTheme({
   styles: {
     global: {
       html: {
+        display: "flex",
+        flexDirection: "column",
+        height: "100%",
+        position: "relative",
+        width: "100%",
         scrollBehavior: "smooth"
       },
       body: {
@@ -122,7 +135,7 @@ const theme = extendTheme({
       },
       li: {
         color: "primary",
-        fontSize: { base: "xs", md: "sm", lg: "md", xl: "lg" }
+        fontSize: { base: "xs", md: "sm" }
       },
       ".headroom--pinned": {
         boxShadow: "lg",

@@ -14,7 +14,7 @@ import RedditCloneVideo from "./RedditVideo"
 
 const Projects: React.FC<{ id: string }> = ({ id }) => (
   <SectionContainer id={id} background="linear-gradient(#F9F9F9,#F1F1F1)">
-    <Container flexDir="column">
+    <Container as="article" flexDir="column">
       <SectionHeading title="Projects" subHeading="Full-stack apps" />
       <Grid gap={6}>
         {data.map(project => (

@@ -4,7 +4,7 @@ import MiniAppsCards from "./MiniAppsCards"
 
 export const MiniApps: React.FC<{ id: string }> = ({ id }) => (
   <SectionContainer id={id} background="linear-gradient(#F1F1F1,#E9E9E9)">
-    <Container my={5} pb={3} w="full">
+    <Container as="article" my={5} pb={3} w="full">
       <SectionHeading
         subHeading="small apps made early in my learning journey."
         title="Mini-Apps"

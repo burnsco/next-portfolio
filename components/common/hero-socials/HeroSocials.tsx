@@ -9,7 +9,7 @@ const HeroSocialIcons = () => (
       <Tooltip
         hasArrow
         bg="gray.200"
-        key={`SocialLink-${item.title}`}
+        key={`Social-${item.title}`}
         color="black"
         label={item.title}
         aria-label={item.title}

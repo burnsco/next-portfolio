@@ -13,7 +13,10 @@ export default function DeveloperInfo() {
         </ListItem>
 
         {data.excerpt.map(paragraph => (
-          <ListItem key={`devInfo-${paragraph.text}`}>
+          <ListItem
+            fontSize={{ base: "xs", md: "sm" }}
+            key={`devInfo-${paragraph.text}`}
+          >
             {paragraph.text}
           </ListItem>
         ))}

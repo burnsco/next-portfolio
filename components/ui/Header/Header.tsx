@@ -9,6 +9,7 @@ function capitalizedTitle(title: string) {
 
 function HeaderContent() {
   const sections = useScrollSections()
+
   return (
     <Box
       as={Headroom}
@@ -46,9 +47,9 @@ function HeaderContent() {
   )
 }
 
-function Header(props: any) {
+function Header() {
   return (
-    <chakra.header bg="hero1" width="full" {...props}>
+    <chakra.header bg="hero1" width="full">
       <HeaderContent />
     </chakra.header>
   )

@@ -21,10 +21,10 @@ const ProjectInfo: React.FC<ProjectInfoType> = ({
 }) => (
   <Flex flexDirection="column" p={[4, 5, 6]}>
     <Heading
+      color="bt3"
       mb={[2, 3]}
-      color="text"
       fontSize={["xl", "2xl", "3xl"]}
-      fontWeight="extrabold"
+      fontWeight="900"
     >
       {title}
     </Heading>
