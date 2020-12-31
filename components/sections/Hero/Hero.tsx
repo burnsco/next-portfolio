@@ -40,7 +40,7 @@ const Hero: React.FC<{ id: string }> = ({ id }) => {
             mb="3"
             loading="eager"
             name="Corey Burns"
-            src="/images/Me.webp"
+            src="/images/me.webp"
           />
 
           <Heading color="saffron" fontWeight={900}>

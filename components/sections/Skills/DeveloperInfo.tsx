@@ -13,7 +13,9 @@ export default function DeveloperInfo() {
         </ListItem>
 
         {data.excerpt.map(paragraph => (
-          <ListItem key={`devInfo-${paragraph}`}>{paragraph.text}</ListItem>
+          <ListItem key={`devInfo-${paragraph.text}`}>
+            {paragraph.text}
+          </ListItem>
         ))}
       </List>
     </Container>

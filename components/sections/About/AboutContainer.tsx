@@ -5,8 +5,8 @@ import AboutMe from "./Me"
 import RandomFacts from "./RandomFacts"
 
 const AboutContainer: React.FC<{ id: string }> = ({ id }) => (
-  <SectionContainer background="#FFFFFF" id={id}>
-    <SectionHeading title={id} />
+  <SectionContainer background="linear-gradient(#E9E9E9, white)" id={id}>
+    <SectionHeading title={id} subHeading="some personal info." />
     <Grid
       gap={[3, 4]}
       mb={[4, 5, 6]}

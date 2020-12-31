@@ -1,4 +1,12 @@
-import { Button, chakra, Flex, Heading, Stack, Text } from "@chakra-ui/react"
+import {
+  Button,
+  chakra,
+  Flex,
+  Heading,
+  HStack,
+  Stack,
+  Text
+} from "@chakra-ui/react"
 import GitButtonIcon from "@common/icons/socials/github-icon"
 import WebIcon from "@common/icons/socials/web-icon"
 import RenderIcon from "@common/render-icon/RenderIcon"
@@ -11,25 +19,30 @@ const ProjectInfo: React.FC<ProjectInfoType> = ({
   title,
   builtWith
 }) => (
-  <Flex flexDirection="column" p={[3, 4, 5]}>
-    <Heading as="h3" color="black" fontWeight="800">
+  <Flex flexDirection="column" p={[4, 5, 6]}>
+    <Heading
+      mb={[2, 3]}
+      color="text"
+      fontSize={["xl", "2xl", "3xl"]}
+      fontWeight="extrabold"
+    >
       {title}
     </Heading>
 
-    <Flex p={[2, 3]} my={[1, 2]} flexWrap="wrap">
+    <HStack spacing={4}>
       {builtWith.map(item => (
-        <chakra.span
-          key={`BuiltWith-${item.title}`}
-          ml={2}
-          fontSize={{ base: "xs", md: "sm" }}
-        >
+        <chakra.span key={`BuiltWith-${item.title}`}>
           <RenderIcon iconname={item.iconName} height="1.2em" width="1.2em" />
         </chakra.span>
       ))}
-    </Flex>
+    </HStack>
 
     {description.map(p => (
-      <Text key={`paragraph-${p.text}`} my="2">
+      <Text
+        fontSize={{ base: "xs", md: "sm" }}
+        key={`paragraph-${p.text}`}
+        my="2"
+      >
         {p.text}
       </Text>
     ))}

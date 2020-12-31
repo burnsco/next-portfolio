@@ -8,9 +8,9 @@ const SectionHeading: React.FC<{ title: string; subHeading?: string }> = ({
 }) => {
   const capitalizedTitle = title.charAt(0).toUpperCase() + title.slice(1)
   return (
-    <Container py="3rem" maxW="1280px">
+    <Container maxW="1280px">
       <Box maxW="760px" mx="auto" textAlign="center" mb="42px">
-        <chakra.h1 textStyle="section-heading" mb="3">
+        <chakra.h1 textStyle="section-heading" mb="1">
           <chakra.span
             backgroundImage="linear-gradient(120deg, rgba(243,147, 55,1) 0%, rgb(250, 112, 154) 100%)"
             backgroundRepeat="no-repeat"
@@ -24,7 +24,7 @@ const SectionHeading: React.FC<{ title: string; subHeading?: string }> = ({
             {capitalizedTitle}
           </chakra.span>
         </chakra.h1>
-        <chakra.p opacity={0.8} fontSize="lg">
+        <chakra.p my={3} opacity={0.8} fontSize="md">
           {subHeading}
         </chakra.p>
       </Box>

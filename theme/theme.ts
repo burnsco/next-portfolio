@@ -110,6 +110,9 @@ const colors = {
 const theme = extendTheme({
   styles: {
     global: {
+      html: {
+        scrollBehavior: "smooth"
+      },
       body: {
         fontFamily: "Inter, sans-serif"
       },

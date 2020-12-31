@@ -22,7 +22,9 @@ const ChakraField: React.FC<ChakraFieldProps> = ({
   const [field, { error }] = useField(props)
   return (
     <FormControl isInvalid={!!error}>
-      <FormLabel htmlFor={field.name}>{label}</FormLabel>
+      <FormLabel color="white" htmlFor={field.name}>
+        {label}
+      </FormLabel>
       <Input {...field} {...props} id={field.name} />
       {error ? <FormErrorMessage>{error}</FormErrorMessage> : null}
     </FormControl>

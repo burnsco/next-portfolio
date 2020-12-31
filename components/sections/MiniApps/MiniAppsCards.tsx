@@ -20,7 +20,9 @@ export default function MiniAppsCards() {
           />
 
           <Box p={4}>
-            <Text opacity={0.8}>{app.excerpt}</Text>
+            <Text fontSize={{ base: "xs", md: "sm" }} opacity={0.8}>
+              {app.excerpt}
+            </Text>
 
             <HStack spacing={4} align="flex-end" mt={1}>
               <Button

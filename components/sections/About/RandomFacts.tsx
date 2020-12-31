@@ -1,19 +1,21 @@
-import { Heading, List, ListItem } from "@chakra-ui/react"
+import { EmailIcon } from "@chakra-ui/icons"
+import { List, ListIcon, ListItem } from "@chakra-ui/react"
 import { Container } from "@common/index"
-import RenderIcon from "@common/render-icon/RenderIcon"
 import data from "configs/random-facts"
+import React from "react"
 
 export default function RandomFacts() {
   return (
-    <Container>
-      <RenderIcon height="1.5em" width="1.5em" iconname={data.iconName} />
-      <Heading fontSize="md" ml="2">
-        {data.title}
-      </Heading>
+    <Container as="article">
+      <List>
+        <ListItem textStyle="list-heading">
+          <ListIcon as={EmailIcon} boxSize={5} color="red.500" />
 
-      <List m="0" p="0">
+          {data.title}
+        </ListItem>
+
         {data.facts.map(fact => (
-          <ListItem key={`random-fact-${fact}`}>{fact.title}</ListItem>
+          <ListItem key={`random-fact-${fact.title}`}>{fact.title}</ListItem>
         ))}
       </List>
     </Container>

@@ -1,21 +1,21 @@
-import { Flex, Heading, Text } from "@chakra-ui/react"
+import { EmailIcon } from "@chakra-ui/icons"
+import { List, ListIcon, ListItem } from "@chakra-ui/react"
 import { Container } from "@common/index"
-import RenderIcon from "@common/render-icon/RenderIcon"
 import data from "configs/about-me"
 
 export default function AboutMe() {
   return (
-    <Container>
-      <Flex flexDir="column" flexWrap="wrap">
-        <Heading mb="2" fontSize="sm">
-          <RenderIcon height="1.5em" width="1.5em" iconname={data.iconName} />
+    <Container as="article">
+      <List>
+        <ListItem textStyle="list-heading">
+          <ListIcon as={EmailIcon} boxSize={5} color="red.500" />
           {data.title}
-        </Heading>
+        </ListItem>
 
         {data.excerpt.map(paragraph => (
-          <Text key={`p-${paragraph}`}>{paragraph.text}</Text>
+          <ListItem key={`p-${paragraph.text}`}>{paragraph.text}</ListItem>
         ))}
-      </Flex>
+      </List>
     </Container>
   )
 }

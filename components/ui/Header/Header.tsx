@@ -1,4 +1,5 @@
-import { Box, Button, chakra, Flex } from "@chakra-ui/react"
+import { Box, chakra, Flex } from "@chakra-ui/react"
+import { NextChakraLink } from "@common/index"
 import { useScrollSections } from "@common/scroll-sections/useScrollSection"
 import Headroom from "react-headroom"
 
@@ -23,11 +24,11 @@ function HeaderContent() {
         p={[1, 2, 3]}
       >
         {sections.map(({ id, onClick, selected }) => (
-          <Button
+          <NextChakraLink
+            href={`/#${id}`}
             fontSize={["xs", "sm", "md"]}
             aria-label={`nav-${id}`}
             onClick={onClick}
-            selected={selected}
             fontWeight={500}
             _hover={{
               color: "oranget3"
@@ -38,7 +39,7 @@ function HeaderContent() {
             key={id}
           >
             {capitalizedTitle(id)}
-          </Button>
+          </NextChakraLink>
         ))}
       </Flex>
     </Box>

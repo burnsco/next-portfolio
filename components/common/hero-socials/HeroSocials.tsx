@@ -1,4 +1,4 @@
-import { Center, Flex, HStack, Tooltip } from "@chakra-ui/react"
+import { Flex, Tooltip } from "@chakra-ui/react"
 import { NextChakraLink } from "@common/index"
 import RenderIcon from "@common/render-icon/RenderIcon"
 import data from "configs/socials"
@@ -15,38 +15,36 @@ const HeroSocialIcons = () => (
         aria-label={item.title}
         shouldWrapChildren
       >
-        <HStack>
-          <Center
-            height="2.5em"
-            width="2.5em"
-            border="1px"
-            borderStyle="solid"
-            color="#fff"
-            borderColor="#666"
-            background="#3b3d42"
-            borderRadius={4}
-            transition="all .5s"
-            _hover={{
-              opacity: 0.8,
-              background: "#666;"
-            }}
-          >
-            <NextChakraLink
-              isExternal
-              aria-label={item.title}
-              href={item.url}
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <RenderIcon
-                iconname={item.iconName}
-                width="1.5em"
-                height="1.5em"
-                color="white"
-              />
-            </NextChakraLink>
-          </Center>
-        </HStack>
+        <NextChakraLink
+          _hover={{
+            opacity: 0.8,
+            background: "#666;"
+          }}
+          transition="all .5s"
+          height="2.5em"
+          width="2.5em"
+          borderStyle="solid"
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          border="1px"
+          color="#fff"
+          borderColor="#666"
+          background="#3b3d42"
+          borderRadius={4}
+          isExternal
+          aria-label={item.title}
+          href={item.url}
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <RenderIcon
+            iconname={item.iconName}
+            width="1.5em"
+            height="1.5em"
+            color="white"
+          />
+        </NextChakraLink>
       </Tooltip>
     ))}
   </Flex>
