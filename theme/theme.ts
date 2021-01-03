@@ -1,5 +1,4 @@
 import { extendTheme } from "@chakra-ui/react"
-import { createBreakpoints } from "@chakra-ui/theme-tools"
 
 const fonts = {
   sans:
@@ -12,13 +11,6 @@ const fonts = {
   heading: "inherit"
 }
 
-const breakpoints = createBreakpoints({
-  sm: "40em",
-  md: "52em",
-  lg: "64em",
-  xl: "80em"
-})
-
 const shadows = {
   avatar:
     "0 0 1px 11px rgba(80, 81, 79, .15), 0 0 1px 22px rgba(80, 81, 79, .1)"
@@ -28,9 +20,9 @@ const textStyles = {
   "section-heading": {
     textAlign: "center",
     color: "blackolive",
-    fontFamily: "Helvetica",
+    fontFamily: "Roboto Slab",
     fontWeight: 900,
-    letterSpacing: "-0.015em",
+    letterSpacing: "tight",
     lineHeight: "1.24",
     fontSize: { base: "2rem", sm: "2.5rem", md: "2.75rem" }
   },
@@ -145,8 +137,7 @@ const theme = extendTheme({
   textStyles,
   shadows,
   colors,
-  fonts,
-  breakpoints
+  fonts
 })
 
 export default theme

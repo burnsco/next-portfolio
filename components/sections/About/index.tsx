@@ -1,11 +1,13 @@
-import { SectionContainer, SectionHeading } from "@common/index"
+import { Container, SectionContainer, SectionHeading } from "@common/index"
 import PropTypes from "prop-types"
 import About from "./About"
 
 const AboutContainer: React.FC<{ id: string }> = ({ id }) => (
   <SectionContainer background="linear-gradient(#E9E9E9, white)" id={id}>
-    <SectionHeading title={id} subHeading="some personal info." />
-    <About />
+    <Container>
+      <SectionHeading title={id} subHeading="some personal info." />
+      <About />
+    </Container>
   </SectionContainer>
 )
 

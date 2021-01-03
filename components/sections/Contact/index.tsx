@@ -1,4 +1,4 @@
-import { SectionContainer } from "@common/index"
+import { Container, SectionContainer } from "@common/index"
 import PropTypes from "prop-types"
 import Contact from "./Contact"
 
@@ -7,7 +7,10 @@ const ContactContainer: React.FC<{ id: string }> = ({ id }) => (
     background="linear-gradient(#3b3d42,#292a2d,#252323)"
     id={id}
   >
-    <Contact />
+    {" "}
+    <Container>
+      <Contact />
+    </Container>
   </SectionContainer>
 )
 
