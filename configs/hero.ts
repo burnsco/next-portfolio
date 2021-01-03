@@ -1,5 +1,0 @@
-export default {
-  display: "Corey Burns",
-  subDisplay: "Full-stack Developer",
-  image: "./images/Me.jpg"
-}

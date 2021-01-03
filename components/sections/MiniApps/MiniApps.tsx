@@ -1,21 +1,51 @@
-import { Container, SectionContainer, SectionHeading } from "@common/index"
-import PropTypes from "prop-types"
-import MiniAppsCards from "./MiniAppsCards"
+import { Box, Button, Grid, HStack, Img, Text } from "@chakra-ui/react"
+import MiniAppCard from "@common/cards/Small"
 
-export const MiniApps: React.FC<{ id: string }> = ({ id }) => (
-  <SectionContainer id={id} background="linear-gradient(#F1F1F1,#E9E9E9)">
-    <Container as="article" my={5} pb={3} w="full">
-      <SectionHeading
-        subHeading="small apps made early in my learning journey."
-        title="Mini-Apps"
-      />
-      <MiniAppsCards />
-    </Container>
-  </SectionContainer>
-)
+export default function MiniAppsCards({ miniApps }: any) {
+  return (
+    <Grid gap={2} gridTemplateColumns="repeat(auto-fit, minmax(180px, 1fr))">
+      {miniApps.map((app: any) => (
+        <MiniAppCard key={`mini-apps-${app.title}`}>
+          <Text fontWeight="bold" p={1} textAlign="center">
+            {app.title}
+          </Text>
 
-export default MiniApps
+          <Img
+            w="100%"
+            h="140px"
+            src={app.image}
+            alt={`mini app ${app.title}`}
+            objectFit="cover"
+          />
 
-MiniApps.propTypes = {
-  id: PropTypes.string.isRequired
+          <Box p={4}>
+            <Text fontSize={{ base: "xs", md: "sm" }} opacity={0.8}>
+              {app.excerpt}
+            </Text>
+
+            <HStack spacing={4} align="flex-end" mt={1}>
+              <Button
+                variant="outline"
+                as="a"
+                href={app.gitUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Source
+              </Button>
+
+              <Button
+                as="a"
+                href={app.webUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Demo
+              </Button>
+            </HStack>
+          </Box>
+        </MiniAppCard>
+      ))}
+    </Grid>
+  )
 }

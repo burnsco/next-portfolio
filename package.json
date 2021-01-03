@@ -78,6 +78,7 @@
     "react-remove-scroll": "^2.4.1",
     "smoothscroll-polyfill": "^0.4.4",
     "webpack": "^5.11.1",
+    "yaml-loader": "^0.6.0",
     "yup": "^0.32.8"
   },
   "devDependencies": {
@@ -121,11 +122,16 @@
       ],
       "@pages/*": [
         "pages/*"
+      ],
+      "@custom-types/*": [
+        "types/*"
       ]
     },
     "debug": true,
     "include": [
       "components",
+      "configs",
+      "types",
       "pages"
     ],
     "exclude": [],

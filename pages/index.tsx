@@ -1,26 +1,45 @@
-import HeroSection from "@sections/Hero/index"
 import { Layout } from "@ui/index"
 import dynamic from "next/dynamic"
+import { useEffect, useState } from "react"
 
-const SkillsSection = dynamic(() => import("@sections/Skills/index"))
-const ProjectsSection = dynamic(() => import("@sections/Projects/index"))
-const MiniAppsSection = dynamic(() => import("@sections/MiniApps/index"))
-const AboutSection = dynamic(() => import("@sections/About/index"))
-const ContactSection = dynamic(() => import("@sections/Contact/index"), {
-  ssr: false
-})
+const HeroSection = dynamic(() => import("@sections/Hero"))
+const SkillsSection = dynamic(() => import("@sections/Skills"))
+const ProjectsSection = dynamic(() => import("@sections/Projects"))
+const MiniAppsSection = dynamic(() => import("@sections/MiniApps"))
+const AboutSection = dynamic(() => import("@sections/About"))
+const ContactSection = dynamic(() => import("@sections/Contact"))
 const Footer = dynamic(() => import("@ui/Footer"))
 
-export default function IndexPage() {
+const IndexPage = () => {
+  const [loaded, setLoaded] = useState(false)
+
+  useEffect(() => setLoaded(true), [])
+
   return (
     <Layout>
-      <HeroSection id="home" />
-      <SkillsSection id="skills" />
-      <ProjectsSection id="projects" />
-      <MiniAppsSection id="apps" />
-      <AboutSection id="about" />
-      <ContactSection id="contact" />
-      <Footer />
+      <header>
+        <HeroSection id="home" />
+      </header>
+
+      {loaded ? (
+        <>
+          <main>
+            <SkillsSection id="skills" />
+            <ProjectsSection id="projects" />
+            <MiniAppsSection id="apps" />
+            <AboutSection id="about" />
+          </main>
+          <aside>
+            <ContactSection id="contact" />
+          </aside>
+
+          <footer>
+            <Footer />
+          </footer>
+        </>
+      ) : null}
     </Layout>
   )
 }
+
+export default IndexPage

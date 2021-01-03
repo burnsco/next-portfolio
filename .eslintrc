@@ -25,12 +25,13 @@
     },
     "import/resolver": {
       "alias": [
-        ["@common/*", "src/components/common/*"],
-        ["@sections/*", "src/components/sections/*"],
-        ["@ui/*", "src/components/ui/*"],
-        ["@configs/*", "src/configs/*"],
-        ["@pages/*", "src/pages/*"],
-        ["@theme/*", "src/theme/*"]
+        ["@common/*", "components/common/*"],
+        ["@sections/*", "components/sections/*"],
+        ["@ui/*", "components/ui/*"],
+        ["@configs/*", "configs/*"],
+        ["@pages/*", "pages/*"],
+        ["@theme/*", "theme/*"],
+        ["@custom-types/*", "types/*"]
       ]
     }
   },

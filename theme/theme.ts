@@ -4,7 +4,7 @@ import { createBreakpoints } from "@chakra-ui/theme-tools"
 const fonts = {
   sans:
     '"Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
-  serif: '"Roboto Slab",Georgia,Cambria,"Times New Roman",Times,serif',
+  serif: '"Roboto Slab",Helveltica,Cambria,"Times New Roman",Times,serif',
   monospace:
     '"SF Mono","Roboto Mono",Monaco,Consolas,"Liberation Mono","Courier New",monospace',
   body:

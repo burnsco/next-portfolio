@@ -10,7 +10,7 @@ import {
 import GitButtonIcon from "@common/icons/socials/github-icon"
 import WebIcon from "@common/icons/socials/web-icon"
 import RenderIcon from "@common/render-icon/RenderIcon"
-import { ProjectInfoType } from "configs/types/projects"
+import { ProjectInfoType } from "@custom-types/Projects"
 
 const ProjectInfo: React.FC<ProjectInfoType> = ({
   description,

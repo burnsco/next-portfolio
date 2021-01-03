@@ -1,26 +1,23 @@
 import { List, ListIcon, ListItem } from "@chakra-ui/react"
 import EmailIcon from "@common/icons/socials/email-icon"
-import { Container } from "@common/index"
-import data from "@configs/developer-info"
 
-export default function DeveloperInfo() {
+export default function DeveloperInfo({ devInfo }: any) {
   return (
-    <Container as="article">
-      <List>
-        <ListItem textStyle="list-heading">
-          <ListIcon as={EmailIcon} boxSize={5} color="red.500" />
-          {data.title}
-        </ListItem>
+    <List>
+      <ListItem textStyle="list-heading">
+        <ListIcon as={EmailIcon} boxSize={5} color="red.500" />
+        {devInfo.title}
+      </ListItem>
 
-        {data.excerpt.map(paragraph => (
-          <ListItem
-            fontSize={{ base: "xs", md: "sm" }}
-            key={`devInfo-${paragraph.text}`}
-          >
-            {paragraph.text}
-          </ListItem>
-        ))}
-      </List>
-    </Container>
+      {devInfo.excerpt.map((p: any) => (
+        <ListItem
+          as="h2"
+          fontSize={{ base: "xs", md: "sm" }}
+          key={`devInfo-${p.text}`}
+        >
+          {p.text}
+        </ListItem>
+      ))}
+    </List>
   )
 }

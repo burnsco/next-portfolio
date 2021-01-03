@@ -3,12 +3,10 @@ import { Box, Text } from "@chakra-ui/react"
 const Footer = () => (
   <Box
     display="flex"
-    bgColor="black"
-    as="footer"
     color="white"
     width="100%"
     height="50px"
-    bg="hero2"
+    bg="primary"
     flexDirection="column"
     justifyContent="center"
     alignItems="center"

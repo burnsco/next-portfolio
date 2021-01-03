@@ -1,19 +1,17 @@
 import { Badge, List, ListIcon, ListItem } from "@chakra-ui/react"
 import EmailIcon from "@common/icons/socials/email-icon"
-import { Container } from "@common/index"
-import data from "configs/my-skills"
 
-export default function MySkills() {
+export default function MySkills({ mySkills }: any) {
   return (
-    <Container as="article">
-      {data.map(item => (
+    <>
+      {mySkills.map((item: any) => (
         <List key={`my-skills-${item.title}`}>
           <ListItem textStyle="list-heading">
             <ListIcon as={EmailIcon} boxSize={5} color="red.500" />
             {item.title}
           </ListItem>
           <ListItem>
-            {item.skills.map(skill => (
+            {item.skills.map((skill: any) => (
               <Badge
                 m={1}
                 variant="solid"
@@ -26,6 +24,6 @@ export default function MySkills() {
           </ListItem>
         </List>
       ))}
-    </Container>
+    </>
   )
 }
