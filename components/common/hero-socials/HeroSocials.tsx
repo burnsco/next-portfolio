@@ -1,7 +1,7 @@
 import { Flex, Tooltip } from "@chakra-ui/react"
 import { NextChakraLink } from "@common/index"
 import RenderIcon from "@common/render-icon/RenderIcon"
-import data from "configs/socials"
+import data from "@configs/site/socials"
 
 const HeroSocialIcons = () => (
   <Flex mt={2} w="12em" justify="space-evenly">

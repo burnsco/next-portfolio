@@ -131,7 +131,6 @@
     "include": [
       "components",
       "configs",
-      "types",
       "pages"
     ],
     "exclude": [],

@@ -1,4 +1,4 @@
-import siteConfig from "configs/site-config"
+import siteConfig from "@configs/site/site-config"
 import { NextSeo } from "next-seo"
 
 const SEO: React.FC<{ title: string; description: string }> = ({

@@ -14,7 +14,13 @@ const Contact = () => (
       justifyContent="center"
       alignItems="center"
     >
-      <Heading my={5} fontFamily="Roboto Slab" color="white" width="100">
+      <Heading
+        my={5}
+        fontFamily="Helvetica"
+        fontWeight={800}
+        color="white"
+        width="100"
+      >
         Contact
       </Heading>
       <Formik

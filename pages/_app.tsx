@@ -1,5 +1,5 @@
 import { ChakraProvider } from "@chakra-ui/react"
-import siteConfig from "@configs/site-config"
+import siteConfig from "@configs/site/site-config"
 import theme from "@theme/index"
 import { DefaultSeo } from "next-seo"
 import { AppProps } from "next/app"

@@ -31,7 +31,6 @@
         ["@configs/*", "configs/*"],
         ["@pages/*", "pages/*"],
         ["@theme/*", "theme/*"],
-        ["@custom-types/*", "types/*"]
       ]
     }
   },

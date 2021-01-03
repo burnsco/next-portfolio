@@ -1,16 +1,17 @@
 import { Box, Flex, Grid } from "@chakra-ui/react"
 import { Container, ProjectCard, SectionHeading } from "@common/index"
 import dynamic from "next/dynamic"
+import data from "@configs/Projects/projects"
 import ProjectInfo from "./ProjectInfo"
 
 const QuickEatsVideos = dynamic(() => import("./QuickEatsVideo"))
 const RedditCloneVideos = dynamic(() => import("./RedditVideo"))
 
-const Projects = ({ projects }: any) => (
+const Projects = () => (
   <Container as="article" flexDir="column">
     <SectionHeading title="Projects" subHeading="Full-stack apps" />
     <Grid gap={6}>
-      {projects.map((project: any) => (
+      {data.map((project: any) => (
         <Box key={`MainProject-${project.title}`} p={[2, 3]}>
           <Flex flexDir="column">
             <ProjectCard>

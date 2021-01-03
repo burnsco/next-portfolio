@@ -28,7 +28,7 @@ const textStyles = {
   "section-heading": {
     textAlign: "center",
     color: "blackolive",
-    fontFamily: "Roboto Slab",
+    fontFamily: "Helvetica",
     fontWeight: 900,
     letterSpacing: "-0.015em",
     lineHeight: "1.24",
@@ -119,11 +119,9 @@ const theme = extendTheme({
   styles: {
     global: {
       html: {
-        display: "flex",
-        flexDirection: "column",
         height: "100%",
-        position: "relative",
         width: "100%",
+        position: "relative",
         scrollBehavior: "smooth"
       },
       body: {

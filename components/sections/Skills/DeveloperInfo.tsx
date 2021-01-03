@@ -1,15 +1,16 @@
 import { List, ListIcon, ListItem } from "@chakra-ui/react"
 import EmailIcon from "@common/icons/socials/email-icon"
+import data from "@configs/Skills/about-me"
 
-export default function DeveloperInfo({ devInfo }: any) {
+export default function DeveloperInfo() {
   return (
     <List>
       <ListItem textStyle="list-heading">
         <ListIcon as={EmailIcon} boxSize={5} color="red.500" />
-        {devInfo.title}
+        {data.title}
       </ListItem>
 
-      {devInfo.excerpt.map((p: any) => (
+      {data.excerpt.map(p => (
         <ListItem
           as="h2"
           fontSize={{ base: "xs", md: "sm" }}

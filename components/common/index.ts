@@ -1,6 +1,6 @@
 export { default as AnimatedWave } from "./animated-wave"
-export { default as ProjectCard } from "./cards/Large"
-export { default as MiniAppCard } from "./cards/Small"
+export { default as ProjectCard } from "./Cards/Large"
+export { default as MiniAppCard } from "./Cards/Small"
 export { default as Container } from "./containers/Main"
 export { default as SectionContainer } from "./containers/SectionContainer"
 export { default as FontFace } from "./font-face"

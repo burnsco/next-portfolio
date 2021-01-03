@@ -1,6 +1,5 @@
 import { Layout } from "@ui/index"
 import dynamic from "next/dynamic"
-import { useEffect, useState } from "react"
 
 const HeroSection = dynamic(() => import("@sections/Hero"))
 const SkillsSection = dynamic(() => import("@sections/Skills"))
@@ -10,36 +9,27 @@ const AboutSection = dynamic(() => import("@sections/About"))
 const ContactSection = dynamic(() => import("@sections/Contact"))
 const Footer = dynamic(() => import("@ui/Footer"))
 
-const IndexPage = () => {
-  const [loaded, setLoaded] = useState(false)
+const IndexPage = () => (
+  <Layout>
+    <header>
+      <HeroSection id="home" />
+    </header>
 
-  useEffect(() => setLoaded(true), [])
+    <main>
+      <SkillsSection id="skills" />
+      <ProjectsSection id="projects" />
+      <MiniAppsSection id="apps" />
+      <AboutSection id="about" />
+    </main>
 
-  return (
-    <Layout>
-      <header>
-        <HeroSection id="home" />
-      </header>
+    <aside>
+      <ContactSection id="contact" />
+    </aside>
 
-      {loaded ? (
-        <>
-          <main>
-            <SkillsSection id="skills" />
-            <ProjectsSection id="projects" />
-            <MiniAppsSection id="apps" />
-            <AboutSection id="about" />
-          </main>
-          <aside>
-            <ContactSection id="contact" />
-          </aside>
-
-          <footer>
-            <Footer />
-          </footer>
-        </>
-      ) : null}
-    </Layout>
-  )
-}
+    <footer>
+      <Footer />
+    </footer>
+  </Layout>
+)
 
 export default IndexPage

@@ -1,10 +1,11 @@
 import { Box, Button, Grid, HStack, Img, Text } from "@chakra-ui/react"
-import MiniAppCard from "@common/cards/Small"
+import { MiniAppCard } from "@common/index"
+import data from "@configs/MiniApps/mini-apps"
 
-export default function MiniAppsCards({ miniApps }: any) {
+export default function MiniAppsCards() {
   return (
     <Grid gap={2} gridTemplateColumns="repeat(auto-fit, minmax(180px, 1fr))">
-      {miniApps.map((app: any) => (
+      {data.map(app => (
         <MiniAppCard key={`mini-apps-${app.title}`}>
           <Text fontWeight="bold" p={1} textAlign="center">
             {app.title}
