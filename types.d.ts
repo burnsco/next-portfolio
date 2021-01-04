@@ -32,10 +32,6 @@ type ProjectInfoType = {
   webUrl: string
   gitUrl: string
   title: string
-  builtWith: {
-    title: string
-    iconName: string
-  }[]
 }
 
 type DeveloperInfoType = {

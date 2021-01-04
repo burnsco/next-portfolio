@@ -22,7 +22,6 @@ const Projects = () => (
 
               <ProjectInfo
                 title={project.title}
-                builtWith={project.builtWith}
                 description={project.description}
                 webUrl={project.webUrl}
                 gitUrl={project.gitUrl}

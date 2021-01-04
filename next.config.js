@@ -4,7 +4,7 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true"
 })
 
-const defaultConfig = {
+module.exports = {
   reactStrictMode: true,
   webpack: config => ({
     ...config,
@@ -15,5 +15,3 @@ const defaultConfig = {
     modern: true
   }
 }
-
-module.exports = withPlugins([withBundleAnalyzer], defaultConfig)

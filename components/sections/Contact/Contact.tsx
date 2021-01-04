@@ -1,7 +1,6 @@
+import { EmailIcon } from "@chakra-ui/icons"
 import { Button, chakra, Container, Flex, Heading } from "@chakra-ui/react"
 import { ChakraField } from "@common/index"
-import mailOpen from "@iconify/icons-heroicons-outline/mail-open"
-import { Icon } from "@iconify/react"
 import { Formik } from "formik"
 
 const Contact = () => (
@@ -54,10 +53,14 @@ const Contact = () => (
 
             <ChakraField name="message" label="message" textarea />
 
-            <Button mt={2} type="submit" isLoading={props.isSubmitting}>
+            <Button
+              leftIcon={<EmailIcon />}
+              mt={2}
+              type="submit"
+              isLoading={props.isSubmitting}
+            >
               Submit
             </Button>
-            <Icon icon={mailOpen} height="1.2em" width="1.2em" />
           </chakra.form>
         )}
       </Formik>

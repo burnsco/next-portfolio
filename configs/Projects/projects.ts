@@ -17,21 +17,7 @@ export default [
           "The back-end was created using nodejs, express, apollo server and prisma to interface with the postgres db. Implemented my own authentication system (jwt) that uses refresh tokens (cookies) and does not store any user information in local storage. I added subscriptions for posts and comments, though I later discovered it was unnecessary as you can just add polling to your queries and achieve the same result. I was glad I did as it was quite a challenge and it would be useful if I choose add chat rooms at some point."
       }
     ],
-    builtWith: [
-      { title: "React", iconName: "react" },
-      { title: "Styled Components", iconName: "styled" },
-      { title: "Webpack", iconName: "webpack" },
-      { title: "Babel", iconName: "babel" },
-      { title: "Apollo", iconName: "apollo" },
-      { title: "NodeJS", iconName: "nodejs" },
-      { title: "PostgresQL", iconName: "postgres" },
-      { title: "Graphql", iconName: "graphql" },
-      { title: "JWT/Auth", iconName: "auth" },
-      { title: "Docker", iconName: "docker" },
-      { title: "Linux", iconName: "linux" },
-      { title: "Google Cloud", iconName: "google" }
-    ],
-    video: "reddit"
+    videos: "reddit"
   },
   {
     title: "UberEats Clone",
@@ -45,12 +31,6 @@ export default [
       {
         text: "A basic food ordering app, with a fake strip payment feature."
       }
-    ],
-    builtWith: [
-      { title: "React", iconName: "react" },
-      { title: "Redux", iconName: "redux" },
-      { title: "SASS", iconName: "sass" },
-      { title: "Firebase", iconName: "firebase" }
     ],
     videos: "quickeats"
   }

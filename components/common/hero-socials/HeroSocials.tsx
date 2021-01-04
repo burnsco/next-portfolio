@@ -1,9 +1,12 @@
-import { Flex, Tooltip } from "@chakra-ui/react"
+import { Flex, Icon, Tooltip } from "@chakra-ui/react"
+import CustomEmailIcon from "@common/icons/email-icon"
+import IcqIcon from "@common/icons/icq-icon"
+import AnimatedTelegramIcon from "@common/icons/telegram-icon"
 import { NextChakraLink } from "@common/index"
-import RenderIcon from "@common/render-icon/RenderIcon"
 import data from "@configs/site/socials"
+import { SiGithub } from "react-icons/si"
 
-const HeroSocialIcons = () => (
+const HeroSocialIcon = () => (
   <Flex mt={2} w="12em" justify="space-evenly">
     {data.map(item => (
       <Tooltip
@@ -38,16 +41,18 @@ const HeroSocialIcons = () => (
           target="_blank"
           rel="noreferrer noopener"
         >
-          <RenderIcon
-            iconname={item.iconName}
-            width="1.5em"
-            height="1.5em"
-            color="white"
-          />
+          {item.iconName === "email" && (
+            <Icon w={6} h={6} as={CustomEmailIcon} />
+          )}
+          {item.iconName === "github" && <Icon w={6} h={6} as={SiGithub} />}
+          {item.iconName === "telegram" && (
+            <Icon w={6} h={6} as={AnimatedTelegramIcon} />
+          )}
+          {item.iconName === "icq" && <Icon w={6} h={6} as={IcqIcon} />}
         </NextChakraLink>
       </Tooltip>
     ))}
   </Flex>
 )
 
-export default HeroSocialIcons
+export default HeroSocialIcon

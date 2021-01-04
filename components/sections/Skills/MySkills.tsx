@@ -1,5 +1,5 @@
 import { Badge, List, ListIcon, ListItem } from "@chakra-ui/react"
-import EmailIcon from "@common/icons/socials/email-icon"
+import EmailIcon from "@common/icons/email-icon"
 import data from "@configs/Skills/my-skills"
 
 const MySkills = () => (

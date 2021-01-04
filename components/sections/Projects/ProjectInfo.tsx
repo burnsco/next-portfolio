@@ -1,22 +1,20 @@
-import {
-  Button,
-  chakra,
-  Flex,
-  Heading,
-  HStack,
-  Stack,
-  Text
-} from "@chakra-ui/react"
-import GitButtonIcon from "@common/icons/socials/github-icon"
-import WebIcon from "@common/icons/socials/web-icon"
-import RenderIcon from "@common/render-icon/RenderIcon"
+import { Button, Flex, Heading, Stack, Text } from "@chakra-ui/react"
+import GitButtonIcon from "@common/icons/github-icon"
+import WebIcon from "@common/icons/web-icon"
+import dynamic from "next/dynamic"
+
+const RedditCloneIconsList = dynamic(
+  () => import("@common/icons/RedditCloneIconsList")
+)
+const QuickEatsIconsList = dynamic(
+  () => import("@common/icons/QuickEatsIconsList")
+)
 
 const ProjectInfo: React.FC<ProjectInfoType> = ({
   description,
   webUrl,
   gitUrl,
-  title,
-  builtWith
+  title
 }) => (
   <Flex flexDirection="column" p={[4, 5, 6]}>
     <Heading
@@ -28,13 +26,11 @@ const ProjectInfo: React.FC<ProjectInfoType> = ({
       {title}
     </Heading>
 
-    <HStack spacing={4}>
-      {builtWith.map(item => (
-        <chakra.span key={`BuiltWith-${item.title}`}>
-          <RenderIcon iconname={item.iconName} height="1.2em" width="1.2em" />
-        </chakra.span>
-      ))}
-    </HStack>
+    {title === "Reddit Clone" ? (
+      <RedditCloneIconsList />
+    ) : (
+      <QuickEatsIconsList />
+    )}
 
     {description.map(p => (
       <Text

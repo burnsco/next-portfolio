@@ -20,11 +20,11 @@ const IndexPage = () => (
       <ProjectsSection id="projects" />
       <MiniAppsSection id="apps" />
       <AboutSection id="about" />
-    </main>
 
-    <aside>
-      <ContactSection id="contact" />
-    </aside>
+      <aside>
+        <ContactSection id="contact" />
+      </aside>
+    </main>
 
     <footer>
       <Footer />

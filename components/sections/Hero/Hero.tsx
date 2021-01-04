@@ -36,6 +36,7 @@ const Hero = () => (
         <chakra.h2 fontWeight={600} color="white">
           Full-stack Developer
         </chakra.h2>
+
         <HeroSocialIcons />
       </Container>
       <AnimatedWave bottom />
