@@ -1,6 +1,6 @@
 export default {
   title: "Random facts about me",
-  iconName: "react",
+  icon: "react",
   facts: [
     {
       title:

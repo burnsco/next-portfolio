@@ -1,6 +1,6 @@
 export default {
   title: "More about me",
-  iconName: "react",
+  icon: "react",
   excerpt: [
     {
       text:

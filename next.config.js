@@ -5,6 +5,7 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 })
 
 module.exports = {
+  target: "serverless",
   reactStrictMode: true,
   webpack: config => ({
     ...config,

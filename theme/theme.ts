@@ -36,7 +36,7 @@ const textStyles = {
   "heading-2": {
     textAlign: "center",
     fontWeight: "bold",
-    letterSpacing: "-0.015em",
+    letterSpacing: "tight",
     lineHeight: "1.24",
     fontSize: { base: "1.75rem", md: "2.75rem" }
   },

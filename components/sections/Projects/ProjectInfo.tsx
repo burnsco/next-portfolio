@@ -17,12 +17,7 @@ const ProjectInfo: React.FC<ProjectInfoType> = ({
   title
 }) => (
   <Flex flexDirection="column" p={[4, 5, 6]}>
-    <Heading
-      color="bt3"
-      mb={[2, 3]}
-      fontSize={["xl", "2xl", "3xl"]}
-      fontWeight="900"
-    >
+    <Heading mb={[2, 3]} fontSize={["xl", "2xl", "3xl"]} fontWeight="900">
       {title}
     </Heading>
 
@@ -36,7 +31,7 @@ const ProjectInfo: React.FC<ProjectInfoType> = ({
       <Text
         fontSize={{ base: "xs", md: "sm" }}
         key={`paragraph-${p.text}`}
-        my="2"
+        my={4}
       >
         {p.text}
       </Text>

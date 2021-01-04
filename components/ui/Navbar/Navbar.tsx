@@ -18,7 +18,7 @@ function HeaderContent() {
       width="100%"
     >
       <Flex
-        aria-label="Primary"
+        aria-label="Primary Navigation"
         as="nav"
         justifyContent="space-evenly"
         alignItems="center"
