@@ -1,12 +1,11 @@
 import { chakra } from "@chakra-ui/react"
-import { Container } from "next/app"
 
 const SectionContainer: React.FC<{
   id: string
   children: React.ReactNode
   background?: string
 }> = ({ id, children, background, ...props }) => (
-  <Container as="main">
+  <main>
     <chakra.section
       aria-label={`${id} Section`}
       bg={background}
@@ -15,7 +14,7 @@ const SectionContainer: React.FC<{
     >
       {children}
     </chakra.section>
-  </Container>
+  </main>
 )
 
 export default SectionContainer

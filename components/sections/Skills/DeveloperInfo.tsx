@@ -1,5 +1,5 @@
 import { List, ListIcon, ListItem } from "@chakra-ui/react"
-import EmailIcon from "@common/icons/email-icon"
+import EmailIcon from "@common/Icons/email-icon"
 import data from "@configs/Skills/about-me"
 
 export default function DeveloperInfo() {
