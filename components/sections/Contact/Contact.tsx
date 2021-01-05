@@ -1,7 +1,13 @@
 import { EmailIcon } from "@chakra-ui/icons"
-import { Button, chakra, Container, Flex, Heading } from "@chakra-ui/react"
-import { ChakraField } from "@common/index"
-import { Formik } from "formik"
+import {
+  Button,
+  chakra,
+  Container,
+  Flex,
+  Heading,
+  Input,
+  Textarea
+} from "@chakra-ui/react"
 
 const Contact = () => (
   <Container maxW="4xl" as="aside">
@@ -22,48 +28,32 @@ const Contact = () => (
       >
         Contact
       </Heading>
-      <Formik
-        initialValues={{ name: "", email: "", message: "" }}
-        onSubmit={(_, actions) => {
-          setTimeout(() => {
-            actions.setSubmitting(false)
-          }, 1000)
-        }}
+      <chakra.form
+        width={["95%", "75%", "65%", "50%"]}
+        flexDirection="column"
+        justifyContent="center"
+        justifyItems="center"
+        alignItems="center"
+        as="form"
+        name="contact"
+        method="POST"
+        action="/success"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
       >
-        {props => (
-          <chakra.form
-            width={["95%", "75%", "65%", "50%"]}
-            flexDirection="column"
-            justifyContent="center"
-            justifyItems="center"
-            alignItems="center"
-            as="form"
-            name="contact"
-            method="POST"
-            action="/success"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-          >
-            <input type="hidden" name="bot-field" />
-            <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="bot-field" />
+        <input type="hidden" name="form-name" value="contact" />
 
-            <ChakraField type="text" name="name" label="name" />
+        <Input type="text" name="name" label="name" />
 
-            <ChakraField name="email" type="email" label="email" />
+        <Input name="email" type="email" label="email" />
 
-            <ChakraField name="message" label="message" textarea />
+        <Textarea name="message" label="message" textarea />
 
-            <Button
-              leftIcon={<EmailIcon />}
-              mt={2}
-              type="submit"
-              isLoading={props.isSubmitting}
-            >
-              Submit
-            </Button>
-          </chakra.form>
-        )}
-      </Formik>
+        <Button leftIcon={<EmailIcon />} mt={2} type="submit">
+          Submit
+        </Button>
+      </chakra.form>
     </Flex>
   </Container>
 )

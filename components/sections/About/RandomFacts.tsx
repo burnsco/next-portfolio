@@ -7,7 +7,6 @@ export default function RandomFacts() {
     <List>
       <ListItem textStyle="list-heading">
         <ListIcon as={EmailIcon} boxSize={5} color="red.500" />
-
         {data.title}
       </ListItem>
 

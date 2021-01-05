@@ -119,11 +119,6 @@ const theme = extendTheme({
       li: {
         color: "primary",
         fontSize: { base: "xs", md: "sm" }
-      },
-      ".headroom--pinned": {
-        boxShadow: "lg",
-        bg: "hero1",
-        zIndex: 9
       }
     }
   },

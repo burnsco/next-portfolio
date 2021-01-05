@@ -1,14 +1,14 @@
-import { Container, SectionContainer, SectionHeading } from "@common/index"
+import { Layout } from "@ui/index"
 import PropTypes from "prop-types"
-import Skills from "./Skills"
+import React from "react"
+import DeveloperInfo from "./DeveloperInfo"
+import MySkills from "./MySkills"
 
 const SkillsContainer: React.FC<{ id: string }> = ({ id }) => (
-  <SectionContainer id={id} background="linear-gradient(white,#F9F9F9)">
-    <Container>
-      <SectionHeading title="Skills" />
-      <Skills />
-    </Container>
-  </SectionContainer>
+  <Layout background="linear-gradient(white,#F9F9F9)" id={id}>
+    <DeveloperInfo />
+    <MySkills />
+  </Layout>
 )
 
 export default SkillsContainer

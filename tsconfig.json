@@ -24,7 +24,9 @@
       "@ui/*": ["components/ui/*"],
       "@configs/*": ["configs/*"],
       "@pages/*": ["pages/*"],
-      "@theme/*": ["theme/*"],
+      "@lib/*": ["lib/*"],
+      "@utils/*": ["utils/*"],
+      "@theme/*": ["theme/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js"],

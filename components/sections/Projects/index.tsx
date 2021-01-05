@@ -1,11 +1,10 @@
-import { SectionContainer, SectionHeading } from "@common/index"
 import Projects from "@sections/Projects/Projects"
+import { Layout } from "@ui/index"
 
 const ProjectsContainer: React.FC<{ id: string }> = ({ id }) => (
-  <SectionContainer id={id} background="linear-gradient(#F9F9F9,#F1F1F1)">
-    <SectionHeading title="Projects" subHeading="Full-stack apps" />
+  <Layout background="linear-gradient(#F9F9F9,#F1F1F1)" id={id}>
     <Projects />
-  </SectionContainer>
+  </Layout>
 )
 
 export default ProjectsContainer

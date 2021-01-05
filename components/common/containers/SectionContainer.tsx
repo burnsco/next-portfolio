@@ -1,28 +1,21 @@
 import { chakra } from "@chakra-ui/react"
-import { ScrollContext } from "@common/scroll-sections/context"
-import { useContext, useMemo } from "react"
+import { Container } from "next/app"
 
 const SectionContainer: React.FC<{
   id: string
-  meta?: unknown
   children: React.ReactNode
   background?: string
-}> = ({ id, children, background, meta, ...props }) => {
-  const { registerRef } = useContext(ScrollContext)
-
-  const ref = useMemo(() => registerRef({ id, meta }), [id, meta, registerRef])
-
-  return (
+}> = ({ id, children, background, ...props }) => (
+  <Container as="main">
     <chakra.section
       aria-label={`${id} Section`}
       bg={background}
-      ref={ref}
       id={id}
       {...props}
     >
       {children}
     </chakra.section>
-  )
-}
+  </Container>
+)
 
 export default SectionContainer

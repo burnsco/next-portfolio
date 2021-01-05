@@ -3,7 +3,8 @@ import CustomEmailIcon from "@common/icons/email-icon"
 import IcqIcon from "@common/icons/icq-icon"
 import AnimatedTelegramIcon from "@common/icons/telegram-icon"
 import { NextChakraLink } from "@common/index"
-import data from "@configs/site/socials"
+import data from "@configs/site-config/socials"
+import { motion } from "framer-motion"
 import { SiGithub } from "react-icons/si"
 
 const HeroSocialIcon = () => (
@@ -18,38 +19,42 @@ const HeroSocialIcon = () => (
         aria-label={item.title}
         shouldWrapChildren
       >
-        <NextChakraLink
-          _hover={{
-            opacity: 0.8,
-            background: "#666;"
+        <motion.div
+          whileHover={{ scale: 1.2, rotate: 90 }}
+          whileTap={{
+            scale: 0.8,
+            rotate: -90,
+            borderRadius: "100%"
           }}
-          transition="all .5s"
-          height="2.5em"
-          width="2.5em"
-          borderStyle="solid"
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
-          border="1px"
-          color="#fff"
-          borderColor="#666"
-          background="#3b3d42"
-          borderRadius={4}
-          isExternal
-          aria-label={item.title}
-          href={item.url}
-          target="_blank"
-          rel="noreferrer noopener"
         >
-          {item.iconName === "email" && (
-            <Icon w={6} h={6} as={CustomEmailIcon} />
-          )}
-          {item.iconName === "github" && <Icon w={6} h={6} as={SiGithub} />}
-          {item.iconName === "telegram" && (
-            <Icon w={6} h={6} as={AnimatedTelegramIcon} />
-          )}
-          {item.iconName === "icq" && <Icon w={6} h={6} as={IcqIcon} />}
-        </NextChakraLink>
+          <NextChakraLink
+            height="2.5em"
+            width="2.5em"
+            borderStyle="solid"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            border="1px"
+            color="#fff"
+            borderColor="#666"
+            background="#3b3d42"
+            borderRadius={4}
+            isExternal
+            aria-label={item.title}
+            href={item.url}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {item.iconName === "email" && (
+              <Icon w={6} h={6} as={CustomEmailIcon} />
+            )}
+            {item.iconName === "github" && <Icon w={6} h={6} as={SiGithub} />}
+            {item.iconName === "telegram" && (
+              <Icon w={6} h={6} as={AnimatedTelegramIcon} />
+            )}
+            {item.iconName === "icq" && <Icon w={6} h={6} as={IcqIcon} />}
+          </NextChakraLink>
+        </motion.div>
       </Tooltip>
     ))}
   </Flex>

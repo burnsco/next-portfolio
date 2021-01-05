@@ -1,7 +1,5 @@
 import { ChakraProvider } from "@chakra-ui/react"
-import siteConfig from "@configs/site/site-config"
 import theme from "@theme/index"
-import { DefaultSeo } from "next-seo"
 import { AppProps } from "next/app"
 import Head from "next/head"
 
@@ -18,7 +16,6 @@ export default function App({ Component, pageProps }: AppProps) {
           rel="stylesheet"
         />
       </Head>
-      <DefaultSeo {...siteConfig.seo} />
       <ChakraProvider theme={theme} resetCSS>
         <Component {...pageProps} />
       </ChakraProvider>

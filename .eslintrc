@@ -30,7 +30,9 @@
         ["@ui/*", "components/ui/*"],
         ["@configs/*", "configs/*"],
         ["@pages/*", "pages/*"],
-        ["@theme/*", "theme/*"]
+        ["@theme/*", "theme/*"],
+        ["@utils/*", "utils/*"],
+        ["@lib/*", "lib/*"]
       ]
     }
   },
