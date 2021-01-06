@@ -1,5 +1,5 @@
 import { Badge, List, ListIcon, ListItem } from "@chakra-ui/react"
-import EmailIcon from "@common/Icons/email-icon"
+import EmailIcon from "@common/icons/email-icon"
 import { Container } from "@common/index"
 import data from "@configs/Skills/my-skills"
 import { motion } from "framer-motion"

@@ -1,15 +1,14 @@
 import { Box } from "@chakra-ui/react"
 import { Container } from "@common/index"
-import { Navbar } from "@ui/index"
+import { Header } from "@ui/index"
 import PageTransition from "./PageTransition"
 
 const PageContainer: React.FC<{
   children: React.ReactNode
-  background: string
-}> = ({ children, background }) => (
+}> = ({ children }) => (
   <>
-    <Navbar />
-    <Container bg={background} as="main" className="main-content">
+    <Header />
+    <Container as="main" className="main-content">
       <Box display={{ base: "block", md: "flex" }}>
         <div style={{ flex: 1 }}>
           <Box

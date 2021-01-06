@@ -12,14 +12,11 @@ import {
   FormLabel,
   Input,
   InputGroup,
-  InputLeftAddon,
-  InputRightAddon,
-  Select,
   Stack,
-  Textarea,
   useDisclosure
 } from "@chakra-ui/react"
 import React, { useRef } from "react"
+import { AutoResizeTextArea } from ".."
 
 export default function ContactDrawer() {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -45,46 +42,26 @@ export default function ContactDrawer() {
         <DrawerOverlay>
           <DrawerContent>
             <DrawerCloseButton />
-            <DrawerHeader borderBottomWidth="1px">
-              Create a new account
-            </DrawerHeader>
+            <DrawerHeader borderBottomWidth="1px">Contact Me</DrawerHeader>
 
-            <DrawerBody>
+            <DrawerBody mt={4}>
               <form id="contact-form">
                 <Stack spacing="24px">
                   <Box>
                     <FormLabel htmlFor="username">Name</FormLabel>
-                    <Input
-                      ref={firstField}
-                      id="username"
-                      placeholder="Please enter user name"
-                    />
+                    <Input ref={firstField} id="username" />
                   </Box>
 
                   <Box>
-                    <FormLabel htmlFor="url">Url</FormLabel>
+                    <FormLabel htmlFor="url">E-Mail</FormLabel>
                     <InputGroup>
-                      <InputLeftAddon>http://</InputLeftAddon>
-                      <Input
-                        type="url"
-                        id="url"
-                        placeholder="Please enter domain"
-                      />
-                      <InputRightAddon>.com</InputRightAddon>
+                      <Input type="email" id="email" />
                     </InputGroup>
                   </Box>
 
                   <Box>
-                    <FormLabel htmlFor="owner">Select Owner</FormLabel>
-                    <Select id="owner" defaultValue="segun">
-                      <option value="segun">Segun Adebayo</option>
-                      <option value="kola">Kola Tioluwani</option>
-                    </Select>
-                  </Box>
-
-                  <Box>
-                    <FormLabel htmlFor="desc">Description</FormLabel>
-                    <Textarea id="desc" />
+                    <FormLabel htmlFor="message">Message</FormLabel>
+                    <AutoResizeTextArea id="message" />
                   </Box>
                 </Stack>
               </form>

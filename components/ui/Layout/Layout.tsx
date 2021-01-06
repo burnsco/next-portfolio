@@ -5,9 +5,8 @@ import PageContainer from "./PageContainer"
 const Layout: React.FC<{
   children: React.ReactNode
   id: string
-  background: string
-}> = ({ children, id, background }) => (
-  <PageContainer background={background}>
+}> = ({ children, id }) => (
+  <PageContainer>
     <SectionContainer id={id}>{children}</SectionContainer>
   </PageContainer>
 )

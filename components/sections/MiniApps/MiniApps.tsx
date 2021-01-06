@@ -30,7 +30,7 @@ const MiniAppsCards = () => {
       <Grid gap={2} gridTemplateColumns="repeat(auto-fit, minmax(180px, 1fr))">
         {data.map(app => (
           <MiniAppCard key={`mini-apps-${app.title}`}>
-            <Text fontWeight="bold" p={1} textAlign="center" color="text">
+            <Text fontWeight="bold" p={1} textAlign="center">
               {app.title}
             </Text>
 
@@ -47,7 +47,7 @@ const MiniAppsCards = () => {
                 {app.excerpt}
               </Text>
 
-              <HStack spacing={4} align="flex-end" mt={1}>
+              <HStack spacing={4} mt={1}>
                 <Button
                   variant="outline"
                   as="a"

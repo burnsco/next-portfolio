@@ -11,7 +11,7 @@
   "plugins": ["react-hooks", "@typescript-eslint/eslint-plugin"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 10,
+    "ecmaVersion": 2020,
     "ecmaFeatures": {
       "jsx": true
     },
@@ -30,9 +30,7 @@
         ["@ui/*", "components/ui/*"],
         ["@configs/*", "configs/*"],
         ["@pages/*", "pages/*"],
-        ["@theme/*", "theme/*"],
-        ["@utils/*", "utils/*"],
-        ["@lib/*", "lib/*"]
+        ["@theme/*", "theme/*"]
       ]
     }
   },

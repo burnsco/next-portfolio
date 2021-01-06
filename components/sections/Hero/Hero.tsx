@@ -1,11 +1,17 @@
-import { chakra, Flex, Heading, Img } from "@chakra-ui/react"
-import { AnimatedWave, Container, HeroSocialIcons } from "@common/index"
+import { Box, chakra, Heading, Img } from "@chakra-ui/react"
+import { Container, HeroSocialIcons } from "@common/index"
 
 const Hero = () => (
-  <Flex minHeight="100vh" flexDir="column" align="center" justify="center">
+  <Box
+    display="flex"
+    minHeight="100%"
+    flexDir="column"
+    align="center"
+    justify="center"
+  >
     <Container
+      mt={10}
       display="flex"
-      mb={6}
       bg="translucent"
       flexDir="column"
       alignItems="center"
@@ -36,8 +42,7 @@ const Hero = () => (
 
       <HeroSocialIcons />
     </Container>
-    <AnimatedWave bottom />
-  </Flex>
+  </Box>
 )
 
 export default Hero

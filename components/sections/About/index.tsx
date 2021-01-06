@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import About from "./About"
 
 const AboutContainer: React.FC<{ id: string }> = ({ id }) => (
-  <Layout background="linear-gradient(#E9E9E9, white)" id={id}>
+  <Layout id={id}>
     <About />
   </Layout>
 )
