@@ -1,6 +1,4 @@
-import dynamic from "next/dynamic"
-
-const HeroSection = dynamic(() => import("@sections/Hero"))
+import HeroSection from "@sections/Hero"
 
 const IndexPage = () => <HeroSection id="home" />
 

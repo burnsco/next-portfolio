@@ -20,14 +20,15 @@ const Hero = () => (
       <Img
         objectPosition="50% 50%"
         objectFit="cover"
-        boxSize="130px"
+        w="130px"
+        h="130px"
         aria-label="Me"
         boxShadow="avatar"
         transform="rotate(-37deg)"
         borderRadius="full"
         size="2xl"
         mb="3"
-        loading="eager"
+        loading="lazy"
         name="Corey Burns"
         src="/images/me.webp"
       />
