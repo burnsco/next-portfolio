@@ -1,14 +1,21 @@
-import { SectionContainer } from "@common/index"
+import { Flex } from "@chakra-ui/react"
+import { ScrollingProvider } from "@common/scroll-sections/index"
 import PropTypes from "prop-types"
-import PageContainer from "./PageContainer"
 
-const Layout: React.FC<{
-  children: React.ReactNode
-  id: string
-}> = ({ children, id }) => (
-  <PageContainer>
-    <SectionContainer id={id}>{children}</SectionContainer>
-  </PageContainer>
+const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <>
+    <Flex
+      flexDirection="column"
+      justifyContent="center"
+      minWidth="100%"
+      minHeight="100vh"
+      wordBreak="break-word"
+    >
+      <ScrollingProvider debounceDelay={50} scrollBehavior="smooth" offset={0}>
+        {children}
+      </ScrollingProvider>
+    </Flex>
+  </>
 )
 
 Layout.propTypes = {

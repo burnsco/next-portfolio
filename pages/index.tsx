@@ -1,5 +1,31 @@
-import HeroSection from "@sections/Hero"
+import { Layout } from "@ui/index"
+import dynamic from "next/dynamic"
 
-const IndexPage = () => <HeroSection id="home" />
+const HeroSection = dynamic(() => import("@sections/Hero"))
+const SkillsSection = dynamic(() => import("@sections/Skills"))
+const ProjectsSection = dynamic(() => import("@sections/Projects"))
+const MiniAppsSection = dynamic(() => import("@sections/MiniApps"))
+const AboutSection = dynamic(() => import("@sections/About"))
+
+const Footer = dynamic(() => import("@ui/Footer"))
+
+const IndexPage = () => (
+  <Layout>
+    <header>
+      <HeroSection id="home" />
+    </header>
+
+    <main>
+      <SkillsSection id="skills" />
+      <ProjectsSection id="projects" />
+      <MiniAppsSection id="apps" />
+      <AboutSection id="about" />
+    </main>
+
+    <footer>
+      <Footer />
+    </footer>
+  </Layout>
+)
 
 export default IndexPage

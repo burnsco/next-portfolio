@@ -7,7 +7,6 @@ const styles = {
       height: "100%",
       width: "100%",
       position: "relative",
-      scrollBehavior: "smooth",
       fontSize: "md"
     }
   }
