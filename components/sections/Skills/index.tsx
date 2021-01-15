@@ -1,14 +1,14 @@
-import { Layout } from "@ui/index"
+import { SectionContainer } from "@common/index"
 import PropTypes from "prop-types"
 import React from "react"
 import DeveloperInfo from "./DeveloperInfo"
 import MySkills from "./MySkills"
 
 const SkillsContainer: React.FC<{ id: string }> = ({ id }) => (
-  <Layout id={id}>
+  <SectionContainer id={id}>
     <DeveloperInfo />
     <MySkills />
-  </Layout>
+  </SectionContainer>
 )
 
 export default SkillsContainer

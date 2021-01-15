@@ -1,11 +1,11 @@
-import { Layout } from "@ui/index"
+import { SectionContainer } from "@common/index"
 import PropTypes from "prop-types"
 import About from "./About"
 
 const AboutContainer: React.FC<{ id: string }> = ({ id }) => (
-  <Layout id={id}>
+  <SectionContainer id={id}>
     <About />
-  </Layout>
+  </SectionContainer>
 )
 
 AboutContainer.propTypes = {

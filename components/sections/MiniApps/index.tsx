@@ -1,11 +1,11 @@
-import { Layout } from "@ui/index"
+import { SectionContainer } from "@common/index"
 import PropTypes from "prop-types"
 import MiniAppsCards from "./MiniApps"
 
 export const MiniApps: React.FC<{ id: string }> = ({ id }) => (
-  <Layout id={id}>
+  <SectionContainer id={id}>
     <MiniAppsCards />
-  </Layout>
+  </SectionContainer>
 )
 
 export default MiniApps

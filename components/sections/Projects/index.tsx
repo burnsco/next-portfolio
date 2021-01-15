@@ -1,10 +1,10 @@
+import { SectionContainer } from "@common/index"
 import Projects from "@sections/Projects/Projects"
-import { Layout } from "@ui/index"
 
 const ProjectsContainer: React.FC<{ id: string }> = ({ id }) => (
-  <Layout id={id}>
+  <SectionContainer id={id}>
     <Projects />
-  </Layout>
+  </SectionContainer>
 )
 
 export default ProjectsContainer
