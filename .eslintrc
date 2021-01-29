@@ -1,4 +1,6 @@
 {
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["react-hooks", "@typescript-eslint/eslint-plugin"],
   "extends": [
     "plugin:import/recommended",
     "plugin:import/typescript",
@@ -8,8 +10,6 @@
     "prettier/react",
     "prettier/@typescript-eslint"
   ],
-  "plugins": ["react-hooks", "@typescript-eslint/eslint-plugin"],
-  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2020,
     "ecmaFeatures": {
@@ -60,12 +60,6 @@
     "@typescript-eslint/ban-types": "off",
     "@typescript-eslint/ban-ts-comment": "off"
   },
-  "overrides": [
-    {
-      "files": ["*.ts", "*.tsx"],
-      "parserOptions": {
-        "project": ["tsconfig.json"]
-      }
-    }
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }
