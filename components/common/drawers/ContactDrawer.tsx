@@ -15,8 +15,7 @@ import {
   Stack,
   useDisclosure
 } from "@chakra-ui/react"
-import React, { useRef } from "react"
-import { AutoResizeTextArea } from ".."
+import { useRef } from "react"
 
 export default function ContactDrawer() {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -61,7 +60,9 @@ export default function ContactDrawer() {
 
                   <Box>
                     <FormLabel htmlFor="message">Message</FormLabel>
-                    <AutoResizeTextArea id="message" />
+                    <InputGroup>
+                      <Input type="textarea" id="message" />
+                    </InputGroup>
                   </Box>
                 </Stack>
               </form>
