@@ -32,7 +32,6 @@ export default function HeaderContent() {
           href={sec.href}
           fontSize={["xs", "sm", "md"]}
           aria-label={`Page ${sec.id}`}
-          fontWeight={500}
           display="block"
           key={sec.id}
         >
