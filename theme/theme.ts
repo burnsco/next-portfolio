@@ -7,7 +7,8 @@ const styles = {
       height: "100%",
       width: "100%",
       position: "relative",
-      fontSize: "md"
+      fontSize: "md",
+      lineHeight: "tall"
     },
     ".active": {
       color: "#F39237"
@@ -38,9 +39,7 @@ const textStyles = {
   },
   "list-heading": {
     fontWeight: 800,
-    opacity: 0.8,
-    color: "oliveblack",
-    fontSize: { base: "md", md: "lg" },
+    my: 4,
     mb: 1
   },
   "heading-2": {

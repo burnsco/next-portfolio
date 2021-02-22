@@ -3,7 +3,7 @@ import EmailIcon from "@common/icons/email-icon"
 import data from "@configs/Skills/my-skills"
 
 const MySkills = () => (
-  <Box border="2px solid orange" p={2}>
+  <Box>
     {data.map(item => (
       <List key={`my-skills-${item.title}`}>
         <ListItem textStyle="list-heading">
@@ -14,6 +14,7 @@ const MySkills = () => (
           {item.skills.map(skill => (
             <Badge
               m={1}
+              fontSize="10px"
               variant="solid"
               colorScheme="green"
               key={`MySkills-badge-${skill.title}`}

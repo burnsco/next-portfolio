@@ -1,5 +1,5 @@
 export default {
-  title: "More about Me",
+  title: "Developer Info",
   iconName: "javascript",
   excerpt: [
     {

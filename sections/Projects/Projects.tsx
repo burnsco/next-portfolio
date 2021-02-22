@@ -11,7 +11,7 @@ const Projects = () => (
   <Container flexDir="column">
     <Grid gap={6}>
       {data.map((project: any) => (
-        <Box key={`MainProject-${project.title}`} p={[2, 3]}>
+        <Box key={`MainProject-${project.title}`} p={[2, 3]} my="4rem">
           <Flex flexDir="column">
             <ProjectCard>
               {project.video === "reddit" ? (

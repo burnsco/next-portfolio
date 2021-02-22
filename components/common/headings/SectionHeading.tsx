@@ -8,12 +8,7 @@ const SectionHeading: React.FC<{ title: string; subHeading?: string }> = ({
 }) => {
   const capitalizedTitle = title.charAt(0).toUpperCase() + title.slice(1)
   return (
-    <Container
-      maxW="1280px"
-      bg="transparent"
-      border="1px dotted black"
-      mb={[0, 2, 4]}
-    >
+    <Container maxW="1280px" bg="transparent" mb={[0, 2]} my={8}>
       <Box maxW="760px" mx="auto" textAlign="center">
         <chakra.h1 textStyle="section-heading" mb="1">
           <chakra.span

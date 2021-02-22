@@ -3,7 +3,7 @@ import { MiniAppCard } from "@common/index"
 import data from "@configs/MiniApps/mini-apps"
 
 const MiniAppsCards = () => (
-  <Grid gap={2} gridTemplateColumns="repeat(auto-fit, minmax(180px, 1fr))">
+  <Grid gap={[2, 4]} gridTemplateColumns="repeat(auto-fit, minmax(180px, 1fr))">
     {data.map(app => (
       <MiniAppCard key={`mini-apps-${app.title}`}>
         <Text fontWeight="bold" p={1} textAlign="center">

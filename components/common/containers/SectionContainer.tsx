@@ -6,8 +6,8 @@ const SectionContainer: React.FC<{
   background?: string
 }> = ({ id, children, background, ...props }) => (
   <chakra.section
-    minH="100vh"
-    border="2px solid red"
+    border="2px dotted red"
+    minH="75vh"
     aria-label={`${id} Section`}
     bg={background}
     id={id}
