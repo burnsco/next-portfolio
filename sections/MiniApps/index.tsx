@@ -1,10 +1,14 @@
-import { SectionContainer } from "@common/index"
+import { SectionContainer, SectionHeading } from "@common/index"
+import PageContainer from "@ui/Layout/PageContainer"
 import PropTypes from "prop-types"
 import MiniAppsCards from "./MiniApps"
 
 export const MiniApps: React.FC<{ id: string }> = ({ id }) => (
   <SectionContainer id={id}>
-    <MiniAppsCards />
+    <PageContainer bg="translucent">
+      <SectionHeading title="MiniApps" />
+      <MiniAppsCards />
+    </PageContainer>
   </SectionContainer>
 )
 

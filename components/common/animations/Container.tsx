@@ -7,7 +7,7 @@ const AnimatedWave: React.FC<{ bottom?: boolean }> = ({ bottom }) => (
     left={0}
     userSelect="none"
     pointerEvents="none"
-    height="100vh"
+    height="94vh"
     width="100%"
     transform={bottom ? `matrix(1, 0, 0, -1, 0, 0)` : undefined}
   >

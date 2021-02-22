@@ -8,6 +8,9 @@ const styles = {
       width: "100%",
       position: "relative",
       fontSize: "md"
+    },
+    ".active": {
+      color: "#F39237"
     }
   }
 }

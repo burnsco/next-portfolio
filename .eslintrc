@@ -6,9 +6,7 @@
     "plugin:import/typescript",
     "plugin:react-hooks/recommended",
     "airbnb-typescript",
-    "prettier",
-    "prettier/react",
-    "prettier/@typescript-eslint"
+    "prettier"
   ],
   "parserOptions": {
     "ecmaVersion": 2020,

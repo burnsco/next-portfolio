@@ -5,16 +5,16 @@ const SectionContainer: React.FC<{
   children: React.ReactNode
   background?: string
 }> = ({ id, children, background, ...props }) => (
-  <main>
-    <chakra.section
-      aria-label={`${id} Section`}
-      bg={background}
-      id={id}
-      {...props}
-    >
-      {children}
-    </chakra.section>
-  </main>
+  <chakra.section
+    minH="100vh"
+    border="2px solid red"
+    aria-label={`${id} Section`}
+    bg={background}
+    id={id}
+    {...props}
+  >
+    {children}
+  </chakra.section>
 )
 
 export default SectionContainer

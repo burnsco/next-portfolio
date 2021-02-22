@@ -1,25 +1,20 @@
-import { chakra, useColorModeValue } from "@chakra-ui/react"
-import dynamic from "next/dynamic"
+import { chakra } from "@chakra-ui/react"
+import Headroom from "react-headroom"
+import HeaderContent from "./Content"
 
-const HeaderContent = dynamic(() => import("./Content"))
-
-function Navbar() {
-  const bg = useColorModeValue("gainsboro", "#202020")
-  return (
+const Navbar = () => (
+  <Headroom>
     <chakra.header
       id="navbar"
-      pos="fixed"
-      top="0"
       zIndex="1"
-      bg={bg}
+      bg="#292a2d"
       left="0"
       right="0"
-      boxShadow="base"
-      transition="top 0.3s"
       width="full"
     >
       <HeaderContent />
     </chakra.header>
-  )
-}
+  </Headroom>
+)
+
 export default Navbar

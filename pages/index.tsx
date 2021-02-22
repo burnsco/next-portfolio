@@ -1,11 +1,10 @@
+import AboutSection from "@sections/About"
+import HeroSection from "@sections/Hero"
+import MiniAppsSection from "@sections/MiniApps"
+import ProjectsSection from "@sections/Projects"
+import SkillsSection from "@sections/Skills"
 import { Layout } from "@ui/index"
 import dynamic from "next/dynamic"
-
-const HeroSection = dynamic(() => import("@sections/Hero"))
-const SkillsSection = dynamic(() => import("@sections/Skills"))
-const ProjectsSection = dynamic(() => import("@sections/Projects"))
-const MiniAppsSection = dynamic(() => import("@sections/MiniApps"))
-const AboutSection = dynamic(() => import("@sections/About"))
 
 const Footer = dynamic(() => import("@ui/Footer"))
 

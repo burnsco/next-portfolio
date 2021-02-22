@@ -20,7 +20,7 @@
     "baseUrl": ".",
     "paths": {
       "@common/*": ["components/common/*"],
-      "@sections/*": ["components/sections/*"],
+      "@sections/*": ["sections/*"],
       "@ui/*": ["components/ui/*"],
       "@configs/*": ["configs/*"],
       "@pages/*": ["pages/*"],

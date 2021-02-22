@@ -1,23 +1,9 @@
-import { Badge, List, ListIcon, ListItem } from "@chakra-ui/react"
+import { Badge, Box, List, ListIcon, ListItem } from "@chakra-ui/react"
 import EmailIcon from "@common/icons/email-icon"
-import { Container } from "@common/index"
 import data from "@configs/Skills/my-skills"
-import { motion } from "framer-motion"
-
-const blogVariants = {
-  enter: { transition: { staggerChildren: 0.1 } },
-  exit: { transition: { staggerChildren: 0.1 } }
-}
-
-const AnimatedContainer = motion.custom(Container)
 
 const MySkills = () => (
-  <AnimatedContainer
-    initial="initial"
-    animate="enter"
-    exit="exit"
-    variants={blogVariants}
-  >
+  <Box border="2px solid orange" p={2}>
     {data.map(item => (
       <List key={`my-skills-${item.title}`}>
         <ListItem textStyle="list-heading">
@@ -38,7 +24,7 @@ const MySkills = () => (
         </ListItem>
       </List>
     ))}
-  </AnimatedContainer>
+  </Box>
 )
 
 export default MySkills

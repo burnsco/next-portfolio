@@ -19,14 +19,7 @@ const HeroSocialIcon = () => (
         aria-label={item.title}
         shouldWrapChildren
       >
-        <motion.div
-          whileHover={{ scale: 1.2, rotate: 90 }}
-          whileTap={{
-            scale: 0.8,
-            rotate: -90,
-            borderRadius: "100%"
-          }}
-        >
+        <motion.div whileHover={{ scale: 1.1, y: -5 }}>
           <NextChakraLink
             height="2.5em"
             width="2.5em"

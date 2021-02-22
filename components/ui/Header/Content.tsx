@@ -1,12 +1,14 @@
 import {
   Flex,
   IconButton,
+  Text,
   useColorMode,
   useColorModeValue
 } from "@chakra-ui/react"
-import { ContactDrawer, NextChakraLink } from "@common/index"
+import { ContactDrawer } from "@common/index"
 import sections from "@configs/site-config/sections"
 import { FaMoon, FaSun } from "react-icons/fa"
+import { Link } from "react-scroll"
 
 function capitalizedTitle(title: string) {
   return title.charAt(0).toUpperCase() + title.slice(1)
@@ -28,15 +30,18 @@ export default function HeaderContent() {
       p={[1, 2, 3]}
     >
       {sections.map(sec => (
-        <NextChakraLink
-          href={sec.href}
+        <Text
+          color="whitesmoke"
+          fontWeight="500"
           fontSize={["xs", "sm", "md"]}
           aria-label={`Page ${sec.id}`}
           display="block"
           key={sec.id}
         >
-          {capitalizedTitle(sec.id)}
-        </NextChakraLink>
+          <Link activeClass="active" to={`${sec.id}`} spy smooth duration={500}>
+            {capitalizedTitle(sec.id)}
+          </Link>
+        </Text>
       ))}
       <ContactDrawer />
       <IconButton
