@@ -16,7 +16,7 @@ export const Container = (props: BoxProps) => {
       color={color[colorMode]}
       mx="auto"
       maxW="75rem"
-      px={{ base: "2", md: "6" }}
+      px={{ base: "2", md: "4" }}
       {...props}
     />
   )

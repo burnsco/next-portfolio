@@ -1,7 +1,9 @@
-import { Box, BoxProps } from "@chakra-ui/react"
+import { BoxProps, Flex } from "@chakra-ui/react"
 
 const SmallCard = (props: BoxProps) => (
-  <Box
+  <Flex
+    flexDirection="column"
+    h="full"
     bg="white"
     borderWidth="1px"
     borderRadius="lg"

@@ -1,12 +1,22 @@
-import { Box, Button, Grid, HStack, Img, Text } from "@chakra-ui/react"
+import { Box, Button, Flex, Grid, Img, Spacer, Text } from "@chakra-ui/react"
 import { MiniAppCard } from "@common/index"
 import data from "@configs/MiniApps/mini-apps"
 
 const MiniAppsCards = () => (
-  <Grid gap={[2, 4]} gridTemplateColumns="repeat(auto-fit, minmax(180px, 1fr))">
+  <Grid
+    py={8}
+    gap={[2, 4]}
+    gridTemplateColumns="repeat(auto-fit, minmax(180px, 1fr))"
+  >
     {data.map(app => (
       <MiniAppCard key={`mini-apps-${app.title}`}>
-        <Text fontWeight="bold" p={1} textAlign="center">
+        <Text
+          fontWeight="bold"
+          fontSize="xl"
+          opacity={0.7}
+          p={1}
+          textAlign="center"
+        >
           {app.title}
         </Text>
 
@@ -17,13 +27,13 @@ const MiniAppsCards = () => (
           alt={`mini app ${app.title}`}
           objectFit="cover"
         />
-
-        <Box p={4}>
-          <Text fontSize={{ base: "xs", md: "sm" }} opacity={0.8}>
+        <Flex flexDir="column" h="full" p={3}>
+          <Box fontSize={{ base: "xs", md: "sm" }} py={6} opacity={0.8}>
             {app.excerpt}
-          </Text>
+          </Box>
+          <Spacer />
 
-          <HStack spacing={4} mt={1}>
+          <Flex>
             <Button
               variant="outline"
               as="a"
@@ -33,17 +43,18 @@ const MiniAppsCards = () => (
             >
               Source
             </Button>
-
+            <Spacer />
             <Button
               as="a"
+              colorScheme="whatsapp"
               href={app.webUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
               Demo
             </Button>
-          </HStack>
-        </Box>
+          </Flex>
+        </Flex>
       </MiniAppCard>
     ))}
   </Grid>

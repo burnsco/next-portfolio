@@ -1,4 +1,12 @@
-import { Button, Flex, Heading, Stack, Text } from "@chakra-ui/react"
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  HStack,
+  Spacer,
+  Text
+} from "@chakra-ui/react"
 import GitButtonIcon from "@common/icons/github-icon"
 import WebIcon from "@common/icons/web-icon"
 import dynamic from "next/dynamic"
@@ -17,32 +25,37 @@ const ProjectInfo: React.FC<ProjectInfoType> = ({
   title
 }) => (
   <Flex flexDirection="column" p={[4, 5, 6]}>
-    <Heading
-      color="bt3"
-      mb={[2, 3]}
-      fontSize={["xl", "2xl", "3xl"]}
-      fontWeight="900"
-    >
-      {title}
-    </Heading>
-
-    {title === "Reddit Clone" ? (
-      <RedditCloneIconsList />
-    ) : (
-      <QuickEatsIconsList />
-    )}
-
-    {description.map(p => (
-      <Text
-        fontSize={{ base: "xs", md: "sm" }}
-        key={`paragraph-${p.text}`}
-        my="2"
+    <HStack>
+      <Text>Title : </Text>
+      <Heading
+        color="textMuted"
+        mb={[2, 3]}
+        fontSize={["xl", "2xl", "3xl"]}
+        fontWeight="900"
       >
-        {p.text}
-      </Text>
-    ))}
-
-    <Stack mt={3} dir="row" spacing={4} align="center">
+        {title}
+      </Heading>
+    </HStack>
+    <HStack>
+      <Text>Tech : </Text>
+      {title === "Reddit Clone" ? (
+        <RedditCloneIconsList />
+      ) : (
+        <QuickEatsIconsList />
+      )}
+    </HStack>
+    <Box p={4}>
+      {description.map(p => (
+        <Text
+          fontSize={{ base: "xs", md: "sm" }}
+          key={`paragraph-${p.text}`}
+          my="2"
+        >
+          {p.text}
+        </Text>
+      ))}
+    </Box>
+    <Flex p={6} maxW="md" w="full">
       <Button
         colorScheme="facebook"
         leftIcon={<GitButtonIcon />}
@@ -54,9 +67,9 @@ const ProjectInfo: React.FC<ProjectInfoType> = ({
       >
         Source
       </Button>
-
+      <Spacer />
       <Button
-        colorScheme="twitter"
+        colorScheme="purple"
         leftIcon={<WebIcon />}
         variant="solid"
         as="a"
@@ -66,7 +79,7 @@ const ProjectInfo: React.FC<ProjectInfoType> = ({
       >
         Demo
       </Button>
-    </Stack>
+    </Flex>
   </Flex>
 )
 

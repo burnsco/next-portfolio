@@ -26,6 +26,7 @@ export default function ContactDrawer() {
     <>
       <Button
         ref={btnRef}
+        size="md"
         leftIcon={<EmailIcon />}
         colorScheme="teal"
         onClick={onOpen}

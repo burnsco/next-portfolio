@@ -1,12 +1,12 @@
-import { Grid } from "@chakra-ui/react"
+import { SimpleGrid } from "@chakra-ui/react"
 import AboutMe from "./Me"
 import RandomFacts from "./RandomFacts"
 
 const About = () => (
-  <Grid gridTemplateColumns="repeat(auto-fit, minmax(320px, 1fr))">
+  <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} py="4">
     <AboutMe />
     <RandomFacts />
-  </Grid>
+  </SimpleGrid>
 )
 
 export default About

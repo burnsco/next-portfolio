@@ -38,7 +38,8 @@ const textStyles = {
     fontSize: { base: "2rem", sm: "2.5rem", md: "2.75rem" }
   },
   "list-heading": {
-    fontWeight: 800,
+    fontWeight: "bold",
+    letterSpacing: "tight",
     my: 4,
     mb: 1
   },

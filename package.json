@@ -67,6 +67,7 @@
     "react-dom": "^17.0.1",
     "react-headroom": "^3.1.0",
     "react-icons": "^4.2.0",
+    "react-intersection-observer": "^8.31.0",
     "react-scroll": "^1.8.1",
     "smoothscroll-polyfill": "^0.4.4",
     "yaml-loader": "^0.6.0"
