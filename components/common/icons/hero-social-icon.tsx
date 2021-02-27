@@ -1,4 +1,4 @@
-import { Flex, Icon, Tooltip } from "@chakra-ui/react"
+import { Box, Flex, Icon, Tooltip } from "@chakra-ui/react"
 import CustomEmailIcon from "@common/icons/email-icon"
 import IcqIcon from "@common/icons/icq-icon"
 import AnimatedTelegramIcon from "@common/icons/telegram-icon"
@@ -6,6 +6,8 @@ import { NextChakraLink } from "@common/index"
 import data from "@configs/site-config/socials"
 import { motion } from "framer-motion"
 import { SiGithub } from "react-icons/si"
+
+const MotionHoverBox = motion(Box)
 
 const HeroSocialIcon = () => (
   <Flex mt={2} w="12em" justify="space-evenly">
@@ -19,7 +21,7 @@ const HeroSocialIcon = () => (
         aria-label={item.title}
         shouldWrapChildren
       >
-        <motion.div whileHover={{ scale: 1.1, y: -5 }}>
+        <MotionHoverBox whileHover={{ scale: 1.1, y: -5 }}>
           <NextChakraLink
             height="2.5em"
             width="2.5em"
@@ -47,7 +49,7 @@ const HeroSocialIcon = () => (
             )}
             {item.iconName === "icq" && <Icon w={6} h={6} as={IcqIcon} />}
           </NextChakraLink>
-        </motion.div>
+        </MotionHoverBox>
       </Tooltip>
     ))}
   </Flex>

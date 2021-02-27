@@ -1,17 +1,6 @@
 import { Icon, IconProps } from "@chakra-ui/icons"
 import { motion } from "framer-motion"
 
-const icon = {
-  hidden: {
-    pathLength: 0,
-    fill: "rgba(255, 255, 255, 0)"
-  },
-  visible: {
-    pathLength: 1,
-    fill: "rgba(255, 255, 255, 1)"
-  }
-}
-
 const CustomGithubIcon = (props: IconProps) => (
   <Icon viewBox="0 0 24 24" {...props}>
     <motion.path
