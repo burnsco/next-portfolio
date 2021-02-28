@@ -1,7 +1,10 @@
 import { BoxProps, Flex } from "@chakra-ui/react"
+import { motion } from "framer-motion"
+
+const AnimatedSmallCard = motion(Flex)
 
 const SmallCard = (props: BoxProps) => (
-  <Flex
+  <AnimatedSmallCard
     flexDirection="column"
     h="full"
     bg="white"

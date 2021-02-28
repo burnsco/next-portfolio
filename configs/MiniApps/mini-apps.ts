@@ -1,5 +1,6 @@
 export default [
   {
+    id: 0.1,
     title: "Dice Roll",
     section: "MiniApps",
     webUrl: "https://mini-app-containerapp.vercel.app/dice/",
@@ -8,6 +9,7 @@ export default [
     image: "/images/dice.webp"
   },
   {
+    id: 0.3,
     title: "Lottery Numbers",
     section: "MiniApps",
     webUrl: "https://mini-app-containerapp.vercel.app/lottery/",
@@ -17,6 +19,7 @@ export default [
     image: "/images/lottery.webp"
   },
   {
+    id: 0.5,
     title: "Luggage Tracker",
     section: "MiniApps",
     webUrl: "https://mini-app-containerapp.vercel.app/luggage/",
@@ -25,6 +28,7 @@ export default [
     image: "/images/luggage.webp"
   },
   {
+    id: 0.7,
     title: "Pizza Calculator",
     section: "MiniApps",
     webUrl: "https://mini-app-containerapp.vercel.app/pizza/",
@@ -33,6 +37,7 @@ export default [
     image: "/images/pizza.webp"
   },
   {
+    id: 0.9,
     title: "Monsters",
     section: "MiniApps",
     webUrl: "https://mini-app-containerapp.vercel.app/rolodex/",
@@ -42,6 +47,7 @@ export default [
     image: "/images/monsters.webp"
   },
   {
+    id: 0.5,
     title: "Coin Flip",
     section: "MiniApps",
     webUrl: "https://mini-app-containerapp.vercel.app/coin/",

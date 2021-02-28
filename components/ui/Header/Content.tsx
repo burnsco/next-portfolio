@@ -1,7 +1,14 @@
-import { Flex, Text } from "@chakra-ui/react"
+import {
+  Flex,
+  IconButton,
+  Text,
+  useColorMode,
+  useColorModeValue
+} from "@chakra-ui/react"
 import { ContactDrawer } from "@common/index"
 import sections from "@configs/site-config/sections"
 import { motion } from "framer-motion"
+import { FaMoon, FaSun } from "react-icons/fa"
 import { Link } from "react-scroll"
 
 function capitalizedTitle(title: string) {
@@ -9,6 +16,9 @@ function capitalizedTitle(title: string) {
 }
 
 export default function HeaderContent() {
+  const { toggleColorMode: toggleMode } = useColorMode()
+  const SwitchIcon = useColorModeValue(FaMoon, FaSun)
+  const text = useColorModeValue("dark", "light")
   return (
     <Flex
       aria-label="Primary Navigation"
@@ -42,6 +52,16 @@ export default function HeaderContent() {
         </motion.div>
       ))}
       <ContactDrawer />
+      <IconButton
+        size="md"
+        fontSize="lg"
+        aria-label={`Switch to ${text} mode`}
+        variant="ghost"
+        color="white"
+        ml={{ base: "0", md: "3" }}
+        onClick={toggleMode}
+        icon={<SwitchIcon />}
+      />
     </Flex>
   )
 }

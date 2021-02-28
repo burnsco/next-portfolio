@@ -35,7 +35,7 @@ const textStyles = {
     fontWeight: 900,
     letterSpacing: "tight",
     lineHeight: "1.24",
-    fontSize: { base: "2rem", sm: "2.5rem", md: "2.75rem" }
+    fontSize: { base: "2.5rem", sm: "2.7rem", md: "2.9rem" }
   },
   "list-heading": {
     fontWeight: "bold",
@@ -77,6 +77,7 @@ const layerStyles = {
 }
 
 const theme = extendTheme({
+  initialColorMode: "light",
   styles,
   layerStyles,
   textStyles,
