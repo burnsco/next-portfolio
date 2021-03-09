@@ -1,6 +1,6 @@
 import { Center, chakra, Flex, Heading, Img } from "@chakra-ui/react"
 import { AnimatedWave, HeroSocialIcons } from "@common/index"
-import Navbar from "@ui/Header"
+import Navbar from "@ui/Header/Navbar"
 
 const Hero = () => (
   <>

@@ -6,7 +6,7 @@ import SkillsSection from "@sections/Skills"
 import { Layout } from "@ui/index"
 import dynamic from "next/dynamic"
 
-const Footer = dynamic(() => import("@ui/Footer"))
+const Footer = dynamic(() => import("@ui/Footer/Footer"))
 
 const IndexPage = () => (
   <Layout>
