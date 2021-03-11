@@ -29,7 +29,6 @@
   ],
   "scripts": {
     "dev": "next",
-    "build": "next build",
     "build-export": "next build && next export",
     "start": "next start",
     "analyze": "BUNDLE_ANALYZE=both yarn build",
@@ -59,7 +58,7 @@
     "@types/react-headroom": "^2.2.1",
     "@types/react-scroll": "^1.8.2",
     "@types/smoothscroll-polyfill": "^0.3.1",
-    "framer-motion": "^3.10.0",
+    "framer-motion": "^3.10.2",
     "js-yaml-loader": "^1.2.2",
     "next": "10.0.8",
     "prop-types": "^15.7.2",
@@ -73,7 +72,7 @@
     "yaml-loader": "^0.6.0"
   },
   "devDependencies": {
-    "@types/node": "^14.14.32",
+    "@types/node": "^14.14.33",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.2",
     "@typescript-eslint/eslint-plugin": "^4.17.0",

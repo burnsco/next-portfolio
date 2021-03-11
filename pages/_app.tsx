@@ -1,5 +1,3 @@
-import { ChakraProvider } from "@chakra-ui/react"
-import theme from "@theme/index"
 import { AppProps } from "next/app"
 import Head from "next/head"
 
@@ -16,9 +14,8 @@ export default function App({ Component, pageProps }: AppProps) {
           rel="stylesheet"
         />
       </Head>
-      <ChakraProvider theme={theme} resetCSS>
-        <Component {...pageProps} />
-      </ChakraProvider>
+
+      <Component {...pageProps} />
     </>
   )
 }

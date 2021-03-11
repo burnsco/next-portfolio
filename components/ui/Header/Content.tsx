@@ -29,7 +29,11 @@ export default function HeaderContent() {
       p={[1, 2, 3]}
     >
       {sections.map(sec => (
-        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+        <motion.div
+          key={`nav-item-${sec.id}`}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
           <Text
             color="whitesmoke"
             _hover={{ color: "saffron" }}

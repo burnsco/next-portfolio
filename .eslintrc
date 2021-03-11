@@ -1,12 +1,19 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": ["react-hooks", "@typescript-eslint/eslint-plugin"],
+  "plugins": [
+    "@typescript-eslint",
+    "@typescript-eslint/eslint-plugin",
+    "react",
+    "prettier",
+    "react-hooks"
+  ],
   "extends": [
     "plugin:import/recommended",
     "plugin:import/typescript",
     "plugin:react-hooks/recommended",
     "airbnb-typescript",
-    "prettier"
+    "prettier",
+    "plugin:prettier/recommended"
   ],
   "parserOptions": {
     "ecmaVersion": 2020,
