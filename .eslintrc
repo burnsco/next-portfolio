@@ -4,14 +4,15 @@
     "@typescript-eslint",
     "@typescript-eslint/eslint-plugin",
     "react",
-    "prettier",
-    "react-hooks"
+    "react-hooks",
+    "prettier"
   ],
   "extends": [
-    "plugin:import/recommended",
-    "plugin:import/typescript",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-    "airbnb-typescript",
     "prettier",
     "plugin:prettier/recommended"
   ],
@@ -19,9 +20,7 @@
     "ecmaVersion": 2020,
     "ecmaFeatures": {
       "jsx": true
-    },
-
-    "project": ["tsconfig.json"]
+    }
   },
   "settings": {
     "react": {
