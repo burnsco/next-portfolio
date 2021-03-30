@@ -31,8 +31,12 @@ const MiniAppsCards = () => {
         >
           <AnimateSharedLayout type="crossfade">
             {data.map(app => (
-              <ScaleFade initialScale={app.id} in>
-                <MiniAppCard key={`mini-apps-${app.title}`}>
+              <ScaleFade
+                key={`mini-apps-${app.title}`}
+                initialScale={app.id}
+                in
+              >
+                <MiniAppCard>
                   <Text
                     fontWeight="bold"
                     fontSize="xl"

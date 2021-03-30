@@ -77,7 +77,6 @@ const layerStyles = {
 }
 
 const theme = extendTheme({
-  initialColorMode: "light",
   styles,
   layerStyles,
   textStyles,

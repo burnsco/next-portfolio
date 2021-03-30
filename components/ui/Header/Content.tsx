@@ -28,44 +28,46 @@ export default function HeaderContent() {
       alignItems="center"
       p={[1, 2, 3]}
     >
-      {sections.map(sec => (
-        <motion.div
-          key={`nav-item-${sec.id}`}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <Text
-            color="whitesmoke"
-            _hover={{ color: "saffron" }}
-            fontWeight="500"
-            fontSize={["xs", "sm", "md"]}
-            aria-label={`Page ${sec.id}`}
-            display="block"
-            key={sec.id}
+      <>
+        {sections.map(sec => (
+          <motion.div
+            key={`nav-item-${sec.id}`}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
           >
-            <Link
-              activeClass="active"
-              to={`${sec.id}`}
-              spy
-              smooth
-              duration={500}
+            <Text
+              color="whitesmoke"
+              _hover={{ color: "saffron" }}
+              fontWeight="500"
+              fontSize={["xs", "sm", "md"]}
+              aria-label={`Page ${sec.id}`}
+              display="block"
+              key={sec.id}
             >
-              {capitalizedTitle(sec.id)}
-            </Link>
-          </Text>
-        </motion.div>
-      ))}
-      <ContactDrawer />
-      <IconButton
-        size="md"
-        fontSize="lg"
-        aria-label={`Switch to ${text} mode`}
-        variant="ghost"
-        color="white"
-        ml={{ base: "0", md: "3" }}
-        onClick={toggleMode}
-        icon={<SwitchIcon />}
-      />
+              <Link
+                activeClass="active"
+                to={`${sec.id}`}
+                spy
+                smooth
+                duration={500}
+              >
+                {capitalizedTitle(sec.id)}
+              </Link>
+            </Text>
+          </motion.div>
+        ))}
+        <ContactDrawer />
+        <IconButton
+          size="md"
+          fontSize="lg"
+          aria-label={`Switch to ${text} mode`}
+          variant="ghost"
+          color="white"
+          ml={{ base: "0", md: "3" }}
+          onClick={toggleMode}
+          icon={<SwitchIcon />}
+        />
+      </>
     </Flex>
   )
 }
