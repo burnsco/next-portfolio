@@ -1,19 +1,16 @@
-import { ChakraProvider, Flex } from "@chakra-ui/react"
-import theme from "@theme/theme"
+import { Flex } from "@chakra-ui/react"
 import PropTypes from "prop-types"
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <ChakraProvider theme={theme} resetCSS>
-    <Flex
-      flexDirection="column"
-      justifyContent="center"
-      minWidth="100%"
-      minHeight="100vh"
-      wordBreak="break-word"
-    >
-      {children}
-    </Flex>
-  </ChakraProvider>
+  <Flex
+    flexDirection="column"
+    justifyContent="center"
+    minWidth="100%"
+    minHeight="100vh"
+    wordBreak="break-word"
+  >
+    {children}
+  </Flex>
 )
 
 Layout.propTypes = {

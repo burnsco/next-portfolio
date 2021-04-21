@@ -1,3 +1,5 @@
+import { ChakraProvider } from "@chakra-ui/react"
+import theme from "@theme/theme"
 import { AppProps } from "next/app"
 import Head from "next/head"
 
@@ -14,8 +16,9 @@ export default function App({ Component, pageProps }: AppProps) {
           rel="stylesheet"
         />
       </Head>
-
-      <Component {...pageProps} />
+      <ChakraProvider theme={theme}>
+        <Component {...pageProps} />
+      </ChakraProvider>
     </>
   )
 }

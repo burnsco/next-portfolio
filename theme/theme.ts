@@ -1,19 +1,19 @@
 import { extendTheme } from "@chakra-ui/react"
+import { mode } from "@chakra-ui/theme-tools"
 import colors from "./colors"
 
 const styles = {
-  global: {
+  global: (props: any) => ({
     "html, body": {
+      color: mode("gray.800", "whiteAlpha.900")(props),
+      bg: mode("gray.100", "gray.100")(props),
       height: "100%",
       width: "100%",
       position: "relative",
       fontSize: "md",
       lineHeight: "tall"
-    },
-    ".active": {
-      color: "#F39237"
     }
-  }
+  })
 }
 
 const fonts = {
@@ -38,7 +38,8 @@ const textStyles = {
     fontSize: { base: "2.5rem", sm: "2.7rem", md: "2.9rem" }
   },
   "list-heading": {
-    fontWeight: "bold",
+    fontSize: "20px",
+    fontWeight: 800,
     letterSpacing: "tight",
     my: 4,
     mb: 1
@@ -76,7 +77,13 @@ const layerStyles = {
   }
 }
 
+const config = {
+  initialColorMode: "light",
+  useSystemColorMode: false
+}
+
 const theme = extendTheme({
+  ...config,
   styles,
   layerStyles,
   textStyles,

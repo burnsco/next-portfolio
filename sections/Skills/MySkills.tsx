@@ -1,8 +1,8 @@
 import { Badge, Box, List, ListIcon, ListItem } from "@chakra-ui/react"
 import CustomGraphQLIcon from "@common/icons/graphql-icon"
+import CustomLinuxIcon from "@common/icons/linux-icon"
 import CustomReactIcon from "@common/icons/react-icon"
 import data from "@configs/Skills/my-skills"
-import CustomLinuxIcon from "../../components/common/icons/linux-icon"
 
 const MySkills = () => (
   <Box>
@@ -26,8 +26,8 @@ const MySkills = () => (
             <Badge
               m={1}
               fontSize="10px"
-              variant="solid"
-              colorScheme="green"
+              variant="subtle"
+              colorScheme="purple"
               key={`MySkills-badge-${skill.title}`}
             >
               {skill.title}
