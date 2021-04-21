@@ -9,10 +9,11 @@ export default function RandomFacts() {
         <ListIcon as={EmailIcon} boxSize={5} color="red.500" />
         {data.title}
       </ListItem>
-
-      {data.facts.map((fact: any) => (
-        <ListItem key={`random-fact-${fact.title}`}>{fact.title}</ListItem>
-      ))}
+      <>
+        {data.facts.map((fact: any) => (
+          <ListItem key={`random-fact-${fact.title}`}>{fact.title}</ListItem>
+        ))}
+      </>
     </List>
   )
 }

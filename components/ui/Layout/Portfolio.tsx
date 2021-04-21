@@ -8,7 +8,7 @@ import dynamic from "next/dynamic"
 
 const Footer = dynamic(() => import("@ui/Footer/Footer"))
 
-export default function IndexPage() {
+export default function PortfolioLayout() {
   return (
     <Layout>
       <header>

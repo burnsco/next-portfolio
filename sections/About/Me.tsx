@@ -9,15 +9,16 @@ export default function AboutMe() {
         <ListIcon as={EmailIcon} boxSize={5} color="red.500" />
         {data.title}
       </ListItem>
-
-      {data.excerpt.map((paragraph: any) => (
-        <ListItem
-          fontSize={{ base: "xs", md: "sm" }}
-          key={`p-${paragraph.text}`}
-        >
-          {paragraph.text}
-        </ListItem>
-      ))}
+      <>
+        {data.excerpt.map((paragraph: any) => (
+          <ListItem
+            fontSize={{ base: "xs", md: "sm" }}
+            key={`p-${paragraph.text}`}
+          >
+            {paragraph.text}
+          </ListItem>
+        ))}
+      </>
     </List>
   )
 }
