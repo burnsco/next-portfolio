@@ -5,6 +5,5 @@ export default [
     title: "Github",
     iconName: "github"
   },
-  { url: "https://t.me/coreyburns", title: "Telegram", iconName: "telegram" },
-  { url: "https://icq.im/767901533", title: "ICQ", iconName: "icq" }
+  { url: "https://t.me/coreyburns", title: "Telegram", iconName: "telegram" }
 ]

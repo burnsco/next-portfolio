@@ -13,6 +13,7 @@ import {
   Input,
   InputGroup,
   Stack,
+  Textarea,
   useDisclosure
 } from "@chakra-ui/react"
 import { useRef } from "react"
@@ -20,19 +21,22 @@ import { useRef } from "react"
 export default function ContactDrawer() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const firstField = useRef<HTMLInputElement | null>(null)
-  const btnRef = useRef<HTMLButtonElement | null>(null)
+  const btnRef = useRef<HTMLDivElement | null>(null)
 
   return (
     <>
-      <Button
+      <Box
+        as={Button}
+        border="2px"
+        borderRadius="none"
         ref={btnRef}
         size="sm"
         leftIcon={<EmailIcon />}
-        colorScheme="teal"
+        color="orange"
         onClick={onOpen}
       >
         Contact
-      </Button>
+      </Box>
       <Drawer
         isOpen={isOpen}
         placement="right"
@@ -40,7 +44,7 @@ export default function ContactDrawer() {
         onClose={onClose}
       >
         <DrawerOverlay>
-          <DrawerContent>
+          <DrawerContent color="white">
             <DrawerCloseButton />
             <DrawerHeader borderBottomWidth="1px">Contact Me</DrawerHeader>
 
@@ -62,7 +66,7 @@ export default function ContactDrawer() {
                   <Box>
                     <FormLabel htmlFor="message">Message</FormLabel>
                     <InputGroup>
-                      <Input type="textarea" id="message" />
+                      <Textarea />
                     </InputGroup>
                   </Box>
                 </Stack>

@@ -13,7 +13,7 @@ export default function DeveloperInfo() {
         <>
           {data.excerpt.map(p => (
             <ListItem
-              as="h2"
+              fontWeight="300"
               fontSize={{ base: "xs", md: "sm" }}
               key={`devInfo-${p.text}`}
             >

@@ -5,7 +5,7 @@ export default function ProjectsContainer(props: any) {
   return (
     <SectionContainer
       id={props.id}
-      background={`linear-gradient(#f7fafc" #F9FBFB)`}
+      background={`linear-gradient(white, #f8f9fa)`}
     >
       <SectionHeading title={props.id} />
       <Projects />

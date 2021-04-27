@@ -4,12 +4,14 @@ import {
   Flex,
   Heading,
   HStack,
+  Icon,
   Spacer,
   Text
 } from "@chakra-ui/react"
 import GitButtonIcon from "@common/icons/github-icon"
 import WebIcon from "@common/icons/web-icon"
 import dynamic from "next/dynamic"
+import { IoMdArrowDropright } from "react-icons/io"
 
 const RedditCloneIconsList = dynamic(
   () => import("@common/icons/RedditCloneIconsList")
@@ -26,18 +28,22 @@ const ProjectInfo: React.FC<ProjectInfoType> = ({
 }) => (
   <Flex flexDirection="column" p={[4, 5, 6]}>
     <HStack>
-      <Text>Title : </Text>
+      <Text>
+        Title <Icon as={IoMdArrowDropright} />{" "}
+      </Text>
       <Heading
         color="textMuted"
         mb={[2, 3]}
         fontSize={["xl", "2xl", "3xl"]}
-        fontWeight="900"
+        fontWeight="700"
       >
         {title}
       </Heading>
     </HStack>
     <HStack>
-      <Text>Tech : </Text>
+      <Text>
+        Tech <Icon as={IoMdArrowDropright} />{" "}
+      </Text>
       {title === "Reddit Clone" ? (
         <RedditCloneIconsList />
       ) : (
@@ -57,8 +63,10 @@ const ProjectInfo: React.FC<ProjectInfoType> = ({
     </Box>
     <Flex p={6} maxW="md" w="full">
       <Button
-        colorScheme="facebook"
-        leftIcon={<GitButtonIcon />}
+        fontWeight="800"
+        color="gray.400"
+        textTransform="uppercase"
+        leftIcon={<GitButtonIcon h={6} w={6} />}
         variant="outline"
         as="a"
         href={gitUrl}
@@ -69,7 +77,9 @@ const ProjectInfo: React.FC<ProjectInfoType> = ({
       </Button>
       <Spacer />
       <Button
-        colorScheme="purple"
+        size="lg"
+        fontWeight="700"
+        colorScheme="green"
         leftIcon={<WebIcon />}
         variant="solid"
         as="a"

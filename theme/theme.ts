@@ -5,75 +5,64 @@ import colors from "./colors"
 const styles = {
   global: (props: any) => ({
     "html, body": {
-      color: mode("gray.800", "whiteAlpha.900")(props),
+      color: mode("gray.800", "gray.700")(props),
       bg: mode("gray.100", "gray.100")(props),
       height: "100%",
       width: "100%",
       position: "relative",
       fontSize: "md",
       lineHeight: "tall"
+    },
+    ".hero-section": {
+      position: "relative",
+      width: "100%",
+      display: "block",
+      overflow: "hidden",
+      height: "100vh",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      transform: "scale(1) rotateX(0)",
+      boxShadow: "0 0 40px rgba(0,0,0,0.2)",
+      WebkitTransition: "all 300ms linear",
+      transition: "all 300ms linear",
+      WebkitTransitionDelay: "400ms",
+      transitionDelay: "400ms",
+      transformOrigin: "center top"
+    },
+    p: {
+      fontSize: "sm",
+      lineHeight: "1.4"
     }
   })
 }
 
 const fonts = {
-  sans:
-    '"Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
-  serif: '"Roboto Slab",Helveltica,Cambria,"Times New Roman",Times,serif',
-  monospace:
-    '"SF Mono","Roboto Mono",Monaco,Consolas,"Liberation Mono","Courier New",monospace',
-  body:
-    '"Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
-  heading: "inherit"
+  heading: "Poppins",
+  body: "Poppins"
 }
 
 const textStyles = {
+  "nav-link": {
+    fontSize: ["xs", "sm"]
+  },
   "section-heading": {
     textAlign: "center",
-    color: "blackolive",
-    fontFamily: "Roboto Slab",
+    color: "#343436",
     fontWeight: 900,
-    letterSpacing: "tight",
-    lineHeight: "1.24",
-    fontSize: { base: "2.5rem", sm: "2.7rem", md: "2.9rem" }
+    lineHeight: "2",
+    fontSize: { base: "2.1rem", sm: "2.2rem", md: "2.4rem" }
   },
   "list-heading": {
-    fontSize: "20px",
-    fontWeight: 800,
-    letterSpacing: "tight",
+    fontWeight: 700,
+    color: "gray.600",
     my: 4,
     mb: 1
-  },
-  "heading-2": {
-    textAlign: "center",
-    fontWeight: "bold",
-    letterSpacing: "-0.015em",
-    lineHeight: "1.24",
-    fontSize: { base: "1.75rem", md: "2.75rem" }
   },
   caps: {
     textTransform: "uppercase",
     fontSize: "sm",
     letterSpacing: "widest",
     fontWeight: "bold"
-  }
-}
-
-const shadows = {
-  avatar:
-    "0 0 1px 11px rgba(80, 81, 79, .15), 0 0 1px 22px rgba(80, 81, 79, .1)"
-}
-
-const layerStyles = {
-  base: {
-    bg: "gray.50",
-    border: "2px solid",
-    borderColor: "gray.500"
-  },
-  selected: {
-    bg: "teal.500",
-    color: "teal.700",
-    borderColor: "orange.500"
   }
 }
 
@@ -85,9 +74,7 @@ const config = {
 const theme = extendTheme({
   ...config,
   styles,
-  layerStyles,
   textStyles,
-  shadows,
   colors,
   fonts
 })

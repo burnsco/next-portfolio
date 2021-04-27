@@ -1,47 +1,35 @@
-import { Center, chakra, Flex, Heading, Img } from "@chakra-ui/react"
-import { AnimatedWave, HeroSocialIcons } from "@common/index"
+import { Box, Center, chakra, Flex, Heading, Text } from "@chakra-ui/react"
+import HeroSocialIcon from "@common/icons/hero-social-icon"
+import { AnimatedWave } from "@common/index"
 import Navbar from "@ui/Header/Navbar"
 
-const Hero = () => (
-  <>
-    <Navbar />
-    <Flex
-      minHeight="88vh"
-      bgGradient="linear(to-b, #292a2d,#3b3d42)"
-      flexDir="column"
-      align="center"
-      justify="center"
-    >
-      <Center display="flex" flexDir="column">
-        <Img
-          objectPosition="50% 50%"
-          objectFit="cover"
-          w="130px"
-          h="130px"
-          aria-label="Me"
-          boxShadow="avatar"
-          transform="rotate(-37deg)"
-          borderRadius="full"
-          size="2xl"
-          mb="3"
-          loading="eager"
-          name="Corey Burns"
-          src="/images/me.webp"
-        />
+// $black: #555;
+// $grey: #343436;
+// $lightgrey: #959595;
 
-        <Heading color="saffron" fontWeight="black">
-          Corey Burns
-        </Heading>
+export default function Hero() {
+  return (
+    <Box>
+      <Navbar />
+      <Flex
+        minHeight="90vh"
+        bgGradient="linear(to-b,#202124,#292a2d)"
+        flexDir="column"
+        align="center"
+        justify="center"
+      >
+        <Center display="flex" flexDir="column" mb={6}>
+          <Heading as="h1" color="#ee6c4d" lineHeight="1.6" fontWeight="800">
+            Corey <chakra.span color="white">Burns</chakra.span>
+          </Heading>
 
-        <chakra.h2 fontWeight={600} color="white">
-          Full-stack Developer
-        </chakra.h2>
-
-        <HeroSocialIcons />
-      </Center>
-      <AnimatedWave bottom />
-    </Flex>
-  </>
-)
-
-export default Hero
+          <Text letterSpacing="wide" color="gray.300">
+            Full-stack Developer
+          </Text>
+          <HeroSocialIcon />
+        </Center>
+        <AnimatedWave bottom />
+      </Flex>
+    </Box>
+  )
+}

@@ -66,7 +66,6 @@ const MiniAppsCards = () => {
 
                     <Flex>
                       <Button
-                        variant="outline"
                         as="a"
                         href={app.gitUrl}
                         target="_blank"

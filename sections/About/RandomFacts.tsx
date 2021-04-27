@@ -11,7 +11,9 @@ export default function RandomFacts() {
       </ListItem>
       <>
         {data.facts.map((fact: any) => (
-          <ListItem key={`random-fact-${fact.title}`}>{fact.title}</ListItem>
+          <ListItem fontSize="xs" key={`random-fact-${fact.title}`}>
+            {fact.title}
+          </ListItem>
         ))}
       </>
     </List>

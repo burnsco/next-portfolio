@@ -7,7 +7,8 @@ const Navbar = () => (
     <chakra.header
       id="navbar"
       zIndex="1"
-      bg="#292a2d"
+      p={4}
+      bg="#202124"
       left="0"
       right="0"
       width="full"
