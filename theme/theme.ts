@@ -13,22 +13,6 @@ const styles = {
       fontSize: "md",
       lineHeight: "tall"
     },
-    ".hero-section": {
-      position: "relative",
-      width: "100%",
-      display: "block",
-      overflow: "hidden",
-      height: "100vh",
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      transform: "scale(1) rotateX(0)",
-      boxShadow: "0 0 40px rgba(0,0,0,0.2)",
-      WebkitTransition: "all 300ms linear",
-      transition: "all 300ms linear",
-      WebkitTransitionDelay: "400ms",
-      transitionDelay: "400ms",
-      transformOrigin: "center top"
-    },
     p: {
       fontSize: "sm",
       lineHeight: "1.4"
@@ -53,6 +37,7 @@ const textStyles = {
     fontSize: { base: "2.1rem", sm: "2.2rem", md: "2.4rem" }
   },
   "list-heading": {
+    fontFamily: "Rubik",
     fontWeight: 700,
     color: "gray.600",
     my: 4,

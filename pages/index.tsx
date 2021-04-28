@@ -3,9 +3,7 @@ import HeroSection from "@sections/Hero"
 import MiniAppsSection from "@sections/MiniApps"
 import ProjectsSection from "@sections/Projects"
 import SkillsSection from "@sections/Skills"
-import dynamic from "next/dynamic"
-
-const Footer = dynamic(() => import("@ui/Footer/Footer"))
+import Footer from "@ui/Footer/Footer"
 
 export default function IndexPage() {
   return (

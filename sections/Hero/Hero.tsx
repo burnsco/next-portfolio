@@ -1,7 +1,7 @@
 import { Box, Center, chakra, Flex, Heading, Text } from "@chakra-ui/react"
 import HeroSocialIcon from "@common/icons/hero-social-icon"
 import { AnimatedWave } from "@common/index"
-import Navbar from "@ui/Header/Navbar"
+import Navbar from "@ui/Navbar/Navbar"
 
 // $black: #555;
 // $grey: #343436;
@@ -13,7 +13,7 @@ export default function Hero() {
       <Navbar />
       <Flex
         minHeight="90vh"
-        bgGradient="linear(to-b,#202124,#292a2d)"
+        bgGradient="linear(to-b,#202124,#212529,#292a2d,#343a40)"
         flexDir="column"
         align="center"
         justify="center"
@@ -23,7 +23,7 @@ export default function Hero() {
             Corey <chakra.span color="white">Burns</chakra.span>
           </Heading>
 
-          <Text letterSpacing="wide" color="gray.300">
+          <Text letterSpacing="wide" color="gray.300" fontWeight="medium">
             Full-stack Developer
           </Text>
           <HeroSocialIcon />

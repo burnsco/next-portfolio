@@ -37,18 +37,18 @@ const HeroSocialIcon = () => (
           rel="noreferrer noopener"
         >
           {item.iconName === "email" && (
-            <MotionHoverBox whileHover={{ scale: 1.1, y: -5 }}>
+            <MotionHoverBox whileHover={{ scale: 1.1, rotate: 90 }}>
               <Icon w={8} h={8} as={CustomEmailIcon} />
             </MotionHoverBox>
           )}
           {item.iconName === "github" && (
-            <MotionHoverBox whileHover={{ scale: 1.1, y: -5 }}>
+            <MotionHoverBox whileHover={{ scale: 1.1, rotate: 90 }}>
               {" "}
               <Icon w={8} h={8} as={SiGithub} />
             </MotionHoverBox>
           )}
           {item.iconName === "telegram" && (
-            <MotionHoverBox whileHover={{ scale: 1.1, y: -5 }}>
+            <MotionHoverBox whileHover={{ scale: 1.1, rotate: 90 }}>
               <Icon w={8} h={8} as={AnimatedTelegramIcon} />
             </MotionHoverBox>
           )}

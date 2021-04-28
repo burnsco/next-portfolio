@@ -1,7 +1,8 @@
-import { Box, HStack, Icon, Text } from "@chakra-ui/react"
+import { Box, Button, HStack, Icon } from "@chakra-ui/react"
 import sections from "@configs/site-config/sections"
 import { motion } from "framer-motion"
-import { GoHome } from "react-icons/go"
+import { AiOutlineHome } from "react-icons/ai"
+import { GiMailbox } from "react-icons/gi"
 import { Link } from "react-scroll"
 
 function capitalizedTitle(title: string) {
@@ -16,17 +17,22 @@ function capitalizedTitle(title: string) {
   // }
 }
 
+const MailIcon = (
+  <motion.div whileHover={{ scale: 1.1 }}>
+    <Icon color="white" h={5} w={5} as={GiMailbox} />
+  </motion.div>
+)
+
 export default function HeaderContent() {
   return (
     <HStack
       aria-label="Primary Navigation"
       as="nav"
       w="full"
-      justifyContent="space-around"
-      alignItems="center"
+      px={2}
+      justifyContent="space-between"
     >
-      <Icon color="white" as={GoHome} />
-
+      <Icon color="white" h={5} w={5} as={AiOutlineHome} />
       <HStack w="md" justify="space-evenly">
         {sections.map(sec => (
           <motion.div
@@ -37,7 +43,11 @@ export default function HeaderContent() {
             <Box
               textStyle="nav-link"
               color="whitesmoke"
-              _hover={{ cursor: "pointer", color: "rgba(243,147, 55,1)" }}
+              _hover={{
+                cursor: "pointer",
+                color: "#ffbe0b",
+                transition: "all 0.2s cubic-bezier(.08,.52,.52,1)"
+              }}
               aria-label={`Page ${sec.id}`}
               display="block"
               key={sec.id}
@@ -55,17 +65,9 @@ export default function HeaderContent() {
           </motion.div>
         ))}
       </HStack>
-      <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-        <Text
-          border="1px solid white"
-          p={2}
-          textStyle="nav-link"
-          color="white"
-          _hover={{ cursor: "pointer" }}
-        >
-          Contact
-        </Text>
-      </motion.div>
+      <Button rightIcon={MailIcon} color="white" variant="outline">
+        Contact
+      </Button>
     </HStack>
   )
 }

@@ -8,7 +8,6 @@ import {
   Spacer,
   Text
 } from "@chakra-ui/react"
-import GitButtonIcon from "@common/icons/github-icon"
 import WebIcon from "@common/icons/web-icon"
 import dynamic from "next/dynamic"
 import { IoMdArrowDropright } from "react-icons/io"
@@ -63,11 +62,10 @@ const ProjectInfo: React.FC<ProjectInfoType> = ({
     </Box>
     <Flex p={6} maxW="md" w="full">
       <Button
-        fontWeight="800"
-        color="gray.400"
-        textTransform="uppercase"
-        leftIcon={<GitButtonIcon h={6} w={6} />}
-        variant="outline"
+        size="lg"
+        colorScheme="green"
+        leftIcon={<WebIcon />}
+        variant="solid"
         as="a"
         href={gitUrl}
         target="_blank"
@@ -78,7 +76,6 @@ const ProjectInfo: React.FC<ProjectInfoType> = ({
       <Spacer />
       <Button
         size="lg"
-        fontWeight="700"
         colorScheme="green"
         leftIcon={<WebIcon />}
         variant="solid"
