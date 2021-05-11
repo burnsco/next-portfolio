@@ -19,11 +19,22 @@ export default function Hero() {
         justify="center"
       >
         <Center display="flex" flexDir="column" mb={6}>
-          <Heading as="h1" color="#ee6c4d" lineHeight="1.6" fontWeight="800">
+          <Heading
+            as="h1"
+            fontSize="2.8rem"
+            color="#ee6c4d"
+            lineHeight="1.6"
+            fontWeight="800"
+          >
             Corey <chakra.span color="white">Burns</chakra.span>
           </Heading>
 
-          <Text letterSpacing="wide" color="gray.300" fontWeight="medium">
+          <Text
+            fontSize="1rem"
+            letterSpacing="wide"
+            color="gray.300"
+            fontWeight="medium"
+          >
             Full-stack Developer
           </Text>
           <HeroSocialIcon />

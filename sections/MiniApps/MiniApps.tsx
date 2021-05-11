@@ -13,7 +13,7 @@ import data from "@configs/MiniApps/mini-apps"
 import { AnimateSharedLayout } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 
-const MiniAppsCards = () => {
+export default function MiniAppsCards() {
   const [ref, inView] = useInView({
     threshold: 0.9,
     triggerOnce: true,
@@ -38,8 +38,10 @@ const MiniAppsCards = () => {
               >
                 <MiniAppCard>
                   <Text
-                    fontWeight="bold"
-                    fontSize="xl"
+                    bg="#3A99D8"
+                    color="white"
+                    fontWeight="semibold"
+                    fontSize="md"
                     opacity={0.7}
                     p={1}
                     textAlign="center"
@@ -76,7 +78,8 @@ const MiniAppsCards = () => {
                       <Spacer />
                       <Button
                         as="a"
-                        colorScheme="whatsapp"
+                        color="white"
+                        colorScheme="orange"
                         href={app.webUrl}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -94,5 +97,3 @@ const MiniAppsCards = () => {
     </div>
   )
 }
-
-export default MiniAppsCards

@@ -8,9 +8,13 @@ import { Link } from "react-scroll"
 function capitalizedTitle(title: string) {
   return title.charAt(0).toUpperCase() + title.slice(1)
 
-  //   $primary: #de5f5f;
+  // $primary: #de5f5f;
   // $black: #555;
+  // $primar2: #db3a34
+  // $impary3: #ffc857
   // $grey: #343436;
+  // $black: #323031
+  // $green: #177e89
   // $lightgrey: #959595;
   // $yellow: #FDEF52
   // $blue: #3A99D8
@@ -33,7 +37,7 @@ export default function HeaderContent() {
       justifyContent="space-between"
     >
       <Icon color="white" h={5} w={5} as={AiOutlineHome} />
-      <HStack w="md" justify="space-evenly">
+      <HStack w="md" justify="space-evenly" as="ul">
         {sections.map(sec => (
           <motion.div
             key={`nav-item-${sec.id}`}
@@ -41,6 +45,7 @@ export default function HeaderContent() {
             whileTap={{ scale: 0.9 }}
           >
             <Box
+              as="li"
               textStyle="nav-link"
               color="whitesmoke"
               _hover={{
@@ -65,7 +70,12 @@ export default function HeaderContent() {
           </motion.div>
         ))}
       </HStack>
-      <Button rightIcon={MailIcon} color="white" variant="outline">
+      <Button
+        rightIcon={MailIcon}
+        color="white"
+        fontWeight="medium"
+        variant="outline"
+      >
         Contact
       </Button>
     </HStack>

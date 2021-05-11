@@ -1,5 +1,4 @@
-import { Box, List, ListIcon, ListItem } from "@chakra-ui/react"
-import DevInfoIcon from "@common/icons/dev-info-icon"
+import { Box, chakra, List, ListItem } from "@chakra-ui/react"
 import data from "@configs/Skills/about-me"
 
 export default function DeveloperInfo() {
@@ -7,18 +6,19 @@ export default function DeveloperInfo() {
     <Box p={2}>
       <List>
         <ListItem textStyle="list-heading">
-          <ListIcon
-            textShadow="dark-lg"
-            as={DevInfoIcon}
-            boxSize={5}
-            color="red.500"
-          />
-          {data.title}
+          <chakra.span
+            p={1}
+            fontWeight="700"
+            bgGradient="linear(to-b, rgba(243,147, 55,1),rgb(250, 112, 154))"
+            color="white"
+            textTransform="uppercase"
+          >
+            {data.title}
+          </chakra.span>
         </ListItem>
-        <>
+        <Box mt="1">
           {data.excerpt.map(p => (
             <ListItem
-              fontFamily="Rubik"
               fontWeight="300"
               fontSize={{ base: "xs", md: "sm" }}
               key={`devInfo-${p.text}`}
@@ -26,7 +26,7 @@ export default function DeveloperInfo() {
               {p.text}
             </ListItem>
           ))}
-        </>
+        </Box>
       </List>
     </Box>
   )

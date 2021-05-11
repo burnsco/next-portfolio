@@ -6,10 +6,12 @@ import {
   HStack,
   Icon,
   Spacer,
-  Text
+  Text,
+  VStack
 } from "@chakra-ui/react"
 import WebIcon from "@common/icons/web-icon"
 import dynamic from "next/dynamic"
+import { AiOutlineGithub } from "react-icons/ai"
 import { IoMdArrowDropright } from "react-icons/io"
 
 const RedditCloneIconsList = dynamic(
@@ -25,7 +27,7 @@ const ProjectInfo: React.FC<ProjectInfoType> = ({
   gitUrl,
   title
 }) => (
-  <Flex flexDirection="column" p={[4, 5, 6]}>
+  <VStack spacing={2} p={[4, 5, 6]}>
     <HStack>
       <Text>
         Title <Icon as={IoMdArrowDropright} />{" "}
@@ -52,6 +54,8 @@ const ProjectInfo: React.FC<ProjectInfoType> = ({
     <Box p={4}>
       {description.map(p => (
         <Text
+          fontWeight="300"
+          lineHeight="tall"
           fontSize={{ base: "xs", md: "sm" }}
           key={`paragraph-${p.text}`}
           my="2"
@@ -63,8 +67,9 @@ const ProjectInfo: React.FC<ProjectInfoType> = ({
     <Flex p={6} maxW="md" w="full">
       <Button
         size="lg"
-        colorScheme="green"
-        leftIcon={<WebIcon />}
+        colorScheme="linkedin"
+        color="white"
+        leftIcon={<AiOutlineGithub />}
         variant="solid"
         as="a"
         href={gitUrl}
@@ -76,7 +81,7 @@ const ProjectInfo: React.FC<ProjectInfoType> = ({
       <Spacer />
       <Button
         size="lg"
-        colorScheme="green"
+        colorScheme="red"
         leftIcon={<WebIcon />}
         variant="solid"
         as="a"
@@ -87,7 +92,7 @@ const ProjectInfo: React.FC<ProjectInfoType> = ({
         Demo
       </Button>
     </Flex>
-  </Flex>
+  </VStack>
 )
 
 export default ProjectInfo
