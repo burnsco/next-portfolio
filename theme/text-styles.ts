@@ -11,8 +11,9 @@ export const textStyles = {
   },
   "list-heading": {
     fontFamily: "Rubik",
-    fontWeight: 700,
-    fontSize: "sm",
+    fontWeight: 800,
+    fontSize: "md",
+    mb: 3,
     color: "gray.500"
   },
   caps: {

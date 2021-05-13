@@ -38,8 +38,8 @@ export default function MiniAppsCards() {
               >
                 <MiniAppCard>
                   <Text
-                    bg="#3A99D8"
-                    color="white"
+                    bg="l3"
+                    color="p5"
                     fontWeight="semibold"
                     fontSize="md"
                     opacity={0.7}

@@ -1,6 +1,6 @@
 export default [
   {
-    title: "Front-End",
+    title: "frontend",
     iconName: "react",
     skills: [
       { title: "React" },
@@ -23,7 +23,7 @@ export default [
     ]
   },
   {
-    title: "Backend-End",
+    title: "backend",
     iconName: "graphql",
     skills: [
       { title: "NodeJS" },
@@ -36,7 +36,7 @@ export default [
     ]
   },
   {
-    title: "Dev-Ops",
+    title: "dev-ops",
     iconName: "linux",
     skills: [
       { title: "Docker" },

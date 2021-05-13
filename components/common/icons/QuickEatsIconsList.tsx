@@ -8,9 +8,9 @@ import {
 } from "react-icons/si"
 
 const QuickEatsIconsList = () => (
-  <HStack spacing={2}>
+  <HStack spacing={4}>
     <Icon as={SiReact} />
-    <Icon as={SiStyledComponents} />
+    <Icon as={SiStyledComponents} boxSize={6} />
     <Icon as={SiRedux} />
     <Icon as={SiSass} />
     <Icon as={SiFirebase} />

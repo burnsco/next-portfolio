@@ -5,14 +5,14 @@ import {
   Heading,
   HStack,
   Icon,
+  IconButton,
   Spacer,
   Text,
   VStack
 } from "@chakra-ui/react"
-import WebIcon from "@common/icons/web-icon"
+import { motion } from "framer-motion"
 import dynamic from "next/dynamic"
-import { AiOutlineGithub } from "react-icons/ai"
-import { IoMdArrowDropright } from "react-icons/io"
+import { IoLogoGithub } from "react-icons/io"
 
 const RedditCloneIconsList = dynamic(
   () => import("@common/icons/RedditCloneIconsList")
@@ -21,78 +21,73 @@ const QuickEatsIconsList = dynamic(
   () => import("@common/icons/QuickEatsIconsList")
 )
 
+const MotionButton = motion(IconButton)
+
 const ProjectInfo: React.FC<ProjectInfoType> = ({
   description,
   webUrl,
   gitUrl,
   title
 }) => (
-  <VStack spacing={2} p={[4, 5, 6]}>
-    <HStack>
-      <Text>
-        Title <Icon as={IoMdArrowDropright} />{" "}
-      </Text>
-      <Heading
-        color="textMuted"
-        mb={[2, 3]}
-        fontSize={["xl", "2xl", "3xl"]}
-        fontWeight="700"
-      >
-        {title}
-      </Heading>
-    </HStack>
-    <HStack>
-      <Text>
-        Tech <Icon as={IoMdArrowDropright} />{" "}
-      </Text>
-      {title === "Reddit Clone" ? (
-        <RedditCloneIconsList />
-      ) : (
-        <QuickEatsIconsList />
-      )}
-    </HStack>
-    <Box p={4}>
-      {description.map(p => (
-        <Text
-          fontWeight="300"
-          lineHeight="tall"
-          fontSize={{ base: "xs", md: "sm" }}
-          key={`paragraph-${p.text}`}
-          my="2"
+  <Box
+    h="full"
+    w="full"
+    overflow="hidden"
+    zIndex="-1"
+    bgSize="cover"
+    bgImage="url(/textures/boxygrey.svg)"
+    bgRepeat="repeat-y"
+  >
+    <VStack spacing={2} p={[4, 5, 6]}>
+      <HStack>
+        <Heading
+          lineHeight="2"
+          fontWeight="900"
+          letterSpacing="wide"
+          color="#414a6b !important;"
+          mb={[2, 3]}
+          fontSize={["xl", "2xl", "3xl"]}
         >
-          {p.text}
-        </Text>
-      ))}
-    </Box>
-    <Flex p={6} maxW="md" w="full">
-      <Button
-        size="lg"
-        colorScheme="linkedin"
-        color="white"
-        leftIcon={<AiOutlineGithub />}
-        variant="solid"
-        as="a"
-        href={gitUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Source
-      </Button>
-      <Spacer />
-      <Button
-        size="lg"
-        colorScheme="red"
-        leftIcon={<WebIcon />}
-        variant="solid"
-        as="a"
-        href={webUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Demo
-      </Button>
-    </Flex>
-  </VStack>
+          {title}
+        </Heading>
+      </HStack>
+      <HStack>
+        {title === "Reddit Clone" ? (
+          <RedditCloneIconsList />
+        ) : (
+          <QuickEatsIconsList />
+        )}
+      </HStack>
+      <Box p={4}>
+        {description.map(p => (
+          <Text
+            fontWeight="300"
+            lineHeight="tall"
+            fontSize={{ base: "xs", md: "sm" }}
+            key={`paragraph-${p.text}`}
+            my="2"
+          >
+            {p.text}
+          </Text>
+        ))}
+      </Box>
+      <Flex p={6} maxW="md" w="full">
+        <Icon as={IoLogoGithub} boxSize={12} />
+        <Spacer />
+        <Button
+          px={5}
+          size="lg"
+          variant="outline"
+          as="a"
+          href={webUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Check it out!
+        </Button>
+      </Flex>
+    </VStack>
+  </Box>
 )
 
 export default ProjectInfo

@@ -1,4 +1,4 @@
-import { Box, Flex, Grid } from "@chakra-ui/react"
+import { Box, Grid } from "@chakra-ui/react"
 import { Container, ProjectCard } from "@common/index"
 import data from "@configs/Projects/projects"
 import dynamic from "next/dynamic"
@@ -12,22 +12,20 @@ const Projects = () => (
     <Grid gap={6}>
       {data.map((project: any) => (
         <Box key={`MainProject-${project.title}`} p={[2, 3]} my="4rem">
-          <Flex flexDir="column">
-            <ProjectCard>
-              {project.video === "reddit" ? (
-                <RedditCloneVideos />
-              ) : (
-                <QuickEatsVideos />
-              )}
+          <ProjectCard flexDir="row">
+            {project.video === "reddit" ? (
+              <RedditCloneVideos />
+            ) : (
+              <QuickEatsVideos />
+            )}
 
-              <ProjectInfo
-                title={project.title}
-                description={project.description}
-                webUrl={project.webUrl}
-                gitUrl={project.gitUrl}
-              />
-            </ProjectCard>
-          </Flex>
+            <ProjectInfo
+              title={project.title}
+              description={project.description}
+              webUrl={project.webUrl}
+              gitUrl={project.gitUrl}
+            />
+          </ProjectCard>
         </Box>
       ))}
     </Grid>

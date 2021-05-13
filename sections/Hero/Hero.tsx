@@ -22,11 +22,20 @@ export default function Hero() {
           <Heading
             as="h1"
             fontSize="2.8rem"
-            color="#ee6c4d"
+            color="l5"
             lineHeight="1.6"
             fontWeight="800"
           >
-            Corey <chakra.span color="white">Burns</chakra.span>
+            Corey{" "}
+            <chakra.span
+              color="white"
+              _hover={{
+                filter:
+                  "brightness(0.5) sepia(1) hue-rotate(-70deg) saturate(5)"
+              }}
+            >
+              Burns
+            </chakra.span>
           </Heading>
 
           <Text

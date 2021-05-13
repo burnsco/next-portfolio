@@ -10,7 +10,7 @@ const SkillsContainer: React.FC<{ id: string }> = ({ id }) => (
   <SectionContainer id={id}>
     <PageContainer bg="white">
       <SectionHeading title={id} />
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} py="4">
+      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} py="6">
         <DeveloperInfo />
         <MySkills />
       </SimpleGrid>

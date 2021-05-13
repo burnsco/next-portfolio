@@ -1,7 +1,7 @@
-import { EmailIcon } from "@chakra-ui/icons"
 import {
   Box,
   Button,
+  DarkMode,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
@@ -17,26 +17,27 @@ import {
   useDisclosure
 } from "@chakra-ui/react"
 import { useRef } from "react"
+import { GiMailbox } from "react-icons/gi"
 
 export default function ContactDrawer() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const firstField = useRef<HTMLInputElement | null>(null)
-  const btnRef = useRef<HTMLDivElement | null>(null)
+  const btnRef = useRef<HTMLButtonElement | null>(null)
 
   return (
     <>
-      <Box
-        as={Button}
-        border="2px"
-        borderRadius="none"
-        ref={btnRef}
-        size="sm"
-        leftIcon={<EmailIcon />}
-        color="orange"
-        onClick={onOpen}
-      >
-        Contact
-      </Box>
+      <DarkMode>
+        <Button
+          ref={btnRef}
+          onClick={onOpen}
+          rightIcon={<GiMailbox />}
+          color="white"
+          fontWeight="medium"
+          variant="outline"
+        >
+          Contact
+        </Button>
+      </DarkMode>
       <Drawer
         isOpen={isOpen}
         placement="right"
@@ -44,7 +45,7 @@ export default function ContactDrawer() {
         onClose={onClose}
       >
         <DrawerOverlay>
-          <DrawerContent color="white">
+          <DrawerContent color="white" bg="#3A99D8">
             <DrawerCloseButton />
             <DrawerHeader borderBottomWidth="1px">Contact Me</DrawerHeader>
 

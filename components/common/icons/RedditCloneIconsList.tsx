@@ -14,9 +14,9 @@ import {
 } from "react-icons/si"
 
 const RedditCloneIconsList = () => (
-  <HStack spacing={2}>
+  <HStack spacing={4}>
     <Icon as={SiReact} />
-    <Icon as={SiStyledComponents} />
+    <Icon as={SiStyledComponents} boxSize={6} />
     <Icon as={SiWebpack} />
     <Icon as={SiApollographql} />
     <Icon as={SiNodeDotJs} />
