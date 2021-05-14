@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import About from "./About"
 
 const AboutContainer: React.FC<{ id: string }> = ({ id }) => (
-  <SectionContainer id={id} background={`linear-gradient(#e9ecef,#dee2e6)`}>
+  <SectionContainer id={id} background={`linear-gradient(#e9ecef,gray.50)`}>
     <PageContainer bg="translucent">
       <SectionHeading title={id} />
       <About />

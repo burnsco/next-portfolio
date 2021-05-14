@@ -6,19 +6,19 @@ import React from "react"
 import DeveloperInfo from "./DeveloperInfo"
 import MySkills from "./MySkills"
 
-const SkillsContainer: React.FC<{ id: string }> = ({ id }) => (
-  <SectionContainer id={id}>
-    <PageContainer bg="white">
-      <SectionHeading title={id} />
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} py="6">
-        <DeveloperInfo />
-        <MySkills />
-      </SimpleGrid>
-    </PageContainer>
-  </SectionContainer>
-)
-
-export default SkillsContainer
+export default function SkillsContainer(props: any) {
+  return (
+    <SectionContainer mt="8" id={props.id}>
+      <PageContainer bg="gray.50">
+        <SectionHeading title={props.id} />
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} py="6">
+          <DeveloperInfo />
+          <MySkills />
+        </SimpleGrid>
+      </PageContainer>
+    </SectionContainer>
+  )
+}
 
 SkillsContainer.propTypes = {
   id: PropTypes.string.isRequired

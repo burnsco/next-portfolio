@@ -1,3 +1,15 @@
+// $primary: #de5f5f;
+// $black: #555;
+// $primar2: #db3a34
+// $impary3: #ffc857
+// $grey: #343436;
+// $black: #323031
+// $green: #177e89
+// $lightgrey: #959595;
+// $yellow: #FDEF52
+// $blue: #3A99D8
+// }
+
 const colors = {
   black: "#010100",
   oliveBlack: "#36382E",

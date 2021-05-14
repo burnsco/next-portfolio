@@ -1,7 +1,6 @@
 import {
   Box,
   Button,
-  DarkMode,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
@@ -12,6 +11,7 @@ import {
   FormLabel,
   Input,
   InputGroup,
+  LightMode,
   Stack,
   Textarea,
   useDisclosure
@@ -26,18 +26,17 @@ export default function ContactDrawer() {
 
   return (
     <>
-      <DarkMode>
+      <LightMode>
         <Button
           ref={btnRef}
           onClick={onOpen}
           rightIcon={<GiMailbox />}
-          color="white"
-          fontWeight="medium"
+          color="black"
           variant="outline"
         >
           Contact
         </Button>
-      </DarkMode>
+      </LightMode>
       <Drawer
         isOpen={isOpen}
         placement="right"
