@@ -1,4 +1,4 @@
-import { Box, Heading, HStack, List, ListItem } from "@chakra-ui/react"
+import { Box, chakra, Heading, HStack, List, ListItem } from "@chakra-ui/react"
 import sections from "@configs/site-config/sections"
 import { Link } from "react-scroll"
 
@@ -6,18 +6,31 @@ function capitalizedTitle(title: string) {
   return title.charAt(0).toUpperCase() + title.slice(1)
 }
 
+const ChakraLink = chakra(Link)
+
 export default function HeaderContent() {
   return (
     <HStack
       aria-label="Primary Navigation"
       as="nav"
+      px="2em"
+      h="full"
       w="full"
-      px={1}
-      p={2}
-      ml="10"
       justifyContent="space-between"
     >
-      <Heading fontSize="md">CB</Heading>
+      <Heading
+        _hover={{ cursor: "pointer" }}
+        activeClass="active"
+        spy
+        smooth
+        duration={500}
+        to="home"
+        as={ChakraLink}
+        fontSize="md"
+        fontFamily="Dancing Script"
+      >
+        Corey Burns
+      </Heading>
       <HStack w="md" justify="space-evenly" as={List}>
         {sections.map(sec => (
           <Box
@@ -30,7 +43,8 @@ export default function HeaderContent() {
             letterSpacing="widest"
             aria-label={`Page ${sec.id}`}
           >
-            <Link
+            <ChakraLink
+              _hover={{ cursor: "pointer" }}
               activeClass="active"
               to={`${sec.id}`}
               spy
@@ -38,7 +52,7 @@ export default function HeaderContent() {
               duration={500}
             >
               {capitalizedTitle(sec.id)}
-            </Link>
+            </ChakraLink>
           </Box>
         ))}
       </HStack>

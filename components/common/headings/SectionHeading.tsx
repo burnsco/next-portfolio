@@ -21,8 +21,10 @@ const SectionHeading: React.FC<{ title: string; subHeading?: string }> = ({
         <Box maxW="760px" mx="auto" textAlign="center">
           <Fade in={inView}>
             <chakra.h1
+              fontSize="5xl"
+              fontWeight="800"
+              fontFamily="Lato"
               color="f3"
-              textStyle="section-heading"
               lineHeight="2"
               mb="1"
             >

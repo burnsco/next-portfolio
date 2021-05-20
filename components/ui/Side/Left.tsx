@@ -3,11 +3,11 @@ import { Box } from "@chakra-ui/react"
 const LeftSideBar = () => (
   <Box
     pos="fixed"
-    width="40px"
-    id="Sidebar"
+    width="3em"
+    className="leftBar"
     zIndex="1"
     bg="white"
-    top="0"
+    top="3em"
     left="0"
     bottom="0"
   ></Box>

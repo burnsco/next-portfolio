@@ -4,11 +4,11 @@ import { HeroSocialIcons } from "@common/index"
 const RightSideBar = () => (
   <Box
     pos="fixed"
-    width="40px"
-    id="Sidebar"
+    width="3em"
+    id="rightBar"
     zIndex="1"
     bg="white"
-    top="0"
+    top="3em"
     right="0"
     bottom="0"
   >

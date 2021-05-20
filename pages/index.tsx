@@ -4,15 +4,20 @@ import MiniAppsSection from "@sections/MiniApps"
 import ProjectsSection from "@sections/Projects"
 import SkillsSection from "@sections/Skills"
 import Footer from "@ui/Footer/Footer"
+import Navbar from "@ui/Navbar/Navbar"
+import LeftSideBar from "@ui/Side/Left"
+import RightSideBar from "@ui/Side/Right"
+import BottomSideBar from "../components/ui/Side/Bottom"
 
 export default function IndexPage() {
   return (
     <>
-      <header>
-        <HeroSection id="home" />
-      </header>
-
+      <Navbar />
+      <LeftSideBar />
+      <RightSideBar />
+      <BottomSideBar />
       <main>
+        <HeroSection id="home" />
         <SkillsSection id="skills" />
         <ProjectsSection id="projects" />
         <MiniAppsSection id="apps" />

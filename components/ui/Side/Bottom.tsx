@@ -3,14 +3,15 @@ import { Box } from "@chakra-ui/react"
 const BottomSideBar = () => (
   <Box
     pos="fixed"
-    width="40px"
+    height="3em"
+    width="full"
     id="Sidebar"
     zIndex="1"
     bg="white"
-    left="0"
-    right="0"
+    left="3em"
+    right="3em"
     bottom="0"
-  ></Box>
+  />
 )
 
 export default BottomSideBar

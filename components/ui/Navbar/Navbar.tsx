@@ -4,6 +4,7 @@ import HeaderContent from "./Content"
 export default function Navbar() {
   return (
     <HStack
+      as="header"
       pos="fixed"
       id="navbar"
       zIndex="1"

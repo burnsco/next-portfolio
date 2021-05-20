@@ -6,9 +6,10 @@ export default function DeveloperInfo() {
   return (
     <Box p={2}>
       <List>
-        <ListItem textStyle="list-heading">
+        <ListItem>
           <ListIcon as={FcInfo} boxSize="6" />
           <chakra.span
+            fontFamily="Poppin"
             fontWeight="700"
             color="f4"
             opacity="0.8"
