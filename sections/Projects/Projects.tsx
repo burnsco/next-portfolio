@@ -1,4 +1,4 @@
-import { Box, Grid } from "@chakra-ui/react"
+import { Flex } from "@chakra-ui/react"
 import { Container, ProjectCard } from "@common/index"
 import data from "@configs/Projects/projects"
 import dynamic from "next/dynamic"
@@ -7,28 +7,34 @@ import ProjectInfo from "./ProjectInfo"
 const QuickEatsVideos = dynamic(() => import("./QuickEatsVideo"))
 const RedditCloneVideos = dynamic(() => import("./RedditVideo"))
 
-const Projects = () => (
-  <Container flexDir="column">
-    <Grid gap={6}>
+export default function Projects() {
+  return (
+    <Container id="actual projects container">
       {data.map((project: any) => (
-        <Box key={`MainProject-${project.title}`} p={[2, 3]} my="4rem">
-          <ProjectCard flexDir="row">
-            {project.video === "reddit" ? (
-              <RedditCloneVideos />
-            ) : (
-              <QuickEatsVideos />
-            )}
-
-            <ProjectInfo
-              title={project.title}
-              description={project.description}
-              webUrl={project.webUrl}
-              gitUrl={project.gitUrl}
-            />
+        <Flex key={`MainProject-${project.title}`} p={[2, 3]} my="4rem">
+          <ProjectCard>
+            <Flex>
+              {project.video === "reddit" ? (
+                <Flex w="50%">
+                  <RedditCloneVideos />
+                </Flex>
+              ) : (
+                <Flex w="50%">
+                  <QuickEatsVideos />
+                </Flex>
+              )}
+              <Flex w="50%">
+                <ProjectInfo
+                  title={project.title}
+                  description={project.description}
+                  webUrl={project.webUrl}
+                  gitUrl={project.gitUrl}
+                />
+              </Flex>
+            </Flex>
           </ProjectCard>
-        </Box>
+        </Flex>
       ))}
-    </Grid>
-  </Container>
-)
-export default Projects
+    </Container>
+  )
+}

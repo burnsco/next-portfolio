@@ -44,7 +44,7 @@ export default function HeaderContent() {
             aria-label={`Page ${sec.id}`}
           >
             <ChakraLink
-              _hover={{ cursor: "pointer" }}
+              _hover={{ cursor: "pointer", color: "p2" }}
               activeClass="active"
               to={`${sec.id}`}
               spy

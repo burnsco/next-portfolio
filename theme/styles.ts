@@ -12,7 +12,7 @@ export const styles = {
     },
 
     ".active": {
-      color: "red"
+      color: "p2"
     }
   })
 }

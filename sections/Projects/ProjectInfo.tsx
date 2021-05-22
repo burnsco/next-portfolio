@@ -29,15 +29,7 @@ const ProjectInfo: React.FC<ProjectInfoType> = ({
   gitUrl,
   title
 }) => (
-  <Box
-    h="full"
-    w="full"
-    overflow="hidden"
-    zIndex="-1"
-    bgSize="cover"
-    bgImage="url(/textures/boxygrey.svg)"
-    bgRepeat="repeat-y"
-  >
+  <Box h="full" w="full">
     <VStack spacing={2} p={[4, 5, 6]}>
       <HStack>
         <Heading
@@ -77,7 +69,8 @@ const ProjectInfo: React.FC<ProjectInfoType> = ({
         <Button
           px={5}
           size="lg"
-          variant="outline"
+          colorScheme="red"
+          variant="solid"
           as="a"
           href={webUrl}
           target="_blank"

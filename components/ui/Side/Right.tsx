@@ -1,8 +1,8 @@
-import { Box } from "@chakra-ui/react"
+import { VStack } from "@chakra-ui/react"
 import { HeroSocialIcons } from "@common/index"
 
 const RightSideBar = () => (
-  <Box
+  <VStack
     pos="fixed"
     width="3em"
     id="rightBar"
@@ -13,7 +13,7 @@ const RightSideBar = () => (
     bottom="0"
   >
     <HeroSocialIcons />
-  </Box>
+  </VStack>
 )
 
 export default RightSideBar

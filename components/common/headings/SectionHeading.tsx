@@ -3,10 +3,11 @@ import { Container } from "@common/index"
 import PropTypes from "prop-types"
 import { useInView } from "react-intersection-observer"
 
-const SectionHeading: React.FC<{ title: string; subHeading?: string }> = ({
-  title,
-  subHeading
-}) => {
+const SectionHeading: React.FC<{
+  title: string
+  subHeading?: string
+  color?: string
+}> = ({ title, color, subHeading }) => {
   const [ref, inView] = useInView({
     threshold: 0.9,
     triggerOnce: true,
@@ -16,15 +17,15 @@ const SectionHeading: React.FC<{ title: string; subHeading?: string }> = ({
 
   const capitalizedTitle = title.charAt(0).toUpperCase() + title.slice(1)
   return (
-    <Container py={6} maxW="1280px" pb="2.5rem" bg="transparent" mb={[0, 2]}>
+    <Container py={6} maxW="1280px" bg="gray.50" mb={[0, 2]}>
       <div ref={ref}>
-        <Box maxW="760px" mx="auto" textAlign="center">
+        <Box maxW="960px" mx="auto" textAlign="left">
           <Fade in={inView}>
             <chakra.h1
               fontSize="5xl"
               fontWeight="800"
               fontFamily="Lato"
-              color="f3"
+              color={color || "blackAlpha.700"}
               lineHeight="2"
               mb="1"
             >
@@ -38,7 +39,7 @@ const SectionHeading: React.FC<{ title: string; subHeading?: string }> = ({
                   backgroundSize: "100% 88%"
                 }}
               >
-                {capitalizedTitle}
+                {capitalizedTitle} <chakra.span color="p2">.</chakra.span>
               </chakra.span>
             </chakra.h1>
             {subHeading ? <chakra.h3>{subHeading}</chakra.h3> : null}

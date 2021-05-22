@@ -26,7 +26,8 @@ export default function Hero() {
       <Center
         minH="100vh"
         w="full"
-        px={2}
+        p="3em"
+        bg="gray.50"
         display="flex"
         align="center"
         justify="center"
@@ -56,6 +57,7 @@ export default function Hero() {
               as={Heading}
               transform="rotate(-5deg)"
               bgColor="p2"
+              p="1"
               fontFamily="Montserrat"
               letterSpacing="tighter"
               fontSize="3xl"

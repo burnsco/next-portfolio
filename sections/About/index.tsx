@@ -1,15 +1,32 @@
-import { SectionContainer } from "@common/index"
+import { Box, chakra, VStack } from "@chakra-ui/react"
+import { SectionContainer, SectionHeading } from "@common/index"
+import Image from "next/image"
 import PropTypes from "prop-types"
 import About from "./About"
 
-const AboutContainer: React.FC<{ id: string }> = ({ id }) => (
-  <SectionContainer id={id} background={`linear-gradient(#e9ecef,gray.50)`}>
-    <About />
-  </SectionContainer>
-)
+const ChakraImage = chakra(Image)
+
+export default function AboutContainer(props: { id: string }) {
+  return (
+    <SectionContainer id={props.id}>
+      <VStack>
+        <Box pos="relative" overflow="hidden" p="3em" w="full">
+          <SectionHeading title="About" color="white" />
+          <ChakraImage
+            src="/bg/16.jpg"
+            layout="fill"
+            opacity={0.9}
+            objectFit="cover"
+            quality="100"
+          />
+        </Box>
+
+        <About />
+      </VStack>
+    </SectionContainer>
+  )
+}
 
 AboutContainer.propTypes = {
   id: PropTypes.string.isRequired
 }
-
-export default AboutContainer
