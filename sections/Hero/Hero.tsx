@@ -10,10 +10,13 @@ import {
 import AnimatedScrollDownArrow from "@common/icons/scroll-down-arrow"
 import { motion } from "framer-motion"
 import Image from "next/image"
+import { Link } from "react-scroll"
 
 // $black: #555;
 // $grey: #343436;
 // $lightgrey: #959595;
+
+const ChakraLink = chakra(Link)
 
 const ChakraImage = chakra(Image)
 const AnimatedSubHeading = motion(Box)
@@ -69,22 +72,30 @@ export default function Hero() {
           </Box>
 
           <VStack pos="absolute" bottom="50" px={2}>
-            <AnimatedScrollText
-              initial={{ rotate: 90 }}
-              animate={{
-                y: [0, -2, -5, -7, -9, -6, -4, -3, 0]
-              }}
-              transition={{
-                duration: 2,
-                times: [0, 0.5, 1],
-                ease: "linear",
-                repeat: Infinity,
-                repeatType: "reverse"
-              }}
+            <ChakraLink
+              to="skills"
+              _hover={{ cursor: "pointer", color: "p2" }}
+              spy
+              smooth
+              duration={500}
             >
-              Scroll
-            </AnimatedScrollText>
-            <AnimatedScrollArrow />
+              <AnimatedScrollText
+                initial={{ rotate: 90 }}
+                animate={{
+                  y: [0, -2, -5, -7, -9, -6, -4, -3, 0]
+                }}
+                transition={{
+                  duration: 2,
+                  times: [0, 0.5, 1],
+                  ease: "linear",
+                  repeat: Infinity,
+                  repeatType: "reverse"
+                }}
+              >
+                Scroll
+              </AnimatedScrollText>
+              <AnimatedScrollArrow />
+            </ChakraLink>
           </VStack>
         </Flex>
       </Center>

@@ -37,17 +37,17 @@ const HeroSocialIcon = () => (
         >
           {item.iconName === "email" && (
             <MotionHoverBox whileHover={{ scale: 1.1, rotate: 12 }}>
-              <Icon w={5} h={5} as={CustomEmailIcon} />
+              <Icon opacity={0.9} w={5} h={5} as={CustomEmailIcon} />
             </MotionHoverBox>
           )}
           {item.iconName === "github" && (
             <MotionHoverBox whileHover={{ scale: 1.1, rotate: 12 }}>
-              <Icon w={5} h={5} as={SiGithub} />
+              <Icon w={5} h={5} opacity={0.9} as={SiGithub} />
             </MotionHoverBox>
           )}
           {item.iconName === "telegram" && (
             <MotionHoverBox whileHover={{ scale: 1.1, rotate: 12 }}>
-              <Icon w={5} h={5} as={AnimatedTelegramIcon} />
+              <Icon w={5} h={5} opacity={0.9} as={AnimatedTelegramIcon} />
             </MotionHoverBox>
           )}
         </VStack>

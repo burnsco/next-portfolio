@@ -3,21 +3,23 @@ export default [
     title: "frontend",
     iconName: "react",
     skills: [
+      { title: "Typescript" },
       { title: "React" },
+      { title: "Next.js" },
+      { title: "hooks" },
       { title: "Redux" },
       { title: "Gatsby" },
       { title: "Webpack" },
       { title: "Babel" },
       { title: "HTML5" },
       { title: "CSS5" },
-      { title: "SCSS" },
+      { title: "SASS" },
       { title: "Apollo" },
       { title: "Emotion" },
       { title: "Styled Components" },
       { title: "Bootstrap" },
       { title: "Vue" },
       { title: "Tailwind" },
-      { title: "Theme-UI" },
       { title: "GIT" },
       { title: "Jest" }
     ]
@@ -26,12 +28,14 @@ export default [
     title: "backend",
     iconName: "graphql",
     skills: [
+      { title: "TS" },
       { title: "NodeJS" },
-      { title: "Postgresql" },
       { title: "Apollo" },
-      { title: "Graphql" },
+      { title: "TypeGraphQL" },
       { title: "MongoDB" },
-      { title: "Auth" },
+      { title: "MikroORM" },
+      { title: "Postgres" },
+      { title: "Auth/JWT" },
       { title: "Firebase" }
     ]
   },
