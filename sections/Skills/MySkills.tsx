@@ -52,9 +52,9 @@ export default function MySkills() {
                     color="white"
                     bg="p1"
                     borderRadius="3xl"
-                    border="1px dotted"
+                    border="0.5px dotted"
                     px="2"
-                    opacity={0.8}
+                    opacity={0.7}
                     maxW="110px"
                   >
                     {item.title === "frontend" ? (

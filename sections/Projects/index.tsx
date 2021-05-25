@@ -1,4 +1,4 @@
-import { Box, chakra, VStack } from "@chakra-ui/react"
+import { chakra, VStack } from "@chakra-ui/react"
 import { SectionContainer, SectionHeading } from "@common/index"
 import Projects from "@sections/Projects/Projects"
 import Image from "next/image"
@@ -20,7 +20,7 @@ export default function ProjectsContainer(props: any) {
             quality="100"
           />
         </chakra.div>
-        <Box w="full" h="10em" />
+
         <Projects />
       </VStack>
     </SectionContainer>

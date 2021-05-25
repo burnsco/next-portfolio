@@ -11,7 +11,7 @@ export default function SkillsContainer(props: { id: string }) {
   return (
     <SectionContainer id={props.id}>
       <VStack>
-        <Box pos="relative" overflow="hidden" p="1em" w="full">
+        <Box pos="relative" overflow="hidden" p="3em" w="full">
           <SectionHeading title="Skills" />
           <ChakraImage
             src="/bg/15.jpg"

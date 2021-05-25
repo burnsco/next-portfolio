@@ -23,7 +23,7 @@ export default function IndexPage() {
         <SkillsSection id="skills" />
         <Box w="full" h="10em" bg="white" />
         <ProjectsSection id="projects" />
-        <Box w="full" h="10em" bg="white" />
+
         <MiniAppsSection id="apps" />
         <Box w="full" h="10em" bg="white" />
         <AboutSection id="about" />

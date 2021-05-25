@@ -10,7 +10,17 @@ const RandomFacts = () => (
     </ListItem>
     <>
       {data.facts.map((fact: any) => (
-        <ListItem key={`random-fact-${fact.title}`}>{fact.title}</ListItem>
+        <ListItem
+          fontWeight="400"
+          color="#606060"
+          opacity="1"
+          transform="matrix(1,0,0,1,0,0)"
+          fontFamily="Lato"
+          fontSize={{ base: "xs", md: "sm" }}
+          key={`random-fact-${fact.title}`}
+        >
+          {fact.title}
+        </ListItem>
       ))}
     </>
   </List>

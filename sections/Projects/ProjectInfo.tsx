@@ -1,14 +1,6 @@
 import { Box, Button, Flex, Icon, Spacer, Text, VStack } from "@chakra-ui/react"
 import { NextChakraLink } from "@common/index"
-import dynamic from "next/dynamic"
 import { IoLogoGithub } from "react-icons/io"
-
-const RedditCloneIconsList = dynamic(
-  () => import("@common/icons/RedditCloneIconsList")
-)
-const QuickEatsIconsList = dynamic(
-  () => import("@common/icons/QuickEatsIconsList")
-)
 
 const ProjectInfo: React.FC<ProjectInfoType> = ({
   description,
@@ -16,7 +8,7 @@ const ProjectInfo: React.FC<ProjectInfoType> = ({
   gitUrl
 }) => (
   <Box h="full" w="full">
-    <VStack spacing={2} p={[4, 5, 6]}>
+    <VStack spacing={2} p={[0, 4, 6]}>
       <Box p={4}>
         {description.map(p => (
           <Text

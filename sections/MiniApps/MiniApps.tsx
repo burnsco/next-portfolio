@@ -78,9 +78,8 @@ export default function MiniAppsCards() {
                         </Button>
                         <Spacer />
                         <Button
+                          colorScheme="blackAlpha"
                           as="a"
-                          color="white"
-                          colorScheme="orange"
                           href={app.webUrl}
                           target="_blank"
                           rel="noopener noreferrer"

@@ -11,11 +11,11 @@ export default function AboutContainer(props: { id: string }) {
     <SectionContainer id={props.id}>
       <VStack>
         <Box pos="relative" overflow="hidden" p="3em" w="full">
-          <SectionHeading title="About" color="white" />
+          <SectionHeading title="About" color="black" />
           <ChakraImage
-            src="/bg/16.jpg"
+            src="/bg/14.jpg"
             layout="fill"
-            opacity={0.9}
+            opacity={0.3}
             objectFit="cover"
             quality="100"
           />
