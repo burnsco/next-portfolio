@@ -1,16 +1,5 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Heading,
-  HStack,
-  Icon,
-  IconButton,
-  Spacer,
-  Text,
-  VStack
-} from "@chakra-ui/react"
-import { motion } from "framer-motion"
+import { Box, Button, Flex, Icon, Spacer, Text, VStack } from "@chakra-ui/react"
+import { NextChakraLink } from "@common/index"
 import dynamic from "next/dynamic"
 import { IoLogoGithub } from "react-icons/io"
 
@@ -21,40 +10,21 @@ const QuickEatsIconsList = dynamic(
   () => import("@common/icons/QuickEatsIconsList")
 )
 
-const MotionButton = motion(IconButton)
-
 const ProjectInfo: React.FC<ProjectInfoType> = ({
   description,
   webUrl,
-  gitUrl,
-  title
+  gitUrl
 }) => (
   <Box h="full" w="full">
     <VStack spacing={2} p={[4, 5, 6]}>
-      <HStack>
-        <Heading
-          lineHeight="2"
-          fontWeight="900"
-          letterSpacing="wide"
-          color="#414a6b !important;"
-          mb={[2, 3]}
-          fontSize={["xl", "2xl", "3xl"]}
-        >
-          {title}
-        </Heading>
-      </HStack>
-      <HStack>
-        {title === "Reddit Clone" ? (
-          <RedditCloneIconsList />
-        ) : (
-          <QuickEatsIconsList />
-        )}
-      </HStack>
       <Box p={4}>
         {description.map(p => (
           <Text
-            fontWeight="300"
-            lineHeight="tall"
+            fontWeight="400"
+            color="#606060"
+            opacity="1"
+            transform="matrix(1,0,0,1,0,0)"
+            fontFamily="Lato"
             fontSize={{ base: "xs", md: "sm" }}
             key={`paragraph-${p.text}`}
             my="2"
@@ -64,7 +34,13 @@ const ProjectInfo: React.FC<ProjectInfoType> = ({
         ))}
       </Box>
       <Flex p={6} maxW="md" w="full">
-        <Icon as={IoLogoGithub} boxSize={12} />
+        <NextChakraLink
+          href={gitUrl}
+          target="_blank"
+          rel="noopender noreferrer"
+        >
+          <Icon as={IoLogoGithub} boxSize={12} />
+        </NextChakraLink>
         <Spacer />
         <Button
           px={5}
