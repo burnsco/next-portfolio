@@ -1,6 +1,6 @@
 import { usePrefersReducedMotion } from "@chakra-ui/react"
 
-const QuickEatsVideo = () => {
+export default function QuickEatsVideo() {
   const userPrefersReducedMotion = usePrefersReducedMotion()
   return (
     <video
@@ -18,5 +18,3 @@ const QuickEatsVideo = () => {
     </video>
   )
 }
-
-export default QuickEatsVideo

@@ -23,7 +23,7 @@ const SectionHeading: React.FC<{
           <Fade in={inView}>
             <chakra.h1
               fontSize="5xl"
-              fontWeight="800"
+              fontWeight="900"
               fontFamily="Lato"
               color={color || "blackAlpha.700"}
               lineHeight="2"
@@ -39,7 +39,7 @@ const SectionHeading: React.FC<{
                   backgroundSize: "100% 88%"
                 }}
               >
-                {capitalizedTitle} <chakra.span color="p2">.</chakra.span>
+                {capitalizedTitle}
               </chakra.span>
             </chakra.h1>
             {subHeading ? <chakra.h3>{subHeading}</chakra.h3> : null}

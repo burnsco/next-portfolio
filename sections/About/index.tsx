@@ -13,9 +13,9 @@ export default function AboutContainer(props: { id: string }) {
         <Box pos="relative" overflow="hidden" p="3em" w="full">
           <SectionHeading title="About" color="black" />
           <ChakraImage
-            src="/bg/14.jpg"
+            src="/bg/11.jpg"
             layout="fill"
-            opacity={0.3}
+            opacity={0.4}
             objectFit="cover"
             quality="100"
           />

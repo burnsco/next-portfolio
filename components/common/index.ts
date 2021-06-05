@@ -1,4 +1,3 @@
-export { default as AnimatedWave } from "./animations/Container"
 export { default as ProjectCard } from "./cards/Large"
 export { default as MiniAppCard } from "./cards/Small"
 export { default as Container } from "./containers/Container"

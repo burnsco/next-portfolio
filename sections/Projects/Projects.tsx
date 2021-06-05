@@ -1,6 +1,7 @@
 import {
   Badge,
   Box,
+  Center,
   Heading,
   HStack,
   SimpleGrid,
@@ -25,7 +26,7 @@ const RedditCloneVideos = dynamic(() => import("./RedditVideo"))
 
 export default function Projects() {
   return (
-    <>
+    <Box>
       {data.map((project: any) => (
         <>
           <SimpleGrid
@@ -44,60 +45,62 @@ export default function Projects() {
                 )}
               </Box>
 
-              <Stack spacing={3}>
-                <HStack>
-                  <Badge
-                    opacity={0.5}
-                    variant="outline"
-                    colorScheme="blackAlpha"
-                  >
-                    <Heading
-                      colorScheme="red"
-                      fontWeight="400"
-                      color="black"
-                      transform="matrix(1,0,0,1,0,0)"
-                      fontFamily="Lato"
-                      fontSize={{ base: "xs", md: "sm" }}
+              <Center h="full">
+                <Stack spacing={3}>
+                  <HStack>
+                    <Badge
+                      opacity={0.5}
+                      variant="outline"
+                      colorScheme="blackAlpha"
                     >
-                      Title :{" "}
-                    </Heading>
-                  </Badge>
-                  <Heading
-                    lineHeight="2"
-                    opacity={0.9}
-                    fontWeight="900"
-                    letterSpacing="wide"
-                    color="#414a6b !important;"
-                    mb={[2, 3]}
-                    fontSize={["xl", "2xl", "3xl"]}
-                  >
-                    {project.title}
-                  </Heading>
-                </HStack>
-                <HStack>
-                  <Badge
-                    opacity={0.5}
-                    variant="outline"
-                    colorScheme="blackAlpha"
-                  >
+                      <Heading
+                        colorScheme="red"
+                        fontWeight="400"
+                        color="black"
+                        transform="matrix(1,0,0,1,0,0)"
+                        fontFamily="Lato"
+                        fontSize={{ base: "xs", md: "sm" }}
+                      >
+                        Title :{" "}
+                      </Heading>
+                    </Badge>
                     <Heading
-                      fontWeight="400"
-                      color="black"
-                      opacity="1"
-                      transform="matrix(1,0,0,1,0,0)"
-                      fontFamily="Lato"
-                      fontSize={{ base: "xs", md: "sm" }}
+                      lineHeight="2"
+                      opacity={0.9}
+                      fontWeight="900"
+                      letterSpacing="wide"
+                      color="#414a6b !important;"
+                      mb={[2, 3]}
+                      fontSize={["xl", "2xl", "3xl"]}
                     >
-                      Tech :{" "}
+                      {project.title}
                     </Heading>
-                  </Badge>
-                  {title === "Reddit Clone" ? (
-                    <RedditCloneIconsList />
-                  ) : (
-                    <QuickEatsIconsList />
-                  )}
-                </HStack>
-              </Stack>
+                  </HStack>
+                  <HStack>
+                    <Badge
+                      opacity={0.5}
+                      variant="outline"
+                      colorScheme="blackAlpha"
+                    >
+                      <Heading
+                        fontWeight="400"
+                        color="black"
+                        opacity="1"
+                        transform="matrix(1,0,0,1,0,0)"
+                        fontFamily="Lato"
+                        fontSize={{ base: "xs", md: "sm" }}
+                      >
+                        Tech :{" "}
+                      </Heading>
+                    </Badge>
+                    {title === "Reddit Clone" ? (
+                      <RedditCloneIconsList />
+                    ) : (
+                      <QuickEatsIconsList />
+                    )}
+                  </HStack>
+                </Stack>
+              </Center>
             </VStack>
 
             <ProjectInfo
@@ -111,6 +114,6 @@ export default function Projects() {
           <Box h="10em" w="full" bg="white" />
         </>
       ))}
-    </>
+    </Box>
   )
 }

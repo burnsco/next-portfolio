@@ -16,7 +16,7 @@ export default function SkillsContainer(props: { id: string }) {
           <ChakraImage
             src="/bg/15.jpg"
             layout="fill"
-            opacity={0.6}
+            opacity={0.3}
             objectFit="cover"
             quality="100"
           />
