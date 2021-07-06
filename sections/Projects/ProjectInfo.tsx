@@ -1,12 +1,12 @@
 import { Box, Button, Flex, Icon, Spacer, Text, VStack } from "@chakra-ui/react"
+import CustomGithubIcon from "@common/icons/github-icon"
 import { NextChakraLink } from "@common/index"
-import { IoLogoGithub } from "react-icons/io"
 
 export default function ProjectInfo({
   description,
   webUrl,
   gitUrl
-}: ProjectInfoType) {
+}: ProjectDetailsType) {
   return (
     <Box h="full" w="full">
       <VStack spacing={2} p={[0, 4, 6]}>
@@ -17,7 +17,6 @@ export default function ProjectInfo({
               color="#606060"
               opacity="1"
               transform="matrix(1,0,0,1,0,0)"
-              fontFamily="Lato"
               fontSize={{ base: "xs", md: "sm" }}
               key={`paragraph-${p.text}`}
               my="2"
@@ -32,7 +31,7 @@ export default function ProjectInfo({
             target="_blank"
             rel="noopender noreferrer"
           >
-            <Icon as={IoLogoGithub} boxSize={12} />
+            <Icon as={CustomGithubIcon} boxSize={12} />
           </NextChakraLink>
           <Spacer />
           <Button

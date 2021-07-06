@@ -12,7 +12,7 @@ import {
 import CustomGraphQLIcon from "@common/icons/graphql-icon"
 import CustomLinuxIcon from "@common/icons/linux-icon"
 import CustomReactIcon from "@common/icons/react-icon"
-import data from "@configs/Skills/my-skills"
+import React from "react"
 import { useInView } from "react-intersection-observer"
 
 const OldSkillsHeading = (props: any) => (
@@ -29,18 +29,19 @@ const OldSkillsHeading = (props: any) => (
   </chakra.span>
 )
 
-export default function MySkills() {
+export default function MySkills({ mySkills }: any) {
   const [ref, inView] = useInView({
     threshold: 0.9,
     triggerOnce: true,
     trackVisibility: true,
     delay: 350
   })
+
   return (
     <div ref={ref}>
       {inView ? (
         <Box>
-          {data.map(item => (
+          {mySkills.map((item: any) => (
             <ScaleFade
               initialScale={0.4}
               in={inView}
@@ -72,7 +73,7 @@ export default function MySkills() {
                   </HStack>
                 </ListItem>
                 <ListItem mb={4}>
-                  {item.skills.map(skill => (
+                  {item.skills.map((skill: any) => (
                     <Tag
                       m={1}
                       size="sm"

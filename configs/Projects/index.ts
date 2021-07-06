@@ -1,4 +1,4 @@
-export default [
+export const projects = [
   {
     title: "Reddit Clone",
     webUrl: "https://reddit-clone.com",

@@ -24,7 +24,6 @@ const SectionHeading: React.FC<{
             <chakra.h1
               fontSize="5xl"
               fontWeight="900"
-              fontFamily="Lato"
               color={color || "blackAlpha.700"}
               lineHeight="2"
               mb="1"

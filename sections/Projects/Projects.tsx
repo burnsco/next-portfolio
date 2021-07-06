@@ -8,7 +8,6 @@ import {
   Stack,
   VStack
 } from "@chakra-ui/react"
-import data from "@configs/Projects/projects"
 import dynamic from "next/dynamic"
 import { title } from "process"
 import React from "react"
@@ -24,15 +23,16 @@ const QuickEatsIconsList = dynamic(
 const QuickEatsVideos = dynamic(() => import("./QuickEatsVideo"))
 const RedditCloneVideos = dynamic(() => import("./RedditVideo"))
 
-export default function Projects() {
+export default function Projects({ projects }: ProjectsType) {
   return (
     <Box>
-      {data.map((project: any) => (
+      {projects.map((project: any) => (
         <>
           <SimpleGrid
             key={`MainProject-${project.title}`}
             px="5em"
             pt="5em"
+            s
             columns={{ base: 1, md: 2 }}
             spacing={4}
           >
@@ -58,7 +58,6 @@ export default function Projects() {
                         fontWeight="400"
                         color="black"
                         transform="matrix(1,0,0,1,0,0)"
-                        fontFamily="Lato"
                         fontSize={{ base: "xs", md: "sm" }}
                       >
                         Title :{" "}
@@ -87,7 +86,6 @@ export default function Projects() {
                         color="black"
                         opacity="1"
                         transform="matrix(1,0,0,1,0,0)"
-                        fontFamily="Lato"
                         fontSize={{ base: "xs", md: "sm" }}
                       >
                         Tech :{" "}

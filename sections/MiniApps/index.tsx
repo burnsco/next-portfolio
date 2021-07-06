@@ -1,14 +1,15 @@
 import { Center, chakra, VStack } from "@chakra-ui/react"
 import { SectionContainer, SectionHeading } from "@common/index"
 import Image from "next/image"
-import PropTypes from "prop-types"
 import MiniAppsCards from "./MiniApps"
 
 const ChakraImage = chakra(Image)
 
-export default function MiniAppsContainer(props: { id: string }) {
+export default function MiniAppsContainer({ miniapps }: any) {
+  console.log("mini apps container")
+  console.log(miniapps)
   return (
-    <SectionContainer id={props.id}>
+    <SectionContainer id="miniapps">
       <VStack>
         <chakra.div pos="relative" overflow="hidden" p="3em" w="full">
           <SectionHeading title="mini-apps" />
@@ -21,13 +22,9 @@ export default function MiniAppsContainer(props: { id: string }) {
           />
         </chakra.div>
         <Center p="3em">
-          <MiniAppsCards />
+          <MiniAppsCards miniapps={miniapps} />
         </Center>
       </VStack>
     </SectionContainer>
   )
-}
-
-MiniAppsContainer.propTypes = {
-  id: PropTypes.string.isRequired
 }

@@ -4,7 +4,7 @@ import AnimatedTelegramIcon from "@common/icons/telegram-icon"
 import { NextChakraLink } from "@common/index"
 import data from "@configs/site-config/socials"
 import { motion } from "framer-motion"
-import { SiGithub } from "react-icons/si"
+import GitIcon from "./git-icon"
 
 const MotionHoverBox = motion(Box)
 
@@ -42,7 +42,7 @@ const HeroSocialIcon = () => (
           )}
           {item.iconName === "github" && (
             <MotionHoverBox whileHover={{ scale: 1.1, rotate: 12 }}>
-              <Icon w={5} h={5} opacity={0.9} as={SiGithub} />
+              <Icon w={5} h={5} opacity={0.9} as={GitIcon} />
             </MotionHoverBox>
           )}
           {item.iconName === "telegram" && (

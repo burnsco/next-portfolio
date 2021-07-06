@@ -1,4 +1,4 @@
-export default [
+export const miniapps = [
   {
     id: 0.1,
     title: "Dice Roll",

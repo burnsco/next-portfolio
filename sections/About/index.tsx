@@ -1,14 +1,13 @@
 import { Box, chakra, VStack } from "@chakra-ui/react"
 import { SectionContainer, SectionHeading } from "@common/index"
 import Image from "next/image"
-import PropTypes from "prop-types"
 import About from "./About"
 
 const ChakraImage = chakra(Image)
 
-export default function AboutContainer(props: { id: string }) {
+export default function AboutContainer({ aboutMe, randomFacts }: AboutType) {
   return (
-    <SectionContainer id={props.id}>
+    <SectionContainer id="about">
       <VStack>
         <Box pos="relative" overflow="hidden" p="3em" w="full">
           <SectionHeading title="About" color="black" />
@@ -21,12 +20,8 @@ export default function AboutContainer(props: { id: string }) {
           />
         </Box>
 
-        <About />
+        <About aboutMe={aboutMe} randomFacts={randomFacts} />
       </VStack>
     </SectionContainer>
   )
-}
-
-AboutContainer.propTypes = {
-  id: PropTypes.string.isRequired
 }

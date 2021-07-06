@@ -1,15 +1,18 @@
 import { Box, chakra, SimpleGrid, VStack } from "@chakra-ui/react"
 import { SectionContainer, SectionHeading } from "@common/index"
+import DeveloperInfo from "@sections/Skills/DeveloperInfo"
+import MySkills from "@sections/Skills/MySkills"
 import Image from "next/image"
-import PropTypes from "prop-types"
-import DeveloperInfo from "./DeveloperInfo"
-import MySkills from "./MySkills"
+import React from "react"
 
 const ChakraImage = chakra(Image)
 
-export default function SkillsContainer(props: { id: string }) {
+export default function SkillsContainer({
+  developerInfo,
+  mySkills
+}: SkillsType) {
   return (
-    <SectionContainer id={props.id}>
+    <SectionContainer id="skills">
       <VStack>
         <Box pos="relative" overflow="hidden" p="3em" w="full">
           <SectionHeading title="Skills" />
@@ -23,14 +26,10 @@ export default function SkillsContainer(props: { id: string }) {
         </Box>
 
         <SimpleGrid px="5em" pt="3em" columns={{ base: 1, md: 2 }} spacing={8}>
-          <DeveloperInfo />
-          <MySkills />
+          <DeveloperInfo developerInfo={developerInfo} />
+          <MySkills mySkills={mySkills} />
         </SimpleGrid>
       </VStack>
     </SectionContainer>
   )
-}
-
-SkillsContainer.propTypes = {
-  id: PropTypes.string.isRequired
 }

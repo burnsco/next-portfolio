@@ -9,11 +9,11 @@ import {
   Text
 } from "@chakra-ui/react"
 import { MiniAppCard } from "@common/index"
-import data from "@configs/MiniApps/mini-apps"
 import { AnimateSharedLayout } from "framer-motion"
+import React from "react"
 import { useInView } from "react-intersection-observer"
 
-export default function MiniAppsCards() {
+export default function MiniAppsCards({ miniapps }: MiniAppsType) {
   const [ref, inView] = useInView({
     threshold: 0.9,
     triggerOnce: true,
@@ -31,7 +31,7 @@ export default function MiniAppsCards() {
             gridTemplateColumns="repeat(auto-fit, minmax(180px, 1fr))"
           >
             <AnimateSharedLayout type="crossfade">
-              {data.map(app => (
+              {miniapps.map((app: any) => (
                 <ScaleFade
                   key={`mini-apps-${app.title}`}
                   initialScale={app.id}

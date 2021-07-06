@@ -10,18 +10,14 @@ import {
 import AnimatedScrollDownArrow from "@common/icons/scroll-down-arrow"
 import { motion } from "framer-motion"
 import Image from "next/image"
+import React from "react"
 import { Link } from "react-scroll"
-
-// $black: #555;
-// $grey: #343436;
-// $lightgrey: #959595;
 
 const ChakraLink = chakra(Link)
 
 const ChakraImage = chakra(Image)
 const AnimatedSubHeading = motion(Box)
 const AnimatedScrollText = motion(Text)
-const AnimatedScrollArrow = motion(AnimatedScrollDownArrow)
 
 export default function Hero() {
   return (
@@ -42,7 +38,7 @@ export default function Hero() {
           layout="fill"
           opacity={0.1}
           objectFit="cover"
-          quality="100"
+          quality="80"
         />
 
         <Flex dir="row" justify="center" align="center">
@@ -94,7 +90,7 @@ export default function Hero() {
               >
                 Scroll
               </AnimatedScrollText>
-              <AnimatedScrollArrow />
+              <AnimatedScrollDownArrow />
             </ChakraLink>
           </VStack>
         </Flex>
