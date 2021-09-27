@@ -2,7 +2,7 @@ import { chakra, VStack } from "@chakra-ui/react"
 import { SectionContainer, SectionHeading } from "@common/index"
 import dynamic from "next/dynamic"
 import Image from "next/image"
-import React from "react"
+
 const ChakraImage = chakra(Image)
 const Projects = dynamic(() => import("@sections/Projects/Projects"))
 

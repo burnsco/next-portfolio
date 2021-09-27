@@ -14,14 +14,14 @@ export default function SkillsContainer({
   return (
     <SectionContainer id="skills">
       <VStack>
-        <Box pos="relative" overflow="hidden" p="3em" w="full">
+        <Box pos="relative" overflow="hidden" p="1em" w="full">
           <SectionHeading title="Skills" />
           <ChakraImage
             src="/bg/15.jpg"
             layout="fill"
-            opacity={0.3}
+            opacity={0.1}
             objectFit="cover"
-            quality="100"
+            quality={80}
           />
         </Box>
 

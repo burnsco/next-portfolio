@@ -25,14 +25,13 @@ const RedditCloneVideos = dynamic(() => import("./RedditVideo"))
 
 export default function Projects({ projects }: ProjectsType) {
   return (
-    <Box>
+    <>
       {projects.map((project: any) => (
         <>
           <SimpleGrid
             key={`MainProject-${project.title}`}
             px="5em"
             pt="5em"
-            s
             columns={{ base: 1, md: 2 }}
             spacing={4}
           >
@@ -112,6 +111,6 @@ export default function Projects({ projects }: ProjectsType) {
           <Box h="10em" w="full" bg="white" />
         </>
       ))}
-    </Box>
+    </>
   )
 }

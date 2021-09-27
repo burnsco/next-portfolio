@@ -5,7 +5,7 @@ export default function QuickEatsVideo() {
   return (
     <video
       style={{
-        height: "auto",
+        height: "100%",
         width: "100%"
       }}
       controls

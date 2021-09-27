@@ -7,7 +7,6 @@ export const styles = {
       bg: mode("gray.50", "gray.50")(props),
       minW: "100%",
       minH: "100vh",
-      fontSize: ["xs", "sm"],
       lineHeight: "tall"
     },
 

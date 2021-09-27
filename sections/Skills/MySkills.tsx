@@ -12,7 +12,6 @@ import {
 import CustomGraphQLIcon from "@common/icons/graphql-icon"
 import CustomLinuxIcon from "@common/icons/linux-icon"
 import CustomReactIcon from "@common/icons/react-icon"
-import React from "react"
 import { useInView } from "react-intersection-observer"
 
 const OldSkillsHeading = (props: any) => (
@@ -20,7 +19,6 @@ const OldSkillsHeading = (props: any) => (
     opacity={0.9}
     color="gray.50"
     p="0.5"
-    fontStyle="oblique"
     letterSpacing="wider"
     fontWeight="800"
     textTransform="uppercase"
@@ -56,7 +54,7 @@ export default function MySkills({ mySkills }: any) {
                     border="0.5px dotted"
                     px="2"
                     opacity={0.7}
-                    maxW="110px"
+                    maxW="150px"
                   >
                     {item.title === "frontend" ? (
                       <Icon as={CustomReactIcon} boxSize="5" />
