@@ -5,7 +5,10 @@
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "lib": ["dom", "esnext"],
+    "lib": [
+      "dom",
+      "esnext"
+    ],
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
@@ -19,16 +22,43 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "@common/*": ["components/common/*"],
-      "@sections/*": ["sections/*"],
-      "@ui/*": ["components/ui/*"],
-      "@configs/*": ["configs/*"],
-      "@pages/*": ["pages/*"],
-      "@lib/*": ["lib/*"],
-      "@utils/*": ["utils/*"],
-      "@theme/*": ["theme/*"]
-    }
+      "@common/*": [
+        "components/common/*"
+      ],
+      "@sections/*": [
+        "sections/*"
+      ],
+      "@ui/*": [
+        "components/ui/*"
+      ],
+      "@configs/*": [
+        "configs/*"
+      ],
+      "@pages/*": [
+        "pages/*"
+      ],
+      "@lib/*": [
+        "lib/*"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ],
+      "@theme/*": [
+        "theme/*"
+      ]
+    },
+    "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js"],
-  "exclude": ["node_modules", ".next", "out", "dist"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js"
+  ],
+  "exclude": [
+    "node_modules",
+    ".next",
+    "out",
+    "dist"
+  ]
 }
