@@ -22,7 +22,7 @@ export default function Hero() {
           <Heading
             as="h1"
             fontSize="2.8rem"
-            color="l5"
+            color="orange1"
             lineHeight="1.6"
             fontWeight="800"
           >
@@ -42,7 +42,7 @@ export default function Hero() {
             fontSize="1rem"
             letterSpacing="wide"
             color="gray.300"
-            fontWeight="medium"
+            fontWeight="600"
           >
             Full-stack Developer
           </Text>
