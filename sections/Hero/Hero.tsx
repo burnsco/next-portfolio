@@ -28,8 +28,9 @@ export default function Hero() {
           src="/bg/2.jpg"
           layout="fill"
           opacity={0.1}
+          priority
           objectFit="cover"
-          quality="80"
+          quality="70"
         />
 
         <Center display="flex" flexDir="column">
