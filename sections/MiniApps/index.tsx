@@ -13,14 +13,7 @@ export default function MiniAppsContainer({ miniapps }: any) {
       <VStack>
         <chakra.div pos="relative" overflow="hidden" p="3em" w="full">
           <SectionHeading title="mini-apps" />
-          <ChakraImage
-            src="/bg/6.jpg"
-            layout="fill"
-            opacity={0.2}
-            objectFit="cover"
-            priority
-            quality="50"
-          />
+          <ChakraImage src="/bg/staircase.webp" layout="fill" opacity={0.2} objectFit="cover" />
         </chakra.div>
         <Center p="3em">
           <MiniAppsCards miniapps={miniapps} />

@@ -1,14 +1,17 @@
-import { Badge, Box, Center, Heading, HStack, SimpleGrid, Stack, VStack } from "@chakra-ui/react"
+import { Box, SimpleGrid, VStack } from "@chakra-ui/react"
 import dynamic from "next/dynamic"
-import { title } from "process"
 import React from "react"
 import ProjectInfo from "./ProjectInfo"
 
-const RedditCloneIconsList = dynamic(() => import("@common/icons/RedditCloneIconsList"))
-const QuickEatsIconsList = dynamic(() => import("@common/icons/QuickEatsIconsList"))
+const RedditCloneIconsList = dynamic(
+  () => import("@common/icons/RedditCloneIconsList")
+)
+const QuickEatsIconsList = dynamic(
+  () => import("@common/icons/QuickEatsIconsList")
+)
 
 const QuickEatsVideos = dynamic(() => import("./QuickEatsVideo"))
-const RedditCloneVideos = dynamic(() => import("./RedditVideo"))
+const SocialMediaVideos = dynamic(() => import("./RedditVideo"))
 
 export default function Projects({ projects }: ProjectsType) {
   return (
@@ -17,18 +20,26 @@ export default function Projects({ projects }: ProjectsType) {
         <>
           <SimpleGrid
             key={`MainProject-${project.title}`}
-            px="5em"
-            pt="5em"
             columns={{ base: 1, md: 2 }}
             spacing={4}
           >
-            <VStack py="3em">
-              <Box>{project.video === "reddit" ? <RedditCloneVideos /> : <QuickEatsVideos />}</Box>
+            <VStack>
+              <Box paddingLeft="3em">
+                {project.video === "social" ? (
+                  <SocialMediaVideos />
+                ) : (
+                  <QuickEatsVideos />
+                )}
+              </Box>
 
-              <Center h="full">
+              {/* <Center h="full">
                 <Stack spacing={3}>
                   <HStack>
-                    <Badge opacity={0.5} variant="outline" colorScheme="blackAlpha">
+                    <Badge
+                      opacity={0.5}
+                      variant="outline"
+                      colorScheme="blackAlpha"
+                    >
                       <Heading
                         colorScheme="red"
                         fontWeight="400"
@@ -52,7 +63,11 @@ export default function Projects({ projects }: ProjectsType) {
                     </Heading>
                   </HStack>
                   <HStack>
-                    <Badge opacity={0.5} variant="outline" colorScheme="blackAlpha">
+                    <Badge
+                      opacity={0.5}
+                      variant="outline"
+                      colorScheme="blackAlpha"
+                    >
                       <Heading
                         fontWeight="400"
                         color="black"
@@ -63,10 +78,14 @@ export default function Projects({ projects }: ProjectsType) {
                         Tech :{" "}
                       </Heading>
                     </Badge>
-                    {title === "Reddit Clone" ? <RedditCloneIconsList /> : <QuickEatsIconsList />}
+                    {title === "Reddit Clone" ? (
+                      <RedditCloneIconsList />
+                    ) : (
+                      <QuickEatsIconsList />
+                    )}
                   </HStack>
                 </Stack>
-              </Center>
+              </Center> */}
             </VStack>
 
             <ProjectInfo

@@ -3,7 +3,7 @@ import { Box } from "@chakra-ui/react"
 const LeftSideBar = () => (
   <Box
     pos="fixed"
-    width="3em"
+    width={{ sm: "0em", md: "3em" }}
     className="leftBar"
     zIndex="1"
     bg="white"

@@ -13,7 +13,7 @@ export default function ProjectsContainer({ projects }: any) {
         <chakra.div pos="relative" overflow="hidden" w="full">
           <SectionHeading title="Projects" />
           <ChakraImage
-            src="/bg/5.jpg"
+            src="/bg/spiral.webp"
             layout="fill"
             opacity={0.2}
             objectFit="cover"

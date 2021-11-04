@@ -28,26 +28,26 @@ export default function Navbar({ sections }: any) {
         w="full"
         justifyContent="space-between"
       >
-        <Heading
+        <ChakraLink
           _hover={{ cursor: "pointer" }}
           activeClass="active"
           spy
           smooth
           duration={500}
           to="home"
-          as={ChakraLink}
-          fontSize="md"
+          as={Heading}
+          fontSize={["sm", "md"]}
           fontFamily="Dancing Script"
         >
           Corey Burns
-        </Heading>
+        </ChakraLink>
         <HStack w="md" justify="space-evenly" as={List}>
           {sections.map((sec: { id: string }) => (
             <Box
               key={`nav-item-${sec.id}`}
               as={ListItem}
               fontFamily="Nunito"
-              fontSize="10px"
+              fontSize={{ sm: "10px", md: "12px" }}
               fontWeight="600"
               textTransform="uppercase"
               letterSpacing="widest"

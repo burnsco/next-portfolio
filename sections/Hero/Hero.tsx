@@ -25,12 +25,12 @@ export default function Hero() {
         h="full"
       >
         <ChakraImage
-          src="/bg/2.jpg"
+          src="/bg/hero.webp"
           layout="fill"
-          opacity={0.1}
+          opacity={0.2}
           objectFit="cover"
           priority
-          quality="50"
+          quality="100"
         />
 
         <Center display="flex" flexDir="column">

@@ -12,12 +12,11 @@ export default function AboutContainer({ aboutMe, randomFacts }: AboutType) {
         <Box pos="relative" overflow="hidden" p="3em" w="full">
           <SectionHeading title="About" color="black" />
           <ChakraImage
-            src="/bg/11.jpg"
+            src="/bg/spiral.webp"
             layout="fill"
             opacity={0.4}
             objectFit="cover"
             priority
-            quality="50"
           />
         </Box>
 
