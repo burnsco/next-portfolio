@@ -18,7 +18,8 @@ export default function MiniAppsContainer({ miniapps }: any) {
             layout="fill"
             opacity={0.2}
             objectFit="cover"
-            quality="100"
+            priority
+            quality="50"
           />
         </chakra.div>
         <Center p="3em">

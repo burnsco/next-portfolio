@@ -18,7 +18,8 @@ export default function SkillsContainer({ developerInfo, mySkills }: SkillsType)
             layout="fill"
             opacity={0.1}
             objectFit="cover"
-            quality={80}
+            priority
+            quality="50"
           />
         </Box>
 

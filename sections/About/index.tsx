@@ -16,7 +16,8 @@ export default function AboutContainer({ aboutMe, randomFacts }: AboutType) {
             layout="fill"
             opacity={0.4}
             objectFit="cover"
-            quality="100"
+            priority
+            quality="50"
           />
         </Box>
 
