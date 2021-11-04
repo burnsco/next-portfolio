@@ -3,12 +3,12 @@ import dynamic from "next/dynamic"
 import React from "react"
 import ProjectInfo from "./ProjectInfo"
 
-const RedditCloneIconsList = dynamic(
-  () => import("@common/icons/RedditCloneIconsList")
-)
-const QuickEatsIconsList = dynamic(
-  () => import("@common/icons/QuickEatsIconsList")
-)
+// const RedditCloneIconsList = dynamic(
+//   () => import("@common/icons/RedditCloneIconsList")
+// )
+// const QuickEatsIconsList = dynamic(
+//   () => import("@common/icons/QuickEatsIconsList")
+// )
 
 const QuickEatsVideos = dynamic(() => import("./QuickEatsVideo"))
 const SocialMediaVideos = dynamic(() => import("./RedditVideo"))

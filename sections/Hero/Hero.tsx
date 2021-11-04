@@ -71,7 +71,6 @@ export default function Hero() {
               to="skills"
               _hover={{ cursor: "pointer", color: "p2" }}
               spy
-              smooth
               duration={500}
             >
               <AnimatedScrollText

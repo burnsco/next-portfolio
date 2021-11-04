@@ -1,4 +1,4 @@
 export const fonts = {
-  heading: "Lato",
+  heading: "Rubik",
   body: "Lato"
 }

@@ -32,7 +32,6 @@ export default function Navbar({ sections }: any) {
           _hover={{ cursor: "pointer" }}
           activeClass="active"
           spy
-          smooth
           duration={500}
           to="home"
           as={Heading}
@@ -46,17 +45,18 @@ export default function Navbar({ sections }: any) {
             <Box
               key={`nav-item-${sec.id}`}
               as={ListItem}
+              color="black"
               fontFamily="Nunito"
-              fontSize={{ sm: "10px", md: "12px" }}
-              fontWeight="600"
+              fontWeight="700"
               textTransform="uppercase"
               letterSpacing="widest"
               aria-label={`Page ${sec.id}`}
             >
               <ChakraLink
-                _hover={{ cursor: "pointer", color: "p2" }}
-                activeClass="active"
+                _hover={{ cursor: "pointer", color: "orange" }}
+                activeclass="active"
                 to={`${sec.id}`}
+                fontSize="10px"
                 spy
                 smooth
                 duration={500}

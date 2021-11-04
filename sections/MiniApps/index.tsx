@@ -6,14 +6,17 @@ import MiniAppsCards from "./MiniApps"
 const ChakraImage = chakra(Image)
 
 export default function MiniAppsContainer({ miniapps }: any) {
-  console.log("mini apps container")
-  console.log(miniapps)
   return (
     <SectionContainer id="miniapps">
       <VStack>
         <chakra.div pos="relative" overflow="hidden" p="3em" w="full">
           <SectionHeading title="mini-apps" />
-          <ChakraImage src="/bg/staircase.webp" layout="fill" opacity={0.2} objectFit="cover" />
+          <ChakraImage
+            src="/bg/staircase.webp"
+            layout="fill"
+            opacity={0.2}
+            objectFit="cover"
+          />
         </chakra.div>
         <Center p="3em">
           <MiniAppsCards miniapps={miniapps} />
