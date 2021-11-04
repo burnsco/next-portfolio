@@ -7,10 +7,7 @@ import React from "react"
 
 const ChakraImage = chakra(Image)
 
-export default function SkillsContainer({
-  developerInfo,
-  mySkills
-}: SkillsType) {
+export default function SkillsContainer({ developerInfo, mySkills }: SkillsType) {
   return (
     <SectionContainer id="skills">
       <VStack>

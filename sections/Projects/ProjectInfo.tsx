@@ -2,11 +2,7 @@ import { Box, Button, Flex, Icon, Spacer, Text, VStack } from "@chakra-ui/react"
 import CustomGithubIcon from "@common/icons/github-icon"
 import { NextChakraLink } from "@common/index"
 
-export default function ProjectInfo({
-  description,
-  webUrl,
-  gitUrl
-}: ProjectDetailsType) {
+export default function ProjectInfo({ description, webUrl, gitUrl }: ProjectDetailsType) {
   return (
     <Box h="full" w="full">
       <VStack spacing={2} p={[0, 4, 6]}>
@@ -26,11 +22,7 @@ export default function ProjectInfo({
           ))}
         </Box>
         <Flex p={6} maxW="md" w="full">
-          <NextChakraLink
-            href={gitUrl}
-            target="_blank"
-            rel="noopender noreferrer"
-          >
+          <NextChakraLink href={gitUrl} target="_blank" rel="noopender noreferrer">
             <Icon as={CustomGithubIcon} boxSize={12} />
           </NextChakraLink>
           <Spacer />

@@ -1,24 +1,11 @@
-import {
-  Badge,
-  Box,
-  Center,
-  Heading,
-  HStack,
-  SimpleGrid,
-  Stack,
-  VStack
-} from "@chakra-ui/react"
+import { Badge, Box, Center, Heading, HStack, SimpleGrid, Stack, VStack } from "@chakra-ui/react"
 import dynamic from "next/dynamic"
 import { title } from "process"
 import React from "react"
 import ProjectInfo from "./ProjectInfo"
 
-const RedditCloneIconsList = dynamic(
-  () => import("@common/icons/RedditCloneIconsList")
-)
-const QuickEatsIconsList = dynamic(
-  () => import("@common/icons/QuickEatsIconsList")
-)
+const RedditCloneIconsList = dynamic(() => import("@common/icons/RedditCloneIconsList"))
+const QuickEatsIconsList = dynamic(() => import("@common/icons/QuickEatsIconsList"))
 
 const QuickEatsVideos = dynamic(() => import("./QuickEatsVideo"))
 const RedditCloneVideos = dynamic(() => import("./RedditVideo"))
@@ -36,22 +23,12 @@ export default function Projects({ projects }: ProjectsType) {
             spacing={4}
           >
             <VStack py="3em">
-              <Box>
-                {project.video === "reddit" ? (
-                  <RedditCloneVideos />
-                ) : (
-                  <QuickEatsVideos />
-                )}
-              </Box>
+              <Box>{project.video === "reddit" ? <RedditCloneVideos /> : <QuickEatsVideos />}</Box>
 
               <Center h="full">
                 <Stack spacing={3}>
                   <HStack>
-                    <Badge
-                      opacity={0.5}
-                      variant="outline"
-                      colorScheme="blackAlpha"
-                    >
+                    <Badge opacity={0.5} variant="outline" colorScheme="blackAlpha">
                       <Heading
                         colorScheme="red"
                         fontWeight="400"
@@ -75,11 +52,7 @@ export default function Projects({ projects }: ProjectsType) {
                     </Heading>
                   </HStack>
                   <HStack>
-                    <Badge
-                      opacity={0.5}
-                      variant="outline"
-                      colorScheme="blackAlpha"
-                    >
+                    <Badge opacity={0.5} variant="outline" colorScheme="blackAlpha">
                       <Heading
                         fontWeight="400"
                         color="black"
@@ -90,11 +63,7 @@ export default function Projects({ projects }: ProjectsType) {
                         Tech :{" "}
                       </Heading>
                     </Badge>
-                    {title === "Reddit Clone" ? (
-                      <RedditCloneIconsList />
-                    ) : (
-                      <QuickEatsIconsList />
-                    )}
+                    {title === "Reddit Clone" ? <RedditCloneIconsList /> : <QuickEatsIconsList />}
                   </HStack>
                 </Stack>
               </Center>

@@ -42,8 +42,7 @@ export const miniapps = [
     section: "MiniApps",
     webUrl: "https://mini-app-containerapp.vercel.app/rolodex/",
     gitUrl: "https://github.com/burnsco/reddit-clone",
-    excerpt:
-      "Fetch some sample users and filter them in real time! (with silly monster cards)",
+    excerpt: "Fetch some sample users and filter them in real time! (with silly monster cards)",
     image: "/images/monsters.webp"
   },
   {
@@ -52,8 +51,7 @@ export const miniapps = [
     section: "MiniApps",
     webUrl: "https://mini-app-containerapp.vercel.app/coin/",
     gitUrl: "https://github.com/burnsco/reddit-clone",
-    excerpt:
-      "Flips a coin and keeps track of the number of flips, heads and tails.",
+    excerpt: "Flips a coin and keeps track of the number of flips, heads and tails.",
     image: "/images/coins.webp"
   }
 ]

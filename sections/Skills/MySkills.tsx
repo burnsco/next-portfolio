@@ -40,11 +40,7 @@ export default function MySkills({ mySkills }: any) {
       {inView ? (
         <Box>
           {mySkills.map((item: any) => (
-            <ScaleFade
-              initialScale={0.4}
-              in={inView}
-              key={`my-skills-${item.title}`}
-            >
+            <ScaleFade initialScale={0.4} in={inView} key={`my-skills-${item.title}`}>
               <List>
                 <ListItem mb="2.5">
                   <HStack
@@ -56,16 +52,10 @@ export default function MySkills({ mySkills }: any) {
                     opacity={0.7}
                     maxW="150px"
                   >
-                    {item.title === "frontend" ? (
-                      <Icon as={CustomReactIcon} boxSize="5" />
-                    ) : null}
-                    {item.title === "backend" ? (
-                      <Icon as={CustomGraphQLIcon} boxSize="5" />
-                    ) : null}
+                    {item.title === "frontend" ? <Icon as={CustomReactIcon} boxSize="5" /> : null}
+                    {item.title === "backend" ? <Icon as={CustomGraphQLIcon} boxSize="5" /> : null}
 
-                    {item.title === "dev-ops" ? (
-                      <Icon as={CustomLinuxIcon} boxSize="5" />
-                    ) : null}
+                    {item.title === "dev-ops" ? <Icon as={CustomLinuxIcon} boxSize="5" /> : null}
 
                     <OldSkillsHeading {...item} />
                   </HStack>
