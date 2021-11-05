@@ -7,7 +7,10 @@ import React from "react"
 
 const ChakraImage = chakra(Image)
 
-export default function SkillsContainer({ developerInfo, mySkills }: SkillsType) {
+export default function SkillsContainer({
+  developerInfo,
+  mySkills
+}: SkillsType) {
   return (
     <SectionContainer id="skills">
       <VStack>
@@ -24,7 +27,12 @@ export default function SkillsContainer({ developerInfo, mySkills }: SkillsType)
           />
         </Box>
 
-        <SimpleGrid px="5em" pt="1.5em" columns={{ base: 1, md: 2 }} spacing={8}>
+        <SimpleGrid
+          px="5em"
+          pt="1.5em"
+          columns={{ base: 1, md: 2 }}
+          spacing={8}
+        >
           <DeveloperInfo developerInfo={developerInfo} />
           <MySkills mySkills={mySkills} />
         </SimpleGrid>

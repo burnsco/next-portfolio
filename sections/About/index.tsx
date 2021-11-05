@@ -1,5 +1,5 @@
-import { Box, chakra, VStack } from "@chakra-ui/react"
-import { SectionContainer, SectionHeading } from "@common/index"
+import { Box, Center, chakra, Heading, VStack } from "@chakra-ui/react"
+import { SectionContainer } from "@common/index"
 import Image from "next/image"
 import About from "./About"
 
@@ -10,11 +10,13 @@ export default function AboutContainer({ aboutMe, randomFacts }: AboutType) {
     <SectionContainer id="about">
       <VStack>
         <Box pos="relative" overflow="hidden" p="3em" w="full">
-          <SectionHeading title="About" color="black" />
+          <Center>
+            <Heading>About.</Heading>
+          </Center>
           <ChakraImage
-            src="/bg/spiral.webp"
+            src="/bg/keyboardheadphones.webp"
             layout="fill"
-            opacity={0.4}
+            opacity={0.9}
             objectFit="cover"
             priority
           />

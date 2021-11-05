@@ -40,12 +40,12 @@ export default function Navbar({ sections }: any) {
         >
           Corey Burns
         </ChakraLink>
-        <HStack w="md" justify="space-evenly" as={List}>
+        <HStack w="lg" justify="space-evenly" as={List}>
           {sections.map((sec: { id: string }) => (
             <Box
               key={`nav-item-${sec.id}`}
               as={ListItem}
-              color="black"
+              color="#444444"
               fontFamily="Nunito"
               fontWeight="700"
               textTransform="uppercase"
@@ -56,7 +56,7 @@ export default function Navbar({ sections }: any) {
                 _hover={{ cursor: "pointer", color: "orange" }}
                 activeclass="active"
                 to={`${sec.id}`}
-                fontSize="10px"
+                fontSize="10.5px"
                 spy
                 smooth
                 duration={500}
