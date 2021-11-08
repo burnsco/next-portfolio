@@ -1,16 +1,8 @@
-// $primary: #de5f5f;
-// $black: #555;
-// $primar2: #db3a34
-// $impary3: #ffc857
-// $grey: #343436;
-// $black: #323031
-// $green: #177e89
-// $lightgrey: #959595;
-// $yellow: #FDEF52
-// $blue: #3A99D8
-// }
-
 const colors = {
+  mainGrey: "#bfced9",
+  mainYellow: "#fce38c",
+  mainBlack: "#4a494b",
+  mainRed: "#fc5271",
   black: "#010100",
   oliveBlack: "#36382E",
   b1: "#2d3748",
@@ -29,6 +21,16 @@ const colors = {
   slategray: "#70798C",
   amber: "#FDB750",
   orange1: "#FD7F20",
+  t1: "#de5f5f",
+  t2: "#555",
+  t3: "#db3a34",
+  t4: "#ffc857",
+  t5: "#343436",
+  t6: "#323031",
+  t7: "#177e89",
+  t8: "#959595",
+  t9: "#FDEF52",
+  t10: "#3A99D8",
   grullo: "#A99985",
   text: "rgba(80, 81, 79, 1)",
   maintest: "#F25F5C",

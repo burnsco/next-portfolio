@@ -20,7 +20,7 @@ export const skills = {
 
   mySkills: [
     {
-      title: "frontend",
+      title: "Frontend",
       iconName: "react",
       skills: [
         { title: "Typescript" },
@@ -45,7 +45,7 @@ export const skills = {
       ]
     },
     {
-      title: "backend",
+      title: "Backend",
       iconName: "graphql",
       skills: [
         { title: "TS" },
@@ -60,7 +60,7 @@ export const skills = {
       ]
     },
     {
-      title: "dev-ops",
+      title: "Dev-ops",
       iconName: "linux",
       skills: [
         { title: "Docker" },

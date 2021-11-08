@@ -24,22 +24,11 @@ const SectionHeading: React.FC<{
             <chakra.h1
               fontSize="5xl"
               fontWeight="900"
-              color={color || "blackAlpha.700"}
+              color={color || "blackAlpha.400"}
               lineHeight="2"
               mb="1"
             >
-              <chakra.span
-                backgroundImage="linear-gradient(120deg, rgba(243,147, 55,1) 0%, rgb(250, 112, 154) 100%)"
-                backgroundRepeat="no-repeat"
-                backgroundSize="100% 0.2em"
-                backgroundPosition="0 88%"
-                transition="background-size 0.25s ease-in"
-                _hover={{
-                  backgroundSize: "100% 88%"
-                }}
-              >
-                {capitalizedTitle}
-              </chakra.span>
+              {capitalizedTitle}
             </chakra.h1>
             {subHeading ? <chakra.h3>{subHeading}</chakra.h3> : null}
           </Fade>

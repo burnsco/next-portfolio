@@ -2,30 +2,13 @@ import {
   Box,
   chakra,
   HStack,
-  Icon,
   List,
   ListItem,
   ScaleFade,
   Tag,
   TagLabel
 } from "@chakra-ui/react"
-import CustomGraphQLIcon from "@common/icons/graphql-icon"
-import CustomLinuxIcon from "@common/icons/linux-icon"
-import CustomReactIcon from "@common/icons/react-icon"
 import { useInView } from "react-intersection-observer"
-
-const OldSkillsHeading = (props: any) => (
-  <chakra.span
-    opacity={0.9}
-    color="gray.50"
-    p="0.5"
-    letterSpacing="wider"
-    fontWeight="800"
-    textTransform="uppercase"
-  >
-    {props.title}
-  </chakra.span>
-)
 
 export default function MySkills({ mySkills }: any) {
   const [ref, inView] = useInView({
@@ -40,24 +23,29 @@ export default function MySkills({ mySkills }: any) {
       {inView ? (
         <Box>
           {mySkills.map((item: any) => (
-            <ScaleFade initialScale={0.4} in={inView} key={`my-skills-${item.title}`}>
+            <ScaleFade
+              initialScale={0.4}
+              in={inView}
+              key={`my-skills-${item.title}`}
+            >
               <List>
                 <ListItem mb="2.5">
-                  <HStack
-                    color="white"
-                    bg="p1"
-                    borderRadius="3xl"
-                    border="0.5px dotted"
-                    px="2"
-                    opacity={0.7}
-                    maxW="150px"
-                  >
-                    {item.title === "frontend" ? <Icon as={CustomReactIcon} boxSize="5" /> : null}
-                    {item.title === "backend" ? <Icon as={CustomGraphQLIcon} boxSize="5" /> : null}
-
-                    {item.title === "dev-ops" ? <Icon as={CustomLinuxIcon} boxSize="5" /> : null}
-
-                    <OldSkillsHeading {...item} />
+                  <HStack fontWeight="700" color="newBlack" px="1" maxW="150px">
+                    <chakra.h3
+                      fontSize="22px"
+                      color="mainBlack"
+                      opacity={0.8}
+                      background="linear-gradient(120deg,  rgba(243,147, 55,1), rgb(250, 112, 154) 100%)"
+                      backgroundRepeat="no-repeat"
+                      backgroundSize="100% 0.2em"
+                      backgroundPosition="0 89%"
+                      letterSpacing="tighter"
+                      fontWeight="800"
+                      fontFamily="Nunito, sans-serif"
+                      lineHeight="1.2"
+                    >
+                      {item.title}
+                    </chakra.h3>
                   </HStack>
                 </ListItem>
                 <ListItem mb={4}>
@@ -66,7 +54,7 @@ export default function MySkills({ mySkills }: any) {
                       m={1}
                       size="sm"
                       colorScheme="blackAlpha"
-                      variant="outline"
+                      variant="subtle"
                       key={`MySkills-badge-${skill.title}`}
                     >
                       <TagLabel>{skill.title}</TagLabel>

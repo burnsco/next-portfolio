@@ -30,8 +30,8 @@ export default function Navbar({ sections }: any) {
       >
         <ChakraLink
           _hover={{ cursor: "pointer" }}
-          activeClass="active"
-          spy
+          activeclass="active"
+          spy={true}
           duration={500}
           to="home"
           as={Heading}
@@ -57,7 +57,7 @@ export default function Navbar({ sections }: any) {
                 activeclass="active"
                 to={`${sec.id}`}
                 fontSize="10.5px"
-                spy
+                spy={true}
                 smooth
                 duration={500}
               >

@@ -37,6 +37,7 @@ export default function Hero() {
           <Box>
             <Heading
               color="#343436"
+              opacity={0.9}
               letterSpacing="tighter"
               fontFamily="Montserrat"
               fontSize={{ sm: "4xl", md: "6xl" }}
@@ -60,7 +61,7 @@ export default function Hero() {
               fontFamily="Montserrat"
               letterSpacing="tighter"
               fontSize={{ sm: "1xl", md: "2xl" }}
-              color="blackAlpha.700"
+              color="mainBlack"
               fontWeight="800"
             >
               full-stack developer
@@ -70,7 +71,7 @@ export default function Hero() {
             <ChakraLink
               to="skills"
               _hover={{ cursor: "pointer", color: "p2" }}
-              spy
+              spy={true}
               duration={500}
             >
               <AnimatedScrollText
