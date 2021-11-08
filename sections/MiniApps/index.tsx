@@ -18,7 +18,7 @@ export default function MiniAppsContainer({ miniapps }: any) {
             objectFit="cover"
           />
         </chakra.div>
-        <Center p="3em">
+        <Center maxW="container.xl">
           <MiniAppsCards miniapps={miniapps} />
         </Center>
       </VStack>

@@ -19,11 +19,11 @@ export default function Projects({ projects }: ProjectsType) {
       {projects.map((project: any) => (
         <>
           <SimpleGrid
+            border="2px solid plum"
             key={`MainProject-${project.title}`}
-            columns={{ base: 1, md: 2 }}
-            spacing={4}
+            columns={{ base: 1, xl: 2 }}
           >
-            <VStack>
+            <VStack border="2px solid green">
               <Box paddingLeft="3em">
                 {project.video === "social" ? (
                   <SocialMediaVideos />

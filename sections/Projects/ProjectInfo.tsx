@@ -1,6 +1,4 @@
-import { Box, Button, Flex, Icon, Spacer, Text, VStack } from "@chakra-ui/react"
-import CustomGithubIcon from "@common/icons/github-icon"
-import { NextChakraLink } from "@common/index"
+import { Box, Text, VStack } from "@chakra-ui/react"
 
 export default function ProjectInfo({
   description,
@@ -8,9 +6,9 @@ export default function ProjectInfo({
   gitUrl
 }: ProjectDetailsType) {
   return (
-    <Box h="full" w="full">
-      <VStack spacing={2} p={[0, 4, 6]}>
-        <Box p={4}>
+    <Box h="full" w="full" border="3px" pr="3em">
+      <VStack p={[0, 4, 6]}>
+        <Box p={4} mx="auto">
           {description.map(p => (
             <Text
               fontWeight="400"
@@ -25,13 +23,13 @@ export default function ProjectInfo({
             </Text>
           ))}
         </Box>
-        <Flex p={6} maxW="md" w="full">
+        {/* <Flex p={6} maxW="md" w="full">
           <NextChakraLink
             href={gitUrl}
             target="_blank"
             rel="noopender noreferrer"
           >
-            <Icon as={CustomGithubIcon} boxSize={12} />
+            Source <Icon as={CustomGithubIcon} boxSize={12} />
           </NextChakraLink>
           <Spacer />
           <Button
@@ -40,12 +38,12 @@ export default function ProjectInfo({
             target="_blank"
             rel="noopener noreferrer"
             size="lg"
-            colorScheme="teal"
+            colorScheme="twitter"
             variant="solid"
           >
-            Button
+            Check it out
           </Button>
-        </Flex>
+        </Flex> */}
       </VStack>
     </Box>
   )

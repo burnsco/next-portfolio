@@ -14,8 +14,8 @@ const AnimatedScrollDownArrow = () => (
   >
     <motion.svg height="100%" width="100%" viewBox="0 0 20 20">
       <motion.path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         fill="black"
         animate={{
           y: [0, 2, 4, 6, 8, 4, 3, 3, 0]

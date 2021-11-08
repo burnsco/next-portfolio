@@ -4,11 +4,12 @@ import { HeroSocialIcons } from "@common/index"
 const RightSideBar = () => (
   <VStack
     pos="fixed"
-    width="3em"
+    display={{ base: "none", md: "block" }}
+    width={{ base: "2.5em", md: "3em" }}
     id="rightBar"
     zIndex="1"
     bg="white"
-    top="3em"
+    top={{ base: "2.5em", md: "3em" }}
     right="0"
     bottom="0"
   >

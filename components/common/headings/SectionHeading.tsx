@@ -19,14 +19,13 @@ const SectionHeading: React.FC<{
   return (
     <Container py={6} maxW="1280px" bg="gray.50" mb={[0, 2]}>
       <div ref={ref}>
-        <Box maxW="960px" mx="auto" textAlign="left">
+        <Box maxW="960px" mx="auto" textAlign="left" pl="3em" pt="1em">
           <Fade in={inView}>
             <chakra.h1
               fontSize="5xl"
               fontWeight="900"
               color={color || "blackAlpha.400"}
               lineHeight="2"
-              mb="1"
             >
               {capitalizedTitle}
             </chakra.h1>

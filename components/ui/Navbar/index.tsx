@@ -14,7 +14,7 @@ export default function Navbar({ sections }: any) {
       pos="fixed"
       id="navbar"
       zIndex="1"
-      h="3em"
+      h={{ base: "2.5em", sm: "3em" }}
       bg="white"
       left="0"
       right="0"
@@ -23,7 +23,7 @@ export default function Navbar({ sections }: any) {
       <HStack
         aria-label="Primary Navigation"
         as="nav"
-        px="2em"
+        px={{ base: "1em", md: "3em" }}
         h="full"
         w="full"
         justifyContent="space-between"
@@ -31,11 +31,10 @@ export default function Navbar({ sections }: any) {
         <ChakraLink
           _hover={{ cursor: "pointer" }}
           activeclass="active"
-          spy={true}
           duration={500}
           to="home"
           as={Heading}
-          fontSize={["sm", "md"]}
+          fontSize={["xs", "md"]}
           fontFamily="Dancing Script"
         >
           Corey Burns
@@ -47,7 +46,7 @@ export default function Navbar({ sections }: any) {
               as={ListItem}
               color="#444444"
               fontFamily="Nunito"
-              fontWeight="700"
+              fontWeight={{ base: 800, md: 700 }}
               textTransform="uppercase"
               letterSpacing="widest"
               aria-label={`Page ${sec.id}`}
@@ -56,8 +55,7 @@ export default function Navbar({ sections }: any) {
                 _hover={{ cursor: "pointer", color: "orange" }}
                 activeclass="active"
                 to={`${sec.id}`}
-                fontSize="10.5px"
-                spy={true}
+                fontSize={{ base: "8.5px", md: "10.5px" }}
                 smooth
                 duration={500}
               >
