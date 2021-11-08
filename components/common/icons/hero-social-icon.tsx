@@ -2,7 +2,7 @@ import { Box, Icon, Tooltip, VStack } from "@chakra-ui/react"
 import CustomEmailIcon from "@common/icons/email-icon"
 import AnimatedTelegramIcon from "@common/icons/telegram-icon"
 import { NextChakraLink } from "@common/index"
-import data from "@configs/site-config/socials"
+import { socials } from "@configs/site-config/socials"
 import { motion } from "framer-motion"
 import GitIcon from "./git-icon"
 
@@ -10,7 +10,7 @@ const MotionHoverBox = motion(Box)
 
 const HeroSocialIcon = () => (
   <VStack pos="relative" h="100%" w="40px" justify="center" align="center">
-    {data.map(item => (
+    {socials.map(item => (
       <Tooltip
         hasArrow
         bg="gray.200"
