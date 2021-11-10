@@ -15,7 +15,6 @@ import Image from "next/image"
 
 const ChakraLink = chakra(Link)
 const ChakraImage = chakra(Image)
-const AnimatedSubHeading = motion(Box)
 const AnimatedScrollText = motion(Text)
 
 export default function HeroContainer(props: any) {
