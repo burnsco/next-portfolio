@@ -1,13 +1,14 @@
 import {
   Box,
-  Button,
+  ButtonGroup,
+  Center,
   Flex,
   Grid,
   Img,
   ScaleFade,
-  Spacer,
   Text
 } from "@chakra-ui/react"
+import CustomButton from "@common/buttons/customButton"
 import { MiniAppCard } from "@common/index"
 import { AnimateSharedLayout } from "framer-motion"
 import React from "react"
@@ -52,7 +53,7 @@ export default function MiniAppsCards({ miniapps }: MiniAppsType) {
 
                     <Img
                       w="100%"
-                      h="140px"
+                      h="150px"
                       src={app.image}
                       alt={`mini app ${app.title}`}
                       objectFit="cover"
@@ -65,28 +66,26 @@ export default function MiniAppsCards({ miniapps }: MiniAppsType) {
                       >
                         {app.excerpt}
                       </Box>
-                      <Spacer />
 
-                      <Flex>
-                        <Button
-                          as="a"
-                          href={app.gitUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Source
-                        </Button>
-                        <Spacer />
-                        <Button
-                          colorScheme="blackAlpha"
-                          as="a"
-                          href={app.webUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Demo
-                        </Button>
-                      </Flex>
+                      <Center>
+                        <ButtonGroup w="full">
+                          <CustomButton
+                            as="a"
+                            title="Source"
+                            href={app.gitUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          />
+
+                          <CustomButton
+                            as="a"
+                            href={app.webUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Demo"
+                          />
+                        </ButtonGroup>
+                      </Center>
                     </Flex>
                   </MiniAppCard>
                 </ScaleFade>

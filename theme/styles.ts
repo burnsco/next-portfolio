@@ -11,7 +11,7 @@ export const styles = {
     },
 
     ".active": {
-      color: "p2"
+      color: "#d77f74"
     }
   })
 }

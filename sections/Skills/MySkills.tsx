@@ -21,7 +21,7 @@ export default function MySkills({ mySkills }: any) {
   return (
     <div ref={ref}>
       {inView ? (
-        <Box>
+        <Box border="2px solid palevioletred" p="2">
           {mySkills.map((item: any) => (
             <ScaleFade
               initialScale={0.4}

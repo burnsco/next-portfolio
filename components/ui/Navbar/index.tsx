@@ -29,6 +29,7 @@ export default function Navbar({ sections }: any) {
         justifyContent="space-between"
       >
         <ChakraLink
+          display={{ base: "none", sm: "block" }}
           _hover={{ cursor: "pointer" }}
           activeclass="active"
           duration={500}
@@ -52,10 +53,10 @@ export default function Navbar({ sections }: any) {
               aria-label={`Page ${sec.id}`}
             >
               <ChakraLink
-                _hover={{ cursor: "pointer", color: "orange" }}
-                activeclass="active"
+                _hover={{ cursor: "pointer", color: "#d77f74" }}
+                activeClass="active"
                 to={`${sec.id}`}
-                fontSize={{ base: "8.5px", md: "10.5px" }}
+                fontSize={{ base: "9.5px", md: "11.5px" }}
                 smooth
                 duration={500}
               >

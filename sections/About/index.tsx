@@ -1,7 +1,17 @@
-import { Box, Center, chakra, Heading, VStack } from "@chakra-ui/react"
+import { EmailIcon } from "@chakra-ui/icons"
+import {
+  Box,
+  Center,
+  chakra,
+  Heading,
+  List,
+  ListIcon,
+  ListItem,
+  SimpleGrid,
+  VStack
+} from "@chakra-ui/react"
 import { SectionContainer } from "@common/index"
 import Image from "next/image"
-import About from "./About"
 
 const ChakraImage = chakra(Image)
 
@@ -18,11 +28,51 @@ export default function AboutContainer({ aboutMe, randomFacts }: AboutType) {
             layout="fill"
             opacity={0.9}
             objectFit="cover"
-            priority
           />
         </Box>
 
-        <About aboutMe={aboutMe} randomFacts={randomFacts} />
+        <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={6} p="4">
+          <List>
+            <ListItem textStyle="list-heading">
+              <ListIcon as={EmailIcon} boxSize={5} color="red.500" />
+              {randomFacts.title}
+            </ListItem>
+            <>
+              {randomFacts.facts.map((fact: any) => (
+                <ListItem
+                  fontWeight="400"
+                  color="#606060"
+                  opacity="1"
+                  transform="matrix(1,0,0,1,0,0)"
+                  fontSize={{ base: "xs", md: "sm" }}
+                  key={`random-fact-${fact.title}`}
+                >
+                  {fact.title}
+                </ListItem>
+              ))}
+            </>
+          </List>
+          <List>
+            <ListItem textStyle="list-heading">
+              <ListIcon as={EmailIcon} boxSize={5} color="red.500" />
+              {aboutMe.title}
+            </ListItem>
+            <>
+              {aboutMe.excerpt.map((paragraph: any) => (
+                <ListItem
+                  fontWeight="400"
+                  color="#606060"
+                  opacity="1"
+                  transform="matrix(1,0,0,1,0,0)"
+                  fontSize={{ base: "xs", md: "sm" }}
+                  key={`p-${paragraph.text}`}
+                >
+                  {paragraph.text}
+                </ListItem>
+              ))}
+            </>
+          </List>
+        </SimpleGrid>
       </VStack>
     </SectionContainer>
   )

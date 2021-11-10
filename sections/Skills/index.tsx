@@ -3,7 +3,6 @@ import { SectionContainer, SectionHeading } from "@common/index"
 import DeveloperInfo from "@sections/Skills/DeveloperInfo"
 import MySkills from "@sections/Skills/MySkills"
 import Image from "next/image"
-import React from "react"
 
 const ChakraImage = chakra(Image)
 
@@ -28,10 +27,9 @@ export default function SkillsContainer({
         </Box>
 
         <SimpleGrid
-          px="1em"
-          pt="1.5em"
-          columns={{ base: 1, md: 2 }}
-          spacing={8}
+          columns={{ base: 1, lg: 2 }}
+          spacing={4}
+          border="1px solid purple"
         >
           <DeveloperInfo developerInfo={developerInfo} />
           <MySkills mySkills={mySkills} />

@@ -1,4 +1,5 @@
-import { Box, Text, VStack } from "@chakra-ui/react"
+import { Box, ButtonGroup, Text, VStack } from "@chakra-ui/react"
+import CustomButton from "@common/buttons/customButton"
 
 export default function ProjectInfo({
   description,
@@ -6,9 +7,9 @@ export default function ProjectInfo({
   gitUrl
 }: ProjectDetailsType) {
   return (
-    <Box h="full" w="full" border="3px" pr="3em">
-      <VStack p={[0, 4, 6]}>
-        <Box p={4} mx="auto">
+    <Box border="1px solid red" h="full" w="full" p={{ base: 2, lg: 4 }}>
+      <VStack>
+        <Box mx="auto">
           {description.map(p => (
             <Text
               fontWeight="400"
@@ -44,6 +45,10 @@ export default function ProjectInfo({
             Check it out
           </Button>
         </Flex> */}
+        <ButtonGroup>
+          <CustomButton title="Source" />
+          <CustomButton title="Demo" />
+        </ButtonGroup>
       </VStack>
     </Box>
   )

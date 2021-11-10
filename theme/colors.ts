@@ -2,6 +2,8 @@ const colors = {
   mainGrey: "#bfced9",
   mainYellow: "#fce38c",
   mainBlack: "#4a494b",
+  mainBlackish: "#3b373a",
+  mainSubBlack: "#5f6565",
   mainRed: "#fc5271",
   black: "#010100",
   oliveBlack: "#36382E",

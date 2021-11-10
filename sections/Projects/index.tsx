@@ -10,19 +10,14 @@ export default function ProjectsContainer({ projects }: any) {
   return (
     <SectionContainer id="projects">
       <VStack id="projects Container">
-        <chakra.div
-          pos="relative"
-          overflow="hidden"
-          w="full"
-          border="1px solid red"
-        >
+        <chakra.div pos="relative" overflow="hidden" w="full">
           <SectionHeading title="Projects" />
           <ChakraImage
-            src="/bg/spiral.webp"
+            src="/bg/spiralarch.webp"
             layout="fill"
             opacity={0.2}
             objectFit="cover"
-            quality="100"
+            quality="80"
           />
         </chakra.div>
 

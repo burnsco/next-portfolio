@@ -14,7 +14,7 @@ import WebPackIcon from "./webpack-icon"
 const RedditCloneIconsList = () => (
   <HStack spacing={4}>
     <SiReactIcon />
-    <StyledIcon boxSize={6} />
+    <StyledIcon />
     <WebPackIcon />
     <ApolloIcon />
     <NodeJsIcon />

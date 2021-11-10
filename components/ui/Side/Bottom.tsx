@@ -3,6 +3,7 @@ import HeroSocialIconHor from "@common/icons/hero-social-icons-hor"
 
 const BottomSideBar = () => (
   <Box
+    display="flex"
     pos="fixed"
     height={{ base: "2.0em", sm: "3em" }}
     width="full"

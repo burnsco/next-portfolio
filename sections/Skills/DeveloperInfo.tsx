@@ -13,7 +13,7 @@ export default function DeveloperInfo({ developerInfo }: any) {
     <div ref={ref}>
       {inView ? (
         <Fade in={inView}>
-          <List pt="1em">
+          <List p="4" border="2px solid red">
             {developerInfo.excerpt.map((p: any) => (
               <ListItem
                 fontWeight="400"

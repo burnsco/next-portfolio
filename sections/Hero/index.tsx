@@ -2,6 +2,7 @@ import {
   Box,
   Center,
   chakra,
+  Flex,
   Heading,
   Link,
   Text,
@@ -25,7 +26,6 @@ export default function HeroContainer(props: any) {
           pos="relative"
           minH="100vh"
           w="full"
-          p="3em"
           bg="gray.50"
           display="flex"
           align="center"
@@ -39,10 +39,10 @@ export default function HeroContainer(props: any) {
             opacity={0.2}
             objectFit="cover"
             priority
-            quality="100"
+            quality="80"
           />
 
-          <Center display="flex" flexDir="column">
+          <Flex alignItems="center" justifyContent="center" flexDir="column">
             <Box>
               <Heading
                 color="#343436"
@@ -57,24 +57,20 @@ export default function HeroContainer(props: any) {
             </Box>
 
             <Box>
-              <AnimatedSubHeading
-                as={Heading}
+              <Heading
                 opacity={0.9}
-                initial={false}
-                transform="rotate(-1deg)"
-                animate={{ x: 100 }}
                 background="linear-gradient(120deg,  rgba(243,147, 55,1), rgb(250, 112, 154) 100%)"
                 backgroundRepeat="no-repeat"
                 backgroundSize="100% 60%"
                 backgroundPosition="0 59%"
                 fontFamily="Montserrat"
                 letterSpacing="tighter"
-                fontSize={{ base: "2xl", md: "4xl" }}
+                fontSize={{ base: "1xl", md: "2xl" }}
                 color="mainBlack"
                 fontWeight="800"
               >
                 full-stack developer
-              </AnimatedSubHeading>
+              </Heading>
             </Box>
             <VStack pos="absolute" bottom="50" px={2}>
               <ChakraLink
@@ -101,7 +97,7 @@ export default function HeroContainer(props: any) {
                 <AnimatedScrollDownArrow />
               </ChakraLink>
             </VStack>
-          </Center>
+          </Flex>
         </Center>
       </Box>
     </SectionContainer>

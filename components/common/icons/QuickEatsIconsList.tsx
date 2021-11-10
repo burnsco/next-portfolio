@@ -8,7 +8,7 @@ import StyledIcon from "./styled-icon"
 const QuickEatsIconsList = () => (
   <HStack spacing={4}>
     <Icon as={SiReactIcon} />
-    <Icon as={StyledIcon} boxSize={6} />
+    <Icon as={StyledIcon} />
     <Icon as={ReduxIcon} />
     <Icon as={SassIcon} />
     <Icon as={FirebaseIcon} />
