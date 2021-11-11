@@ -53,7 +53,7 @@ export default function MiniAppsCards({ miniapps }: MiniAppsType) {
 
                     <Img
                       w="100%"
-                      h="150px"
+                      h="180px"
                       src={app.image}
                       alt={`mini app ${app.title}`}
                       objectFit="cover"

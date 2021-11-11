@@ -17,12 +17,12 @@ const SectionHeading: React.FC<{
 
   const capitalizedTitle = title.charAt(0).toUpperCase() + title.slice(1)
   return (
-    <Container py={2} maxW="1400px" bg="gray.50">
+    <Container p="10" maxW="1400px" bg="gray.50">
       <div ref={ref}>
         <Box maxW="1400px" mx="auto" textAlign="center" pt="1em">
           <Fade in={inView}>
             <chakra.h1
-              fontSize="4xl"
+              fontSize="5xl"
               fontWeight="900"
               color={color || "blackAlpha.400"}
               lineHeight="2"

@@ -19,11 +19,12 @@ export default function Projects({ projects }: ProjectsType) {
       {projects.map((project: any) => (
         <>
           <SimpleGrid
+            px={{ base: "2em", md: "3em" }}
             key={`MainProject-${project.title}`}
             spacing={{ base: 0, lg: 4, xl: 6 }}
             columns={{ base: 1, xl: 2 }}
           >
-            <VStack border="2px solid plum">
+            <VStack>
               <Box>
                 {project.video === "social" ? (
                   <SocialMediaVideos />
@@ -96,7 +97,7 @@ export default function Projects({ projects }: ProjectsType) {
             />
           </SimpleGrid>
 
-          <Box h={{ base: "2em", md: "6em", xl: "10em" }} w="full" bg="white" />
+          <Box h={{ base: "2em", md: "6em", xl: "8em" }} w="full" bg="white" />
         </>
       ))}
     </>

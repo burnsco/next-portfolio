@@ -5,7 +5,7 @@ const BottomSideBar = () => (
   <Box
     display="flex"
     pos="fixed"
-    height={{ base: "2.0em", sm: "3em" }}
+    height={{ base: "2em", sm: "3em" }}
     width="full"
     id="Sidebar"
     zIndex="1"

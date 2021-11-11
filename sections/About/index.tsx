@@ -18,7 +18,7 @@ const ChakraImage = chakra(Image)
 export default function AboutContainer({ aboutMe, randomFacts }: AboutType) {
   return (
     <SectionContainer id="about">
-      <VStack>
+      <VStack px={{ base: "2em", md: "3em" }}>
         <Box pos="relative" overflow="hidden" p="3em" w="full">
           <Center>
             <Heading>About.</Heading>

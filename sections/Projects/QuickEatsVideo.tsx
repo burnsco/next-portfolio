@@ -1,4 +1,4 @@
-import { Box, Flex, usePrefersReducedMotion } from "@chakra-ui/react"
+import { Center, usePrefersReducedMotion } from "@chakra-ui/react"
 import dynamic from "next/dynamic"
 
 const RedditCloneIconsList = dynamic(
@@ -11,7 +11,7 @@ const QuickEatsIconsList = dynamic(
 export default function QuickEatsVideo() {
   const userPrefersReducedMotion = usePrefersReducedMotion()
   return (
-    <Box w="100%" h="100%">
+    <>
       <video
         style={{
           height: "auto",
@@ -25,15 +25,14 @@ export default function QuickEatsVideo() {
         <source src="/videos/quikeatswebm.webm" type="video/webm" />
         <source src="/videos/quikeatsmp4.mp4" type="video/mp4" />
       </video>
-      <Flex p="1" border="2px solid blue">
-        <Box>
-          <h4>QuickEats</h4>
-          <p>
-            <QuickEatsIconsList />
-          </p>
-        </Box>
-      </Flex>
-    </Box>
+      <Center mt="4" p="1">
+        <h4>QuickEats</h4>
+      </Center>
+      <Center mt="1">
+        {" "}
+        <QuickEatsIconsList />
+      </Center>
+    </>
   )
 }
 

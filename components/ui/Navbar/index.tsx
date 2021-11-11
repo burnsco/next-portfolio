@@ -23,7 +23,7 @@ export default function Navbar({ sections }: any) {
       <HStack
         aria-label="Primary Navigation"
         as="nav"
-        px={{ base: "1em", md: "3em" }}
+        px={{ base: "1em", sm: "2em", xl: "4em" }}
         h="full"
         w="full"
         justifyContent="space-between"
@@ -56,7 +56,7 @@ export default function Navbar({ sections }: any) {
                 _hover={{ cursor: "pointer", color: "#d77f74" }}
                 activeClass="active"
                 to={`${sec.id}`}
-                fontSize={{ base: "9.5px", md: "11.5px" }}
+                fontSize={{ base: "8.5px", md: "10.5px" }}
                 smooth
                 duration={500}
               >

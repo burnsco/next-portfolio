@@ -12,7 +12,7 @@ const SmallCard = (props: BoxProps) => (
     borderRadius="lg"
     overflow="hidden"
     rounded="md"
-    shadow="md"
+    shadow="lg"
     {...props}
   />
 )

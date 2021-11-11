@@ -8,7 +8,7 @@ const CustomButton = (props: any) => (
     lineHeight="1.2"
     transition="all 0.2s cubic-bezier(.08,.52,.52,1)"
     border="1px"
-    px="8px"
+    px="10px"
     borderRadius="2px"
     fontSize="14px"
     fontWeight="semibold"

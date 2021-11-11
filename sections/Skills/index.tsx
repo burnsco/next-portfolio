@@ -27,6 +27,7 @@ export default function SkillsContainer({
         </Box>
 
         <SimpleGrid
+          p={{ base: "2em", md: "3em" }}
           columns={{ base: 1, lg: 2 }}
           spacing={4}
           border="1px solid purple"

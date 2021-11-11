@@ -7,9 +7,9 @@ export default function ProjectInfo({
   gitUrl
 }: ProjectDetailsType) {
   return (
-    <Box border="1px solid red" h="full" w="full" p={{ base: 2, lg: 4 }}>
+    <Box h="full" w="full" p={{ base: 2, lg: 4 }}>
       <VStack>
-        <Box mx="auto">
+        <Box mx="auto" maxW="960px">
           {description.map(p => (
             <Text
               fontWeight="400"
@@ -47,7 +47,7 @@ export default function ProjectInfo({
         </Flex> */}
         <ButtonGroup>
           <CustomButton title="Source" />
-          <CustomButton title="Demo" />
+          <CustomButton title="Demo" solid />
         </ButtonGroup>
       </VStack>
     </Box>
