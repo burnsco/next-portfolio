@@ -46,8 +46,8 @@ export default function ProjectInfo({
           </Button>
         </Flex> */}
         <ButtonGroup>
-          <CustomButton title="Source" />
-          <CustomButton title="Demo" solid />
+          <CustomButton title="Source" href={gitUrl} />
+          <CustomButton title="Demo" href={webUrl} />
         </ButtonGroup>
       </VStack>
     </Box>
