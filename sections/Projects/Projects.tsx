@@ -1,23 +1,93 @@
-import { Box, Grid } from "@chakra-ui/react"
-import { Container, ProjectCard } from "@common/index"
-import data from "@configs/Projects/projects"
+import { Box, SimpleGrid, VStack } from "@chakra-ui/react"
 import dynamic from "next/dynamic"
+import React from "react"
 import ProjectInfo from "./ProjectInfo"
 
-const QuickEatsVideos = dynamic(() => import("./QuickEatsVideo"))
-const RedditCloneVideos = dynamic(() => import("./RedditVideo"))
+// const RedditCloneIconsList = dynamic(
+//   () => import("@common/icons/RedditCloneIconsList")
+// )
+// const QuickEatsIconsList = dynamic(
+//   () => import("@common/icons/QuickEatsIconsList")
+// )
 
-const Projects = () => (
-  <Container flexDir="column">
-    <Grid gap={6}>
-      {data.map((project: any) => (
-        <Box key={`MainProject-${project.title}`} p={[2, 3]} my="4rem">
-          <ProjectCard flexDir="row">
-            {project.video === "reddit" ? (
-              <RedditCloneVideos />
-            ) : (
-              <QuickEatsVideos />
-            )}
+const QuickEatsVideos = dynamic(() => import("./QuickEatsVideo"))
+const SocialMediaVideos = dynamic(() => import("./RedditVideo"))
+
+export default function Projects({ projects }: ProjectsType) {
+  return (
+    <>
+      {projects.map((project: any) => (
+        <>
+          <SimpleGrid
+            px={{ base: "2em", md: "3em" }}
+            key={`MainProject-${project.title}`}
+            spacing={{ base: 0, lg: 4, xl: 6 }}
+            columns={{ base: 1, xl: 2 }}
+          >
+            <VStack>
+              <Box>
+                {project.video === "social" ? (
+                  <SocialMediaVideos />
+                ) : (
+                  <QuickEatsVideos />
+                )}
+              </Box>
+
+              {/* <Center h="full">
+                <Stack spacing={3}>
+                  <HStack>
+                    <Badge
+                      opacity={0.5}
+                      variant="outline"
+                      colorScheme="blackAlpha"
+                    >
+                      <Heading
+                        colorScheme="red"
+                        fontWeight="400"
+                        color="black"
+                        transform="matrix(1,0,0,1,0,0)"
+                        fontSize={{ base: "xs", md: "sm" }}
+                      >
+                        Title :{" "}
+                      </Heading>
+                    </Badge>
+                    <Heading
+                      lineHeight="2"
+                      opacity={0.9}
+                      fontWeight="900"
+                      letterSpacing="wide"
+                      color="#414a6b !important;"
+                      mb={[2, 3]}
+                      fontSize={["xl", "2xl", "3xl"]}
+                    >
+                      {project.title}
+                    </Heading>
+                  </HStack>
+                  <HStack>
+                    <Badge
+                      opacity={0.5}
+                      variant="outline"
+                      colorScheme="blackAlpha"
+                    >
+                      <Heading
+                        fontWeight="400"
+                        color="black"
+                        opacity="1"
+                        transform="matrix(1,0,0,1,0,0)"
+                        fontSize={{ base: "xs", md: "sm" }}
+                      >
+                        Tech :{" "}
+                      </Heading>
+                    </Badge>
+                    {title === "Reddit Clone" ? (
+                      <RedditCloneIconsList />
+                    ) : (
+                      <QuickEatsIconsList />
+                    )}
+                  </HStack>
+                </Stack>
+              </Center> */}
+            </VStack>
 
             <ProjectInfo
               title={project.title}
@@ -25,10 +95,11 @@ const Projects = () => (
               webUrl={project.webUrl}
               gitUrl={project.gitUrl}
             />
-          </ProjectCard>
-        </Box>
+          </SimpleGrid>
+
+          <Box h={{ base: "2em", md: "6em", xl: "8em" }} w="full" bg="white" />
+        </>
       ))}
-    </Grid>
-  </Container>
-)
-export default Projects
+    </>
+  )
+}

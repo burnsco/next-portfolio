@@ -3,12 +3,11 @@ import { chakra } from "@chakra-ui/react"
 const SectionContainer: React.FC<{
   id: string
   children: React.ReactNode
-  background?: string
-}> = ({ id, children, background, ...props }) => (
+}> = ({ id, children, ...props }) => (
   <chakra.section
+    px={{ base: "0em", xs: "2.5em", md: "3em" }}
     minH="95vh"
     aria-label={`${id} Section`}
-    bg={background}
     id={id}
     {...props}
   >

@@ -1,19 +1,17 @@
 import { HStack, Icon } from "@chakra-ui/react"
-import {
-  SiFirebase,
-  SiReact,
-  SiRedux,
-  SiSass,
-  SiStyledComponents
-} from "react-icons/si"
+import FirebaseIcon from "./firebase-icon"
+import SiReactIcon from "./reactIcon"
+import ReduxIcon from "./redux-icon"
+import SassIcon from "./sass-icon"
+import StyledIcon from "./styled-icon"
 
 const QuickEatsIconsList = () => (
   <HStack spacing={4}>
-    <Icon as={SiReact} />
-    <Icon as={SiStyledComponents} boxSize={6} />
-    <Icon as={SiRedux} />
-    <Icon as={SiSass} />
-    <Icon as={SiFirebase} />
+    <Icon as={SiReactIcon} />
+    <Icon as={StyledIcon} />
+    <Icon as={ReduxIcon} />
+    <Icon as={SassIcon} />
+    <Icon as={FirebaseIcon} />
   </HStack>
 )
 

@@ -1,6 +1,6 @@
 import { usePrefersReducedMotion } from "@chakra-ui/react"
 
-const RedditCloneVideo = () => {
+export default function RedditCloneVideo() {
   const userPrefersReducedMotion = usePrefersReducedMotion()
   return (
     <video
@@ -18,5 +18,3 @@ const RedditCloneVideo = () => {
     </video>
   )
 }
-
-export default RedditCloneVideo

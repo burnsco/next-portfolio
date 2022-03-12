@@ -1,25 +1,41 @@
-import { SimpleGrid } from "@chakra-ui/react"
+import { Box, Center, chakra, SimpleGrid, VStack } from "@chakra-ui/react"
 import { SectionContainer, SectionHeading } from "@common/index"
-import PageContainer from "@ui/Layout/PageContainer"
-import PropTypes from "prop-types"
-import React from "react"
-import DeveloperInfo from "./DeveloperInfo"
-import MySkills from "./MySkills"
+import DeveloperInfo from "@sections/Skills/DeveloperInfo"
+import MySkills from "@sections/Skills/MySkills"
+import Image from "next/image"
 
-const SkillsContainer: React.FC<{ id: string }> = ({ id }) => (
-  <SectionContainer id={id}>
-    <PageContainer bg="white">
-      <SectionHeading title={id} />
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} py="6">
-        <DeveloperInfo />
-        <MySkills />
-      </SimpleGrid>
-    </PageContainer>
-  </SectionContainer>
-)
+const ChakraImage = chakra(Image)
 
-export default SkillsContainer
+export default function SkillsContainer({
+  developerInfo,
+  mySkills
+}: SkillsType) {
+  return (
+    <SectionContainer id="skills">
+      <VStack>
+        <Box pos="relative" overflow="hidden" w="full">
+          <Center>
+            <SectionHeading title="Skills" />
+          </Center>
+          <ChakraImage
+            src="/bg/laptop.webp"
+            layout="fill"
+            opacity={0.1}
+            objectFit="cover"
+            priority
+          />
+        </Box>
 
-SkillsContainer.propTypes = {
-  id: PropTypes.string.isRequired
+        <SimpleGrid
+          p={{ base: "2em", md: "3em" }}
+          columns={{ base: 1, lg: 2 }}
+          spacing={4}
+          border="1px solid purple"
+        >
+          <DeveloperInfo developerInfo={developerInfo} />
+          <MySkills mySkills={mySkills} />
+        </SimpleGrid>
+      </VStack>
+    </SectionContainer>
+  )
 }

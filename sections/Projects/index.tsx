@@ -1,14 +1,28 @@
+import { chakra, VStack } from "@chakra-ui/react"
 import { SectionContainer, SectionHeading } from "@common/index"
-import Projects from "@sections/Projects/Projects"
+import dynamic from "next/dynamic"
+import Image from "next/image"
 
-export default function ProjectsContainer(props: any) {
+const ChakraImage = chakra(Image)
+const Projects = dynamic(() => import("@sections/Projects/Projects"))
+
+export default function ProjectsContainer({ projects }: any) {
   return (
-    <SectionContainer
-      id={props.id}
-      background={`linear-gradient(white, #f8f9fa)`}
-    >
-      <SectionHeading title={props.id} />
-      <Projects />
+    <SectionContainer id="projects">
+      <VStack id="projects Container">
+        <chakra.div pos="relative" overflow="hidden" w="full">
+          <SectionHeading title="Projects" />
+          <ChakraImage
+            src="/bg/spiralarch.webp"
+            layout="fill"
+            opacity={0.2}
+            objectFit="cover"
+            quality="80"
+          />
+        </chakra.div>
+
+        <Projects projects={projects} />
+      </VStack>
     </SectionContainer>
   )
 }

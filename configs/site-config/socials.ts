@@ -1,4 +1,4 @@
-export default [
+export const socials = [
   { url: "mailto:coreyburns@outlook.com", title: "Email", iconName: "email" },
   {
     url: "https://www.github.com/burnsco",

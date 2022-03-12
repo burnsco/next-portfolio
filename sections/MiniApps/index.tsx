@@ -1,19 +1,25 @@
+import { Center, chakra } from "@chakra-ui/react"
 import { SectionContainer, SectionHeading } from "@common/index"
-import PageContainer from "@ui/Layout/PageContainer"
-import PropTypes from "prop-types"
+import Image from "next/image"
 import MiniAppsCards from "./MiniApps"
 
-export const MiniApps: React.FC<{ id: string }> = ({ id }): JSX.Element => (
-  <SectionContainer id={id} background={`linear-gradient(#f8f9fa,#e9ecef)`}>
-    <PageContainer bg="translucent">
-      <SectionHeading title="MiniApps" />
-      <MiniAppsCards />
-    </PageContainer>
-  </SectionContainer>
-)
+const ChakraImage = chakra(Image)
 
-export default MiniApps
-
-MiniApps.propTypes = {
-  id: PropTypes.string.isRequired
+export default function MiniAppsContainer({ miniapps }: any) {
+  return (
+    <SectionContainer id="miniapps">
+      <chakra.div pos="relative" overflow="hidden" w="full">
+        <SectionHeading title="miniapps" />
+        <ChakraImage
+          src="/bg/staircase.webp"
+          layout="fill"
+          opacity={0.2}
+          objectFit="cover"
+        />
+      </chakra.div>
+      <Center maxW="container.xl" p=".5em">
+        <MiniAppsCards miniapps={miniapps} />
+      </Center>
+    </SectionContainer>
+  )
 }

@@ -1,55 +1,94 @@
-type RefsRegister = {
-  [x: string]: RefObject<HTMLElement>
+type MainDataType = {
+  data: {
+    skills: SkillsType
+    about: AboutType
+    miniapps: MiniAppsType
+    projects: ProjectsType
+    sections: SectionType
+  }
 }
 
-type Meta = {
-  [id: string]: unknown
+type SectionType = {
+  sections: {
+    id: string
+    href: string
+  }[]
 }
 
-type ScrollContextType = {
-  registerRef: ({ id: string, meta: unknown }) => RefObject<HTMLElement> | null
-  scrollTo: (section: string) => void
-  refs: RefsRegister
-  meta: Meta
-  selected: string
-}
-
-type MiniAppsType = {
-  miniApps: {
+type ProjectsType = {
+  projects: {
     title: string
-    section: string
     webUrl: string
     gitUrl: string
-    excerpt: string
-    image: string
+    description: {
+      text: string
+    }[]
+    videos: string
+  }[]
+}
+type Projects2Type = {
+  projects: {
+    title: string
+    webUrl: string
+    gitUrl: string
+    description: {
+      text: string
+    }[]
+    videos: string
   }[]
 }
 
-type ProjectInfoType = {
-  description: {
-    text: string
-  }[]
-  webUrl: string
-  gitUrl: string
-  title: string
-}
-
-type DeveloperInfoType = {
-  devInfo: {
+type SkillsType = {
+  developerInfo: {
     title: string
     iconName: string
     excerpt: {
       text: string
     }[]
   }
-}
-
-type MySkillsType = {
   mySkills: {
     title: string
     iconName: string
-    skills: {
-      title: string
+    skills: { title: string }[]
+  }[]
+}
+
+type FactsType = {
+  title: string
+  iconName: string
+  facts: {
+    title: string
+  }[]
+}
+
+type ProjectDetailsType = {
+  title: string
+  webUrl: string
+  gitUrl: string
+  description: {
+    text: string
+  }[]
+}
+
+type AboutType = {
+  aboutMe: {
+    title: string
+    iconName: string
+    excerpt: {
+      text: string
     }[]
+  }
+  randomFacts: FactsType
+}
+
+type MiniAppsType = {
+  miniapps: {
+    id: number
+    title: string
+    section: string
+    webUrl: string
+    gitUrl: string
+    excerpt: string
+    image: string
   }[]
 }
