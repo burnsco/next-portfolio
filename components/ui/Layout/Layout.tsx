@@ -1,7 +1,9 @@
 import { Flex } from "@chakra-ui/react"
 import PropTypes from "prop-types"
 
-const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+export default function Layout(props: { children:React.ReactNode}){
+
+return (
   <Flex
     flexDirection="column"
     justifyContent="center"
@@ -9,12 +11,12 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     minHeight="100vh"
     wordBreak="break-word"
   >
-    {children}
+    {props.children}
   </Flex>
 )
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired
 }
 
-export default Layout
