@@ -4,7 +4,6 @@ import { motion } from "framer-motion"
 const AnimatedScrollDownArrow = () => (
   <chakra.div
     display="flex"
-    align="center"
     id="scroll-down-div"
     pos="relative"
     userSelect="none"
