@@ -1,9 +1,7 @@
 import { Center, usePrefersReducedMotion } from "@chakra-ui/react"
 import dynamic from "next/dynamic"
 
-const RedditCloneIconsList = dynamic(
-  () => import("@common/icons/RedditCloneIconsList")
-)
+
 const QuickEatsIconsList = dynamic(
   () => import("@common/icons/QuickEatsIconsList")
 )
