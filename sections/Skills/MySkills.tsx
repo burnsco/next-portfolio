@@ -57,7 +57,7 @@ export default function MySkills({ mySkills }: any) {
                       variant="subtle"
                       key={`MySkills-badge-${skill.title}`}
                     >
-                      <TagLabel>{skill.title}</TagLabel>
+                      <TagLabel color="blackAlpha.700">{skill.title}</TagLabel>
                     </Tag>
                   ))}
                 </ListItem>
