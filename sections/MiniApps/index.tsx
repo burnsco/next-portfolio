@@ -5,9 +5,9 @@ import MiniAppsCards from "./MiniApps"
 
 const ChakraImage = chakra(Image)
 
-export default function MiniAppsContainer({ miniapps }: MiniAppsType) {
+export default function MiniAppsContainer({ miniapps }: any) {
   return (
-    <SectionContainer id="miniapps">
+    <SectionContainer id="apps">
       <chakra.div pos="relative" overflow="hidden" w="full">
         <SectionHeading title="miniapps" />
         <ChakraImage
@@ -17,6 +17,7 @@ export default function MiniAppsContainer({ miniapps }: MiniAppsType) {
           objectFit="cover"
         />
       </chakra.div>
+
 
         <MiniAppsCards miniapps={miniapps} />
 

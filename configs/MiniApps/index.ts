@@ -15,7 +15,7 @@ export const miniapps = [
     webUrl: "https://mini-app-containerapp.vercel.app/lottery/",
     gitUrl: "https://github.com/burnsco/reddit-clone",
     excerpt:
-      "Pick the amount of numbers, limit, and get yourself some guaranteed winning lottery numbers! ",
+      "Generate winning lottery numbers, 100% success rate.",
     image: "/images/lottery.webp"
   },
   {
@@ -24,7 +24,7 @@ export const miniapps = [
     section: "MiniApps",
     webUrl: "https://mini-app-containerapp.vercel.app/luggage/",
     gitUrl: "https://github.com/burnsco/reddit-clone",
-    excerpt: "Track your packed and unpacked items for your trip. ",
+    excerpt: "a todo app for tracking your luggage.",
     image: "/images/luggage.webp"
   },
   {
@@ -42,7 +42,7 @@ export const miniapps = [
     section: "MiniApps",
     webUrl: "https://mini-app-containerapp.vercel.app/rolodex/",
     gitUrl: "https://github.com/burnsco/reddit-clone",
-    excerpt: "Fetch some sample users and filter them in real time! (with silly monster cards)",
+    excerpt: "Fetch example using next.js, ssr, ssg and client methods.",
     image: "/images/monsters.webp"
   },
   {
@@ -51,7 +51,7 @@ export const miniapps = [
     section: "MiniApps",
     webUrl: "https://mini-app-containerapp.vercel.app/coin/",
     gitUrl: "https://github.com/burnsco/reddit-clone",
-    excerpt: "Flips a coin and keeps track of the number of flips, heads and tails.",
+    excerpt: "Flip coins and see how many heads and tails you can get.",
     image: "/images/coins.webp"
   }
 ]
