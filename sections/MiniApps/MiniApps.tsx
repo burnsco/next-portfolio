@@ -1,17 +1,13 @@
 import {
   Box,
-  ButtonGroup,
-  Center,
-  Flex,
-  Grid,
+  ButtonGroup, Center, Grid,
+  GridItem,
   Img,
   ScaleFade,
   Text
 } from "@chakra-ui/react"
 import CustomButton from "@common/buttons/customButton"
-import { MiniAppCard } from "@common/index"
 import { AnimateSharedLayout } from "framer-motion"
-import React from "react"
 import { useInView } from "react-intersection-observer"
 
 export default function MiniAppsCards({ miniapps }: MiniAppsType) {
@@ -25,11 +21,12 @@ export default function MiniAppsCards({ miniapps }: MiniAppsType) {
   return (
     <div ref={ref}>
       {inView ? (
-        <Box p={[1, 6]}>
           <Grid
+            gridTemplateColumns="repeat(auto-fill, minmax(200px, 1fr))"
             py={8}
-            gap={[2, 4]}
-            gridTemplateColumns="repeat(auto-fit, minmax(180px, 1fr))"
+            px="4em"
+            margin="1em auto"
+            gap="6"
           >
             <AnimateSharedLayout>
               {miniapps.map((app: any) => (
@@ -38,7 +35,12 @@ export default function MiniAppsCards({ miniapps }: MiniAppsType) {
                   initialScale={app.id}
                   in
                 >
-                  <MiniAppCard>
+                  <GridItem
+                      borderRadius="md"
+                      boxShadow="md"
+                      border="2px solid purple"
+                      gridTemplateRows="max-content 180px 1fr"
+                  >
                     <Text
                       bg="l3"
                       color="p5"
@@ -53,22 +55,25 @@ export default function MiniAppsCards({ miniapps }: MiniAppsType) {
 
                     <Img
                       w="100%"
-                      h="180px"
+                      h="200px"
+                      maxW="100%"
                       src={app.image}
                       alt={`mini app ${app.title}`}
                       objectFit="cover"
                     />
-                    <Flex flexDir="column" h="full" p={3}>
-                      <Box
+                      <Box padding="1">
+                      <Text
+                        border="2px solid blue"
                         fontSize={{ base: "xs", md: "sm" }}
-                        py={2}
+                        p="4"
                         opacity={0.8}
                       >
                         {app.excerpt}
-                      </Box>
+                      </Text>
 
-                      <Center>
-                        <ButtonGroup w="full">
+
+                    <Center w="full" py="2">
+                        <ButtonGroup gap="4" border="2px solid red">
                           <CustomButton
                             as="a"
                             title="Source"
@@ -85,14 +90,17 @@ export default function MiniAppsCards({ miniapps }: MiniAppsType) {
                             title="Demo"
                           />
                         </ButtonGroup>
-                      </Center>
-                    </Flex>
-                  </MiniAppCard>
+                        </Center>
+                        </Box>
+
+
+
+                  </GridItem>
                 </ScaleFade>
               ))}
             </AnimateSharedLayout>
           </Grid>
-        </Box>
+
       ) : null}
     </div>
   )

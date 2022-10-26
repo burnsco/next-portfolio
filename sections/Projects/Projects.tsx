@@ -96,7 +96,7 @@ export default function Projects({ projects }: ProjectsType) {
             />
           </SimpleGrid>
 
-          <Box h={{ base: "2em", md: "6em", xl: "8em" }} w="full" bg="white" />
+          <Box h={{ base: "6em", md: "8em", xl: "10em" }} w="full" bg="white" />
       </Box>
       ))}
     </>

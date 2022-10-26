@@ -1,4 +1,4 @@
-import { Center, usePrefersReducedMotion } from "@chakra-ui/react"
+import { Box, Center, chakra, usePrefersReducedMotion } from "@chakra-ui/react"
 import dynamic from "next/dynamic"
 
 
@@ -23,13 +23,15 @@ export default function QuickEatsVideo() {
         <source src="/videos/quikeatswebm.webm" type="video/webm" />
         <source src="/videos/quikeatsmp4.mp4" type="video/mp4" />
       </video>
-      <Center mt="4" p="1">
-        <h4>QuickEats</h4>
+      <Box border="2px solid red"  p="2">
+      <Center >
+        <chakra.h3 fontWeight="medium">QuickEats</chakra.h3>
       </Center>
-      <Center mt="1">
+      <Center mt="2">
         {" "}
         <QuickEatsIconsList />
       </Center>
+      </Box>
     </>
   )
 }

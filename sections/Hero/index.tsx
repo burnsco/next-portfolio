@@ -27,18 +27,16 @@ export default function HeroContainer(props: any) {
           w="full"
           bg="gray.50"
           display="flex"
-          align="center"
-          justify="center"
           dir="column"
           h="full"
         >
           <ChakraImage
             src="/bg/hero.webp"
-            layout="fill"
             opacity={0.2}
+            layout="fill"
             objectFit="cover"
+            quality="70"
             priority
-            quality="80"
           />
 
           <Flex alignItems="center" justifyContent="center" flexDir="column">

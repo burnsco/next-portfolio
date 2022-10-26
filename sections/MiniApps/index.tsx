@@ -1,11 +1,11 @@
-import { Center, chakra } from "@chakra-ui/react"
+import { chakra } from "@chakra-ui/react"
 import { SectionContainer, SectionHeading } from "@common/index"
 import Image from "next/image"
 import MiniAppsCards from "./MiniApps"
 
 const ChakraImage = chakra(Image)
 
-export default function MiniAppsContainer({ miniapps }: any) {
+export default function MiniAppsContainer({ miniapps }: MiniAppsType) {
   return (
     <SectionContainer id="miniapps">
       <chakra.div pos="relative" overflow="hidden" w="full">
@@ -17,9 +17,9 @@ export default function MiniAppsContainer({ miniapps }: any) {
           objectFit="cover"
         />
       </chakra.div>
-      <Center maxW="container.xl" p=".5em">
+
         <MiniAppsCards miniapps={miniapps} />
-      </Center>
+
     </SectionContainer>
   )
 }
