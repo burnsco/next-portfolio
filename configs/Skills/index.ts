@@ -50,6 +50,8 @@ export const skills = {
       skills: [
         { title: "TS" },
         { title: "NodeJS" },
+        { title: 'Postgres'},
+        { title: 'MySQL'},
         { title: "Apollo" },
         { title: "TypeGraphQL" },
         { title: "MongoDB" },
