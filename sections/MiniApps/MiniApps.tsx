@@ -11,7 +11,7 @@ export default function MiniAppsCards({ miniapps }: MiniAppsType) {
 
 
   return (
-    <Box px="3em">
+    <Box px={["4em", "6em"]}>
           <chakra.section
             id="Cards"
             display="grid"

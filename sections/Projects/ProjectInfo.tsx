@@ -7,7 +7,7 @@ export default function ProjectInfo({
   gitUrl
 }: ProjectDetailsType) {
   return (
-    <Box h="full" w="full" p={{ base: 2, lg: 4 }}>
+    <Box h="full" w="full" p={{ base: 4, lg: 2 }}>
       <VStack>
         <Box mx="auto" maxW="960px">
           {description.map(p => (

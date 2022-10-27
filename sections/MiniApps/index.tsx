@@ -13,7 +13,7 @@ export default function MiniAppsContainer({ miniapps }: any) {
         <ChakraImage
           src="/bg/staircase.webp"
           layout="fill"
-          opacity={0.2}
+          opacity={0.3}
           objectFit="cover"
         />
       </chakra.div>
