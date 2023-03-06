@@ -1,3 +1,7 @@
 module.exports = {
-  output: 'standalone',
+  reactStrictMode: true,
+  experimental: {
+    externalDir: true,
+    appDir: true
+  }
 }

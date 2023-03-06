@@ -7,11 +7,14 @@ import {
   VStack
 } from "@chakra-ui/react"
 import { SectionContainer, SectionHeading } from "@common/index"
-import Image from "next/image"
+import { aboutMe, randomFacts } from "@configs/About"
+import Image from "next/legacy/image"
+
+
 
 const ChakraImage = chakra(Image)
 
-export default function AboutContainer({ aboutMe, randomFacts }: AboutType) {
+export default function AboutContainer() {
   return (
     <SectionContainer id="about">
       <VStack px={{ base: "2em", md: "3em" }}>

@@ -1,7 +1,7 @@
 import { Box, Icon, Tooltip, VStack } from "@chakra-ui/react"
 import CustomEmailIcon from "@common/icons/email-icon"
 import AnimatedTelegramIcon from "@common/icons/telegram-icon"
-import { NextChakraLink } from "@common/index"
+import { NextChakraLink } from "@common/link/NextChakraLink"
 import { socials } from "@configs/site-config/socials"
 import { motion } from "framer-motion"
 import GitIcon from "./git-icon"

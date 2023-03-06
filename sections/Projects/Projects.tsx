@@ -1,4 +1,5 @@
 import { Box, SimpleGrid, VStack } from "@chakra-ui/react"
+import { projects } from "@configs/Projects"
 import dynamic from "next/dynamic"
 import ProjectInfo from "./ProjectInfo"
 
@@ -12,7 +13,7 @@ import ProjectInfo from "./ProjectInfo"
 const QuickEatsVideos = dynamic(() => import("./QuickEatsVideo"))
 const SocialMediaVideos = dynamic(() => import("./RedditVideo"))
 
-export default function Projects({ projects }: ProjectsType) {
+export default function Projects() {
   return (
     <>
       {projects.map((project: any) => (

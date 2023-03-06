@@ -1,5 +1,5 @@
-export const skills = {
-  developerInfo: {
+
+  export const developerInfo =  {
     title: "Developer Info",
     iconName: "javascript",
     excerpt: [
@@ -16,9 +16,9 @@ export const skills = {
         text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio vel modi natus labore deserunt, ratione ipsum."
       }
     ]
-  },
+  }
 
-  mySkills: [
+  export const mySkills =  [
     {
       title: "Frontend",
       iconName: "react",
@@ -74,4 +74,4 @@ export const skills = {
       ]
     }
   ]
-}
+

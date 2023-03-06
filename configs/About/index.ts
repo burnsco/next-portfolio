@@ -1,5 +1,5 @@
-export const about = {
-  aboutMe: {
+
+  export const aboutMe = {
     title: "More tidbits",
     iconName: "react",
     excerpt: [
@@ -13,9 +13,9 @@ export const about = {
         text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa, hic! Et natus nam as asdf asdf sdpernatur nobis architecto ipsa, asperiores nulla  asdf dsint quisquam facere rerum deserunt voluptatem alias debitis excepturi molestiae ipsam."
       }
     ]
-  },
+  }
 
-  randomFacts: {
+  export const randomFacts = {
     title: "Random facts",
     iconName: "react",
     facts: [
@@ -41,4 +41,4 @@ export const about = {
       }
     ]
   }
-}
+

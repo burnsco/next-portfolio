@@ -2,14 +2,14 @@ import { Box, Center, chakra, SimpleGrid, VStack } from "@chakra-ui/react"
 import { SectionContainer, SectionHeading } from "@common/index"
 import DeveloperInfo from "@sections/Skills/DeveloperInfo"
 import MySkills from "@sections/Skills/MySkills"
-import Image from "next/image"
+import Image from "next/legacy/image"
 
 const ChakraImage = chakra(Image)
 
-export default function SkillsContainer({
-  developerInfo,
-  mySkills
-}: SkillsType) {
+
+
+export default function SkillsContainer() {
+
   return (
     <SectionContainer id="skills">
       <VStack>
@@ -32,8 +32,8 @@ export default function SkillsContainer({
           spacing={4}
           border="1px solid purple"
         >
-          <DeveloperInfo developerInfo={developerInfo} />
-          <MySkills mySkills={mySkills} />
+          <DeveloperInfo />
+          <MySkills  />
         </SimpleGrid>
       </VStack>
     </SectionContainer>

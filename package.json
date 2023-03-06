@@ -54,12 +54,13 @@
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.17",
+    "@chakra-ui/next-js": "^2.0.1",
     "@chakra-ui/react": "^2.5.1",
     "@chakra-ui/theme-tools": "2.0.16",
     "@emotion/react": "11.10.6",
     "@emotion/styled": "11.10.6",
     "@next/bundle-analyzer": "^13.2.3",
-    "framer-motion": "^10.0.1",
+    "framer-motion": "^10.1.0",
     "next": "^13.2.3",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
@@ -69,7 +70,7 @@
     "sharp": "^0.31.3"
   },
   "devDependencies": {
-    "@types/node": "^18.14.5",
+    "@types/node": "^18.14.6",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@types/react-scroll": "^1.8.6",
@@ -78,7 +79,7 @@
     "eslint": "^8.35.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-next": "^13.2.3",
-    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-prettier": "^8.7.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",

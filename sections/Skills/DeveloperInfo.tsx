@@ -1,7 +1,10 @@
 import { Fade, List, ListItem } from "@chakra-ui/react"
+import { developerInfo } from "@configs/Skills"
 import { useInView } from "react-intersection-observer"
 
-export default function DeveloperInfo({ developerInfo }: any) {
+
+export default function DeveloperInfo() {
+
   const [ref, inView] = useInView({
     threshold: 0.9,
     triggerOnce: true,

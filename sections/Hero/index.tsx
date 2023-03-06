@@ -11,7 +11,7 @@ import {
 import AnimatedScrollDownArrow from "@common/icons/scroll-down-arrow"
 import { SectionContainer } from "@common/index"
 import { motion } from "framer-motion"
-import Image from "next/image"
+import Image from "next/legacy/image"
 
 const ChakraLink = chakra(Link)
 const ChakraImage = chakra(Image)

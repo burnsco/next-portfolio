@@ -3,11 +3,10 @@ import {
   ButtonGroup, Center, chakra, Img, Text
 } from "@chakra-ui/react"
 import CustomButton from "@common/buttons/customButton"
+import { miniapps } from "@configs/MiniApps"
 
 
-// todo put a speech bubble here that explains what these are
-
-export default function MiniAppsCards({ miniapps }: MiniAppsType) {
+export default function MiniAppsCards() {
 
 
   return (

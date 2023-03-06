@@ -8,9 +8,10 @@ import {
   Tag,
   TagLabel
 } from "@chakra-ui/react"
+import { mySkills } from "@configs/Skills"
 import { useInView } from "react-intersection-observer"
 
-export default function MySkills({ mySkills }: any) {
+export default function MySkills() {
   const [ref, inView] = useInView({
     threshold: 0.9,
     triggerOnce: true,
