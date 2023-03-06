@@ -1,4 +1,6 @@
 import { Box, chakra, Heading, HStack, List, ListItem } from "@chakra-ui/react"
+import { sections } from "@configs/site-config/sections"
+import { dancing, nunito } from "fonts"
 import { Link } from "react-scroll"
 
 function capitalizedTitle(title: string) {
@@ -7,7 +9,7 @@ function capitalizedTitle(title: string) {
 
 const ChakraLink = chakra(Link)
 
-export default function Navbar({ sections }: any) {
+export default function Navbar() {
   return (
     <HStack
       as="header"
@@ -29,6 +31,7 @@ export default function Navbar({ sections }: any) {
         justifyContent="space-between"
       >
         <ChakraLink
+          className={dancing.className}
           display={{ base: "none", sm: "block" }}
           _hover={{ cursor: "pointer" }}
           activeclass="active"
@@ -43,6 +46,7 @@ export default function Navbar({ sections }: any) {
         <HStack w="lg" justify="space-evenly" as={List}>
           {sections.map((sec: { id: string }) => (
             <Box
+              className={nunito.className}
               key={`nav-item-${sec.id}`}
               as={ListItem}
               color="#444444"

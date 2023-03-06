@@ -1,7 +1,6 @@
 "use client"
 
 import { Box } from "@chakra-ui/react"
-import { sections } from "@configs/site-config/sections"
 import HeroSection from "@sections/Hero"
 import Navbar from "@ui/Navbar"
 import BottomSideBar from "@ui/Side/Bottom"
@@ -15,14 +14,10 @@ const MiniAppsSection = dynamic(() => import("@sections/MiniApps"))
 const AboutSection = dynamic(() => import("@sections/About"))
 const Footer = dynamic(() => import("@ui/Footer/Footer"))
 
-
-
-
 export default function Page() {
-
   return (
     <>
-      <Navbar sections={sections} />
+      <Navbar />
       <LeftSideBar />
       <RightSideBar />
       <BottomSideBar />

@@ -9,6 +9,7 @@ import {
   TagLabel
 } from "@chakra-ui/react"
 import { mySkills } from "@configs/Skills"
+import { nunito } from "fonts"
 import { useInView } from "react-intersection-observer"
 
 export default function MySkills() {
@@ -33,6 +34,7 @@ export default function MySkills() {
                 <ListItem mb="2.5">
                   <HStack fontWeight="700" color="newBlack" px="1" maxW="150px">
                     <chakra.h3
+                      className={nunito.className}
                       fontSize="22px"
                       color="mainBlack"
                       opacity={0.8}

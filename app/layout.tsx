@@ -1,7 +1,10 @@
 "use client"
 
-import { ColorModeScript } from "@chakra-ui/react"
-import Provider from "./provider"
+
+import { lato, raleway } from "fonts";
+import Provider from "./provider";
+
+
 
 export default function RootLayout({
   children,
@@ -9,10 +12,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" data-theme="light">
+    <html lang="en" data-theme="light" className={`${raleway} ${lato}`}>
       <head />
       <body>
-        <ColorModeScript type="cookie" nonce="testing" />
         <Provider>{children}</Provider>
       </body>
     </html>

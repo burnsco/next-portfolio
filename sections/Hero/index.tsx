@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react"
 import AnimatedScrollDownArrow from "@common/icons/scroll-down-arrow"
 import { SectionContainer } from "@common/index"
+import { monte } from "fonts"
 import { motion } from "framer-motion"
 import Image from "next/legacy/image"
 
@@ -42,6 +43,7 @@ export default function HeroContainer(props: any) {
           <Flex alignItems="center" justifyContent="center" flexDir="column">
             <Box>
               <Heading
+                className={monte.className}
                 color="#343436"
                 opacity={0.8}
                 letterSpacing="tighter"
@@ -55,6 +57,7 @@ export default function HeroContainer(props: any) {
 
             <Box>
               <Heading
+                className={monte.className}
                 opacity={0.9}
                 background="linear-gradient(120deg,  rgba(243,147, 55,1), rgb(250, 112, 154) 100%)"
                 backgroundRepeat="no-repeat"
@@ -63,7 +66,7 @@ export default function HeroContainer(props: any) {
                 fontFamily="Montserrat"
                 letterSpacing="tighter"
                 fontSize={{ base: "1xl", md: "2xl" }}
-                color="mainBlack"
+                color="gray.700"
                 fontWeight="800"
               >
                 full-stack developer
