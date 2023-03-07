@@ -1,17 +1,17 @@
-import { mode } from "@chakra-ui/theme-tools"
 
-export const styles = {
-  global: (props: any) => ({
-    "html, body": {
-      color: mode("gray.800", "gray.800")(props),
-      bg: mode("gray.50", "gray.50")(props),
-      minW: "100%",
-      minH: "100vh",
-      lineHeight: "tall"
-    },
 
-    ".active": {
-      color: "#d77f74"
+export const theme = {
+  styles: {
+    global: {
+      'html, body': {
+        color: 'gray.800',
+        bg: 'gray.50',
+        minW: "100%",
+        minH: "100%",
+        lineHeight: "tall"
+      }
     }
-  })
+  }
 }
+
+

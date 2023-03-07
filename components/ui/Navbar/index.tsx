@@ -1,13 +1,12 @@
-import { Box, chakra, Heading, HStack, List, ListItem } from "@chakra-ui/react"
+import { Box, Heading, HStack, List, ListItem } from "@chakra-ui/react"
 import { sections } from "@configs/site-config/sections"
+import { ChakraScrollLink } from "@lib/chakraScrollLink"
 import { dancing, nunito } from "fonts"
-import { Link } from "react-scroll"
 
 function capitalizedTitle(title: string) {
   return title.charAt(0).toUpperCase() + title.slice(1)
 }
 
-const ChakraLink = chakra(Link)
 
 export default function Navbar() {
   return (
@@ -30,20 +29,21 @@ export default function Navbar() {
         w="full"
         justifyContent="space-between"
       >
-        <ChakraLink
+        <ChakraScrollLink
           className={dancing.className}
           display={{ base: "none", sm: "block" }}
           _hover={{ cursor: "pointer" }}
           activeclass="active"
           duration={500}
-          to="home"
-          smooth="true"
+          to={`home`}
+          spy={true}
+          smooth={true}
           as={Heading}
           fontSize={["xs", "md"]}
           fontFamily="Dancing Script"
         >
           Corey Burns
-        </ChakraLink>
+        </ChakraScrollLink>
         <HStack w="lg" justify="space-evenly" as={List}>
           {sections.map((sec: { id: string }) => (
             <Box
@@ -57,16 +57,20 @@ export default function Navbar() {
               letterSpacing="widest"
               aria-label={`Page ${sec.id}`}
             >
-              <ChakraLink
+              <ChakraScrollLink
+                activeStyle={{
+                  color: "#d77f74"
+                }}
                 _hover={{ cursor: "pointer", color: "#d77f74" }}
                 activeClass="active"
                 to={`${sec.id}`}
+                spy={true}
+                smooth={true}
                 fontSize={{ base: "8.5px", md: "10.5px" }}
-                smooth
                 duration={500}
               >
-                {capitalizedTitle(sec.id)}
-              </ChakraLink>
+                <span>{capitalizedTitle(sec.id)}</span>
+              </ChakraScrollLink>
             </Box>
           ))}
         </HStack>
