@@ -4,7 +4,6 @@ import {
   chakra,
   Flex,
   Heading,
-  Link,
   Text,
   VStack
 } from "@chakra-ui/react"
@@ -13,6 +12,7 @@ import { SectionContainer } from "@common/index"
 import { monte } from "fonts"
 import { motion } from "framer-motion"
 import Image from "next/image"
+import { Link } from 'react-scroll'
 
 const ChakraLink = chakra(Link)
 const ChakraImage = chakra(Image)
@@ -77,6 +77,7 @@ export default function HeroContainer(props: any) {
               <ChakraLink
                 to="skills"
                 _hover={{ cursor: "pointer", color: "p2" }}
+                smooth
                 duration={500}
               >
                 <AnimatedScrollText
