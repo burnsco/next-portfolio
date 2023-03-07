@@ -4,11 +4,11 @@ const CustomButton = (props: any) => (
   <Box
     {...props}
     as="button"
-    height="24px"
+    height="28px"
     lineHeight="1.2"
     transition="all 0.2s cubic-bezier(.08,.52,.52,1)"
-    border="1px"
-    px="10px"
+    border="1.5px"
+    px="12px"
     borderRadius="2px"
     fontSize="14px"
     fontWeight="semibold"

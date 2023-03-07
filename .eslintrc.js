@@ -1,44 +1,52 @@
-{
-  "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "@typescript-eslint",
-    "@typescript-eslint/eslint-plugin",
-    "react",
-    "react-hooks",
+module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+    node: true,
+    jest: true
+  },
+  extends: [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:testing-library/react",
     "prettier"
   ],
-  "extends": ["next/core-web-vitals"],
-  "parserOptions": {
-    "ecmaVersion": 2020,
-    "ecmaFeatures": {
-      "jsx": true
+  overrides: [
+    {
+      files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+      extends: ["plugin:testing-library/react"]
     }
-  },
-  "settings": {
-    "react": {
-      "pragma": "React",
-      "version": "detect"
+  ],
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true
     },
-    "import/resolver": {
-      "alias": [
-        ["@common/*", "components/common/*"],
-        ["@sections/*", "components/sections/*"],
-        ["@ui/*", "components/ui/*"],
-        ["@configs/*", "configs/*"],
-        ["@pages/*", "pages/*"],
-        ["@theme/*", "theme/*"]
-      ]
-    }
+    ecmaVersion: "latest",
+    sourceType: "module"
   },
-  "rules": {
+  plugins: [
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "@typescript-eslint/eslint-plugin",
+    "prettier"
+  ],
+  rules: {
+    "@typescript-eslint/no-explicit-any": "off",
+    "no-constant-condition": "off",
+    "react/display-name": "off",
+    "react-hooks/rules-of-hooks": "error",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-empty-interface": "off",
-    "@typescript-eslint/no-explicit-any": "off",
+
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-use-before-define": "off",
     "@typescript-eslint/no-empty-function": "off",
     "@typescript-eslint/indent": "off",
+
     "@typescript-eslint/array-type": "off",
     "@typescript-eslint/member-delimiter-style": "off",
     "@typescript-eslint/no-var-requires": "off",
@@ -50,7 +58,6 @@
     "import/prefer-default-export": "off",
     "no-underscore-dangle": "off",
     "no-shadow": "off",
-    "no-undef": "off",
     "no-plusplus": "off",
     "spaced-comment": "off",
     "guard-for-in": "off",
@@ -73,10 +80,7 @@
     "import/no-extraneous-dependencies": "off",
     "@typescript-eslint/lines-between-class-members": "off",
     "no-alert": "off",
-    "react/jsx-filename-extension": [
-      "error",
-      { "extensions": [".js", ".tsx"] }
-    ],
+    "react/jsx-filename-extension": ["error", { extensions: [".js", ".tsx"] }],
     "react/jsx-props-no-spreading": "off",
     "react/no-array-index-key": "off",
     "react/require-default-props": "off",
@@ -85,13 +89,5 @@
     "@typescript-eslint/no-shadow": "off",
     "react-hooks/exhaustive-deps": "error",
     "import/no-named-as-default": "off"
-  },
-  "overrides": [
-    {
-      "files": ["*.ts", "*.tsx"],
-      "parserOptions": {
-        "project": ["tsconfig.json"]
-      }
-    }
-  ]
+  }
 }

@@ -18,9 +18,9 @@ const ChakraLink = chakra(Link)
 const ChakraImage = chakra(Image)
 const AnimatedScrollText = motion(Text)
 
-export default function HeroContainer(props: any) {
+export default function HeroContainer() {
   return (
-    <SectionContainer id={props.id}>
+    <SectionContainer id="home">
       <Box pos="relative" overflow="hidden" w="full">
         <Center
           pos="relative"

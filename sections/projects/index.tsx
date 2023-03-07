@@ -3,9 +3,8 @@ import CustomButton from "@common/buttons/customButton"
 import QuickEatsIconsList from "@common/icons/QuickEatsIconsList"
 import { SectionContainer, SectionHeading } from "@common/index"
 import { projects } from "@configs/projects"
-import Image from "next/legacy/image"
+import { ChakraImage } from "@lib/chakraImage"
 
-const ChakraImage = chakra(Image)
 
 interface Project {
   title: string;
@@ -14,6 +13,7 @@ interface Project {
   description: {
     text: string
   }[]
+  videos: string
 }
 
 function SocialVideos() {
@@ -72,6 +72,7 @@ export default function ProjectsContainer() {
       <chakra.div pos="relative" overflow="hidden" w="full">
         <SectionHeading title="Projects" />
         <ChakraImage
+          alt=""
           src="/bg/spiralarch.webp"
           layout="fill"
           opacity={0.2}
@@ -81,7 +82,7 @@ export default function ProjectsContainer() {
       </chakra.div>
 
       <Box>
-      {projects.map((project: any) => (
+      {projects.map((project: Project) => (
         <Box       key={`MainProject-${project.title}`}>
           <SimpleGrid
             px={{ base: "2em", md: "3em" }}
@@ -91,7 +92,7 @@ export default function ProjectsContainer() {
           >
             <VStack>
               <Box>
-                {project.video === "social" ? (
+                {project.videos === "social" ? (
                   <SocialVideos />
                 ) : (
                   <QuickEatsVideos />

@@ -37,6 +37,7 @@ export default function Navbar() {
           activeclass="active"
           duration={500}
           to="home"
+          smooth="true"
           as={Heading}
           fontSize={["xs", "md"]}
           fontFamily="Dancing Script"

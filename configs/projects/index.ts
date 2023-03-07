@@ -14,7 +14,7 @@ export const projects = [
         text: "uscipit, justo diam placerat nibh, sed hendrerit ligula tortor nec arcu. Quisque in felis mauris. In ut finibus ipsum. Morbi a sagittis urna, eget varius erat. Curabitur aliquam egestas metus, eu consectetur lectus elementum vitae. Curabitur non lacus non risus feugiat faucibus et at lorem. Integer id sem quis justo vulputate molestie eu nec urna. Morbi eg"
       }
     ],
-    videos: "reddit"
+    videos: "social"
   },
   {
     title: "UberEats Clone",
