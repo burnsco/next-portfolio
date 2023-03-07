@@ -5,7 +5,6 @@ import { lato, raleway } from "fonts";
 import Provider from "./provider";
 
 
-
 export default function RootLayout({
   children,
 }: {

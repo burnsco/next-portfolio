@@ -1,15 +1,15 @@
 import {
-  Box,
-  chakra,
-  HStack,
-  List,
-  ListItem,
-  ScaleFade,
-  Tag,
-  TagLabel
+    Box,
+    chakra,
+    HStack,
+    List,
+    ListItem,
+    ScaleFade,
+    Tag,
+    TagLabel
 } from "@chakra-ui/react"
-import { mySkills } from "@configs/Skills"
 import { nunito } from "fonts"
+import { mySkills } from "fonts/Skills"
 import { useInView } from "react-intersection-observer"
 
 export default function MySkills() {
@@ -23,7 +23,7 @@ export default function MySkills() {
   return (
     <div ref={ref}>
       {inView ? (
-        <Box border="2px solid palevioletred" p="2">
+        <Box  p="2">
           {mySkills.map((item: any) => (
             <ScaleFade
               initialScale={0.4}

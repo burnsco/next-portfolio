@@ -12,7 +12,7 @@ import AnimatedScrollDownArrow from "@common/icons/scroll-down-arrow"
 import { SectionContainer } from "@common/index"
 import { monte } from "fonts"
 import { motion } from "framer-motion"
-import Image from "next/legacy/image"
+import Image from "next/image"
 
 const ChakraLink = chakra(Link)
 const ChakraImage = chakra(Image)
@@ -32,6 +32,7 @@ export default function HeroContainer(props: any) {
           h="full"
         >
           <ChakraImage
+            alt=""
             src="/bg/hero.webp"
             opacity={0.2}
             layout="fill"

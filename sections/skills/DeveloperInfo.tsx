@@ -1,5 +1,5 @@
 import { Fade, List, ListItem } from "@chakra-ui/react"
-import { developerInfo } from "@configs/Skills"
+import { developerInfo } from "fonts/Skills"
 import { useInView } from "react-intersection-observer"
 
 

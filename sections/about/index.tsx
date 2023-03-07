@@ -7,9 +7,8 @@ import {
   VStack
 } from "@chakra-ui/react"
 import { SectionContainer, SectionHeading } from "@common/index"
-import { aboutMe, randomFacts } from "@configs/About"
+import { aboutMe, randomFacts } from "@configs/about"
 import Image from "next/legacy/image"
-
 
 
 const ChakraImage = chakra(Image)

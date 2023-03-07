@@ -3,7 +3,7 @@ import {
   ButtonGroup, Center, chakra, Img, Text
 } from "@chakra-ui/react"
 import CustomButton from "@common/buttons/customButton"
-import { miniapps } from "@configs/MiniApps"
+import { miniapps } from "@configs/miniapps"
 
 
 export default function MiniAppsCards() {
