@@ -122,7 +122,7 @@ export default function SkillsContainer() {
             alt=""
             src={skillsBgImage}
             placeholder="blur"
-            quality={100}
+            quality={80}
             fill
             sizes="100vw"
             style={{

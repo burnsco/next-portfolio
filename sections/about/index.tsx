@@ -21,7 +21,7 @@ export default function AboutContainer() {
           <Image
             alt=""
             src={aboutBGImage}
-            quality={100}
+            quality={80}
             fill
             sizes="100vw"
             style={{

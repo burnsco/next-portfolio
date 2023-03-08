@@ -84,7 +84,7 @@ export default function ProjectsContainer() {
             alt=""
             src={projectsBgImage}
             placeholder="blur"
-            quality={100}
+            quality={80}
             fill
             sizes="100vw"
             style={{

@@ -3,7 +3,7 @@ import CustomButton from "@common/buttons/customButton"
 import { SectionContainer, SectionHeading } from "@common/index"
 import { miniapps } from "@configs/miniapps"
 import Image from "next/image"
-import miniappsBgImage from "../../public/bg/staircase.webp"
+import miniappsBgImage from "../../public/bg/spiralarch.webp"
 
 export default function MiniAppsContainer() {
   return (
@@ -14,7 +14,7 @@ export default function MiniAppsContainer() {
           alt=""
           src={miniappsBgImage}
           placeholder="blur"
-          quality={100}
+          quality={80}
           fill
           sizes="100vw"
           style={{
@@ -27,6 +27,7 @@ export default function MiniAppsContainer() {
       <Box px={["4em", "6em"]}>
         <chakra.section
           id="Cards"
+          p={2}
           display="grid"
           gridTemplateColumns="repeat(auto-fill, minmax(230px, 1fr))"
           gap="20px"
