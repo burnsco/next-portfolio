@@ -19,6 +19,14 @@ import Image from "next/image"
 import { useInView } from "react-intersection-observer"
 import skillsBgImage from "../../public/bg/laptop.webp"
 
+interface Skill {
+  title: string
+  iconName: string
+  skills: {
+    title: string
+  }[]
+}
+
 function MySkills() {
   const [ref, inView] = useInView({
     threshold: 0.9,
@@ -29,8 +37,8 @@ function MySkills() {
   return (
     <div ref={ref}>
       {inView ? (
-        <Box p="2">
-          {mySkills.map((item: any) => (
+        <Box>
+          {mySkills.map((item: Skill) => (
             <ScaleFade
               initialScale={0.4}
               in={inView}
@@ -90,7 +98,7 @@ function DeveloperInfo() {
     <div ref={ref}>
       {inView ? (
         <Fade in={inView}>
-          <List p="4" border="2px solid red">
+          <List p="4">
             {developerInfo.excerpt.map((p: any) => (
               <ListItem
                 fontWeight="400"

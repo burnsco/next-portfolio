@@ -60,7 +60,7 @@ function QuickEatsVideos() {
         <source src="/videos/quikeatswebm.webm" type="video/webm" />
         <source src="/videos/quikeatsmp4.mp4" type="video/mp4" />
       </video>
-      <Box border="2px solid red" p="2">
+      <Box p="2">
         <Center>
           <chakra.h3 fontWeight="semibold" color="gray.800">
             QuickEats

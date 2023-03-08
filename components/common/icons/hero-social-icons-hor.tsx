@@ -12,7 +12,6 @@ const HeroSocialIconHor = () => (
     {socials.map(item => (
       <HStack
         key={`social-bottom-${item.title}`}
-        border="2px solid red"
         w="full"
         display={{ base: "block", sm: "none" }}
       >
