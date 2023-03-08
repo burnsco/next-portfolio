@@ -1,8 +1,8 @@
 import { Box, Icon, Tooltip, VStack } from "@chakra-ui/react"
 import CustomEmailIcon from "@common/icons/email-icon"
 import AnimatedTelegramIcon from "@common/icons/telegram-icon"
-import { NextChakraLink } from "@common/link/NextChakraLink"
 import { socials } from "@configs/site-config/socials"
+import { ChakraLink } from "@lib/chakraLink"
 import { motion } from "framer-motion"
 import GitIcon from "./git-icon"
 
@@ -22,7 +22,7 @@ const HeroSocialIcon = () => (
         shouldWrapChildren
       >
         <VStack
-          as={NextChakraLink}
+          as={ChakraLink}
           height="2em"
           width="2em"
           display="flex"
