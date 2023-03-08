@@ -12,10 +12,10 @@ import { SectionContainer } from "@common/index"
 import { monte } from "fonts"
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { Link } from 'react-scroll'
+import { Link } from "react-scroll"
+import heroBgImage from "../../public/bg/hero.webp"
 
 const ChakraLink = chakra(Link)
-const ChakraImage = chakra(Image)
 const AnimatedScrollText = motion(Text)
 
 export default function HeroContainer() {
@@ -31,14 +31,18 @@ export default function HeroContainer() {
           dir="column"
           h="full"
         >
-          <ChakraImage
+          <Image
             alt=""
-            src="/bg/hero.webp"
-            opacity={0.2}
-            layout="fill"
-            objectFit="cover"
-            quality="70"
             priority
+            src={heroBgImage}
+            placeholder="blur"
+            quality={100}
+            fill
+            sizes="100vw"
+            style={{
+              opacity: 0.2,
+              objectFit: "cover"
+            }}
           />
 
           <Flex alignItems="center" justifyContent="center" flexDir="column">

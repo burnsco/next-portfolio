@@ -9,14 +9,7 @@ module.exports = {
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:testing-library/react",
     "prettier"
-  ],
-  overrides: [
-    {
-      files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
-      extends: ["plugin:testing-library/react"]
-    }
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {

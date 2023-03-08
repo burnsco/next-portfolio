@@ -1,6 +1,7 @@
 import { EmailIcon } from "@chakra-ui/icons"
 import {
-  Box, List,
+  Box,
+  List,
   ListIcon,
   ListItem,
   SimpleGrid,
@@ -8,21 +9,25 @@ import {
 } from "@chakra-ui/react"
 import { SectionContainer, SectionHeading } from "@common/index"
 import { aboutMe, randomFacts } from "@configs/about"
-import { ChakraImage } from "@lib/chakraImage"
-
+import Image from "next/image"
+import aboutBGImage from "../../public/bg/leaves.webp"
 
 export default function AboutContainer() {
   return (
     <SectionContainer id="about">
       <VStack px={{ base: "2em", md: "3em" }}>
-        <Box pos="relative" overflow="hidden" p="2em" w="full">
-          <SectionHeading title="about"/>
-          <ChakraImage
+        <Box pos="relative" overflow="hidden" w="full">
+          <SectionHeading title="about" />
+          <Image
             alt=""
-            src="/bg/leaves.webp"
-            layout="fill"
-            opacity={0.2}
-            objectFit="cover"
+            src={aboutBGImage}
+            quality={100}
+            fill
+            sizes="100vw"
+            style={{
+              opacity: 0.2,
+              objectFit: "cover"
+            }}
           />
         </Box>
 
@@ -68,7 +73,6 @@ export default function AboutContainer() {
             </>
           </List>
         </SimpleGrid>
-
       </VStack>
     </SectionContainer>
   )

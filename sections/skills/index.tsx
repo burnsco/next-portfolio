@@ -1,10 +1,23 @@
-import { Box, Center, chakra, Fade, HStack, List, ListItem, ScaleFade, SimpleGrid, Tag, TagLabel, VStack } from "@chakra-ui/react"
+import {
+  Box,
+  Center,
+  chakra,
+  Fade,
+  HStack,
+  List,
+  ListItem,
+  ScaleFade,
+  SimpleGrid,
+  Tag,
+  TagLabel,
+  VStack
+} from "@chakra-ui/react"
 import { SectionContainer, SectionHeading } from "@common/index"
 import { developerInfo, mySkills } from "@configs/skills"
-import { ChakraImage } from "@lib/chakraImage"
 import { nunito } from "fonts"
+import Image from "next/image"
 import { useInView } from "react-intersection-observer"
-
+import skillsBgImage from "../../public/bg/laptop.webp"
 
 function MySkills() {
   const [ref, inView] = useInView({
@@ -16,7 +29,7 @@ function MySkills() {
   return (
     <div ref={ref}>
       {inView ? (
-        <Box  p="2">
+        <Box p="2">
           {mySkills.map((item: any) => (
             <ScaleFade
               initialScale={0.4}
@@ -66,7 +79,7 @@ function MySkills() {
   )
 }
 
- function DeveloperInfo() {
+function DeveloperInfo() {
   const [ref, inView] = useInView({
     threshold: 0.9,
     triggerOnce: true,
@@ -105,14 +118,17 @@ export default function SkillsContainer() {
           <Center>
             <SectionHeading title="Skills" />
           </Center>
-          <ChakraImage
+          <Image
             alt=""
-            src="/bg/laptop.webp"
-            layout="fill"
-            opacity={0.1}
-            quality={80}
-            objectFit="cover"
-            priority
+            src={skillsBgImage}
+            placeholder="blur"
+            quality={100}
+            fill
+            sizes="100vw"
+            style={{
+              opacity: 0.2,
+              objectFit: "cover"
+            }}
           />
         </Box>
         <SimpleGrid
@@ -121,7 +137,7 @@ export default function SkillsContainer() {
           spacing={4}
         >
           <DeveloperInfo />
-          <MySkills  />
+          <MySkills />
         </SimpleGrid>
       </VStack>
     </SectionContainer>

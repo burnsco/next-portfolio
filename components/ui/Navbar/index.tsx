@@ -7,7 +7,6 @@ function capitalizedTitle(title: string) {
   return title.charAt(0).toUpperCase() + title.slice(1)
 }
 
-
 export default function Navbar() {
   return (
     <HStack
@@ -36,7 +35,7 @@ export default function Navbar() {
           activeclass="active"
           duration={500}
           to={`home`}
-          spy={true}
+          spy
           smooth={true}
           as={Heading}
           fontSize={["xs", "md"]}
@@ -64,7 +63,7 @@ export default function Navbar() {
                 _hover={{ cursor: "pointer", color: "#d77f74" }}
                 activeClass="active"
                 to={`${sec.id}`}
-                spy={true}
+                spy
                 smooth={true}
                 fontSize={{ base: "8.5px", md: "10.5px" }}
                 duration={500}
