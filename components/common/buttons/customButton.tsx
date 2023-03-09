@@ -1,33 +1,52 @@
-import { Box } from "@chakra-ui/react"
+import { chakra, Flex } from "@chakra-ui/react"
+import WebIcon from "@common/icons/web-icon"
+import CustomGithubIcon from "../icons/github-icon"
 
 const CustomButton = (props: any) => (
-  <Box
-    {...props}
-    as="button"
-    height="28px"
-    lineHeight="1.2"
-    transition="all 0.2s cubic-bezier(.08,.52,.52,1)"
-    border="1.5px"
-    px="12px"
-    borderRadius="2px"
-    fontSize="14px"
-    fontWeight="semibold"
-    bg="#f5f6f7"
-    borderColor="#ccd0d5"
-    color="#4b4f56"
-    _hover={{ bg: "#ebedf0" }}
-    _active={{
-      bg: "#dddfe2",
-      transform: "scale(0.98)",
-      borderColor: "#bec3c9"
-    }}
+  <Flex
+    backgroundColor="#3DD1E7"
+    border="0 solid #E5E7EB"
+    boxSizing="border-box"
+    color="#000000"
+    fontSize={["1rem", "1.75rem"]}
+    fontWeight="700"
+    justifyContent="center"
+    lineHeight="1.75rem"
+    padding={[".75rem 1.65rem", ".75rem 3re,"]}
+    position="relative"
+    textAlign="center"
+    textDecoration="none #000000 solid"
+    textDecorationThickness="auto"
+    width="100%"
+    maxWidth="md"
+    cursor="pointer"
+    transform="rotate(-2deg)"
+    userSelect="none"
+    WebkitUserSelect="none"
+    touchAction="manipulation"
     _focus={{
-      boxShadow:
-        "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)"
+      outline: 0
     }}
+    _after={{
+      content: '""',
+      position: "absolute",
+      border: "1px solid #000000",
+      bottom: "2px",
+      left: "2px",
+      width: "calc(100% - 1px)",
+      height: "calc(100% - 1px)"
+    }}
+    _hover={{
+      _after: {
+        bottom: "2px",
+        left: "2px"
+      }
+    }}
+    {...props}
   >
-    {props.title}
-  </Box>
+    <chakra.span mr="1">{props.title}</chakra.span>{" "}
+    {props.source ? <CustomGithubIcon /> : <WebIcon />}
+  </Flex>
 )
 
 export default CustomButton

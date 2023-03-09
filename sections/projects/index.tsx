@@ -131,7 +131,11 @@ export default function ProjectsContainer() {
                     </Box>
 
                     <ButtonGroup>
-                      <CustomButton title="Source" href={project.gitUrl} />
+                      <CustomButton
+                        title="Source"
+                        href={project.gitUrl}
+                        source
+                      />
                       <CustomButton title="Demo" href={project.webUrl} />
                     </ButtonGroup>
                   </VStack>
