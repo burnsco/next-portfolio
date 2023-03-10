@@ -136,7 +136,7 @@ export default function ProjectsContainer() {
                         href={project.gitUrl}
                         source
                       />
-                      <CustomButton title="Demo" href={project.webUrl} />
+                      <CustomButton demo title="Demo" href={project.webUrl} />
                     </ButtonGroup>
                   </VStack>
                 </Box>

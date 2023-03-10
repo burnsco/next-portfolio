@@ -24,9 +24,9 @@ export default function Page() {
       <main>
         <HeroSection />
         <Box w="full" h="10em" bg="white" />
-        <SkillsSection  />
+        <SkillsSection />
         <Box w="full" h="10em" bg="white" />
-        <ProjectsSection  />
+        <ProjectsSection />
         <Box w="full" h="10em" bg="white" />
         <MiniAppsSection />
         <Box w="full" h="10em" bg="white" />

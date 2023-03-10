@@ -1,13 +1,13 @@
 import { chakra, Flex } from "@chakra-ui/react"
+import CustomGithubIconColor from "@common/icons/github-icon-color"
 import WebIcon from "@common/icons/web-icon"
-import CustomGithubIcon from "../icons/github-icon"
 
 const CustomButton = (props: any) => (
   <Flex
-    backgroundColor="#3DD1E7"
-    border="0 solid #E5E7EB"
+    backgroundColor={props.demo ? "#3DD1E7" : "#E5E7EB"}
+    border={props.demo ? "0 solid #E5E7EB" : "0 solid #3DD1E7"}
     boxSizing="border-box"
-    color="#000000"
+    color={props.source ? "#000000" : "#E5E7EB"}
     fontSize={["1rem", "1.75rem"]}
     fontWeight="700"
     justifyContent="center"
@@ -45,7 +45,7 @@ const CustomButton = (props: any) => (
     {...props}
   >
     <chakra.span mr="1">{props.title}</chakra.span>{" "}
-    {props.source ? <CustomGithubIcon /> : <WebIcon />}
+    {props.source ? <CustomGithubIconColor /> : <WebIcon />}
   </Flex>
 )
 

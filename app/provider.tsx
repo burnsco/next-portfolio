@@ -4,7 +4,7 @@ import { CacheProvider } from "@chakra-ui/next-js"
 import { ChakraProvider, cookieStorageManager } from "@chakra-ui/react"
 
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode
 }) {

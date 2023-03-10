@@ -1,5 +1,5 @@
 import { Box, ButtonGroup, Center, chakra, Img } from "@chakra-ui/react"
-import CustomButton from "@common/buttons/customButton"
+import CustomButton2 from "@common/buttons/customButton2"
 import { SectionContainer, SectionHeading } from "@common/index"
 import { miniapps } from "@configs/miniapps"
 import Image from "next/image"
@@ -76,7 +76,7 @@ export default function MiniAppsContainer() {
                   gap="4"
                   border="2px solid red"
                 >
-                  <CustomButton
+                  <CustomButton2
                     as="a"
                     title="Source"
                     href={app.gitUrl}
@@ -84,7 +84,7 @@ export default function MiniAppsContainer() {
                     rel="noopener noreferrer"
                   />
 
-                  <CustomButton
+                  <CustomButton2
                     as="a"
                     href={app.webUrl}
                     target="_blank"

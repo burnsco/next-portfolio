@@ -1,12 +1,10 @@
 "use client"
 
-
-import { lato, raleway } from "fonts";
-import Provider from "./provider";
-
+import { lato, raleway } from "fonts"
+import Provider from "./provider"
 
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode
 }) {

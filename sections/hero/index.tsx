@@ -53,7 +53,7 @@ export default function HeroContainer() {
               opacity={0.8}
               letterSpacing="tighter"
               fontFamily="Montserrat"
-              fontSize={{ base: "4xl", md: "6xl" }}
+              fontSize={{ base: "4xl", sm: "6xl", xl: "8xl" }}
               fontWeight="900"
             >
               Corey Burns
