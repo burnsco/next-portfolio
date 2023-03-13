@@ -22,9 +22,9 @@ const SectionHeading: React.FC<{
         <Box maxW="1400px" mx="auto" textAlign="center" pt="1em">
           <Fade in={inView}>
             <chakra.h1
-
-              fontSize="5xl"
-              fontWeight="900"
+              fontSize={{ base: "3xl", sm: "5xl", xl: "7xl" }}
+              fontFamily="Montserrat"
+              fontWeight="800"
               color={color || "blackAlpha.400"}
               lineHeight="2"
             >
