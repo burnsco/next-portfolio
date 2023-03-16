@@ -38,7 +38,7 @@ export default function AboutContainer() {
               {randomFacts.title}
             </ListItem>
             <>
-              {randomFacts.facts.map((fact: any) => (
+              {randomFacts.facts.map((fact: { title: string }) => (
                 <ListItem
                   fontWeight="400"
                   color="#606060"
@@ -58,7 +58,7 @@ export default function AboutContainer() {
               {aboutMe.title}
             </ListItem>
             <>
-              {aboutMe.excerpt.map((paragraph: any) => (
+              {aboutMe.excerpt.map((paragraph: { text: string }) => (
                 <ListItem
                   fontWeight="400"
                   color="#606060"
