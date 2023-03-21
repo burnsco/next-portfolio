@@ -55,12 +55,12 @@
   "dependencies": {
     "@chakra-ui/icons": "^2.0.17",
     "@chakra-ui/next-js": "^2.0.1",
-    "@chakra-ui/react": "^2.5.1",
+    "@chakra-ui/react": "^2.5.2",
     "@chakra-ui/theme-tools": "2.0.16",
     "@emotion/react": "11.10.6",
     "@emotion/styled": "11.10.6",
     "@next/bundle-analyzer": "^13.2.4",
-    "framer-motion": "^10.4.0",
+    "framer-motion": "^10.8.2",
     "next": "^13.2.4",
     "next-unused": "^0.0.6",
     "prop-types": "^15.8.1",
@@ -71,16 +71,16 @@
     "sharp": "^0.31.3"
   },
   "devDependencies": {
-    "@types/node": "^18.15.3",
+    "@types/node": "^18.15.5",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@types/react-scroll": "^1.8.6",
-    "@typescript-eslint/eslint-plugin": "^5.55.0",
-    "@typescript-eslint/parser": "^5.55.0",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
     "eslint": "^8.36.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-next": "^13.2.4",
-    "eslint-config-prettier": "^8.7.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
@@ -89,8 +89,8 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.0",
-    "prettier": "^2.8.4",
-    "typescript": "4.9.5"
+    "prettier": "^2.8.6",
+    "typescript": "5.0.2"
   },
   "next-unused": {
     "alias": {

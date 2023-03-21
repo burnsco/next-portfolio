@@ -4,7 +4,6 @@ import {
   chakra,
   Flex,
   Heading,
-  Text,
   VStack
 } from "@chakra-ui/react"
 import AnimatedScrollDownArrow from "@common/icons/scroll-down-arrow"
@@ -16,7 +15,7 @@ import { Link } from "react-scroll"
 import heroBgImage from "../../public/bg/hero.webp"
 
 const ChakraLink = chakra(Link)
-const AnimatedScrollText = motion(Text)
+const AnimatedScrollText = motion(Box)
 
 export default function HeroContainer() {
   return (
