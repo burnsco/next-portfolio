@@ -1,11 +1,4 @@
-import {
-  Box,
-  Center,
-  chakra,
-  Flex,
-  Heading,
-  VStack
-} from "@chakra-ui/react"
+import { Box, Center, chakra, Flex, Heading, VStack } from "@chakra-ui/react"
 import AnimatedScrollDownArrow from "@common/icons/scroll-down-arrow"
 import { SectionContainer } from "@common/index"
 import { monte } from "fonts"
@@ -52,7 +45,7 @@ export default function HeroContainer() {
               opacity={0.8}
               letterSpacing="tighter"
               fontFamily="Montserrat"
-              fontSize={{ base: "4xl", sm: "6xl", xl: "8xl" }}
+              fontSize={{ base: "4xl", sm: "6xl", xl: "7xl" }}
               fontWeight="900"
             >
               Corey Burns
