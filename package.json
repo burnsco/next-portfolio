@@ -53,9 +53,9 @@
     ]
   },
   "dependencies": {
-    "@chakra-ui/icons": "^2.0.17",
-    "@chakra-ui/next-js": "^2.1.1",
-    "@chakra-ui/react": "^2.5.4",
+    "@chakra-ui/icons": "^2.0.18",
+    "@chakra-ui/next-js": "^2.1.2",
+    "@chakra-ui/react": "^2.5.5",
     "@chakra-ui/theme-tools": "2.0.16",
     "@emotion/react": "11.10.6",
     "@emotion/styled": "11.10.6",
@@ -72,11 +72,11 @@
   },
   "devDependencies": {
     "@types/node": "^18.15.11",
-    "@types/react": "^18.0.31",
+    "@types/react": "^18.0.32",
     "@types/react-dom": "^18.0.11",
     "@types/react-scroll": "^1.8.6",
-    "@typescript-eslint/eslint-plugin": "^5.57.0",
-    "@typescript-eslint/parser": "^5.57.0",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
     "eslint": "^8.37.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-next": "^13.2.4",
@@ -90,7 +90,7 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.2.0",
     "prettier": "^2.8.7",
-    "typescript": "5.0.2"
+    "typescript": "5.0.3"
   },
   "next-unused": {
     "alias": {
