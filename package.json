@@ -60,7 +60,7 @@
     "@emotion/react": "11.10.6",
     "@emotion/styled": "11.10.6",
     "@next/bundle-analyzer": "^13.3.0",
-    "framer-motion": "^10.11.6",
+    "framer-motion": "^10.12.2",
     "next": "^13.3.0",
     "next-unused": "^0.0.6",
     "prop-types": "^15.8.1",
