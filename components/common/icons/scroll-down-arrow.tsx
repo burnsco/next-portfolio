@@ -5,7 +5,6 @@ const AnimatedScrollDownArrow = () => (
   <chakra.div
     display="flex"
     id="scroll-down-div"
-    pos="relative"
     userSelect="none"
     width="1em"
     h="2.5em"

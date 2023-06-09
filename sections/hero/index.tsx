@@ -69,8 +69,9 @@ export default function HeroContainer() {
               full-stack developer
             </Heading>
           </Box>
-          <VStack pos="absolute" bottom="50" px={2}>
+          <VStack pos="absolute" bottom="50" alignItems="center">
             <ChakraLink
+              as={VStack}
               to="skills"
               _hover={{ cursor: "pointer", color: "p2" }}
               smooth
@@ -80,7 +81,7 @@ export default function HeroContainer() {
                 fontSize={{ base: "10.5px", sm: "12.5px" }}
                 initial={{ rotate: 90 }}
                 animate={{
-                  y: [0, -2, -5, -7, -9, -6, -4, -3, 0]
+                  y: [0, -1, -4, -6, -8, -5, -3, -2, 0]
                 }}
                 transition={{
                   duration: 2,
