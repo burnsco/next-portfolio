@@ -60,7 +60,7 @@
     "@emotion/react": "11.11.1",
     "@emotion/styled": "11.11.0",
     "@next/bundle-analyzer": "^13.5.6",
-    "framer-motion": "^10.16.5",
+    "framer-motion": "^10.16.16",
     "next": "^13.5.6",
     "next-unused": "^0.0.6",
     "prop-types": "^15.8.1",
@@ -71,13 +71,13 @@
     "sharp": "^0.32.6"
   },
   "devDependencies": {
-    "@types/node": "^20.9.4",
-    "@types/react": "^18.2.38",
+    "@types/node": "^20.10.4",
+    "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.17",
     "@types/react-scroll": "^1.8.10",
-    "@typescript-eslint/eslint-plugin": "^6.12.0",
-    "@typescript-eslint/parser": "^6.12.0",
-    "eslint": "^8.54.0",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "eslint": "^8.55.0",
     "eslint-config-airbnb-typescript": "^17.1.0",
     "eslint-config-next": "^13.5.6",
     "eslint-config-prettier": "^8.10.0",
@@ -89,7 +89,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.3.0",
-    "prettier": "^3.1.0",
+    "prettier": "^3.1.1",
     "typescript": "5.1.6"
   },
   "next-unused": {
