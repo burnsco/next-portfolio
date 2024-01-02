@@ -9,9 +9,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" data-theme="light" className={`${raleway} ${lato}`}>
+    <html lang="en" data-theme="light">
       <head />
-      <body>
+      <body className={`${raleway} ${lato} antialiased`}>
         <Provider>{children}</Provider>
       </body>
     </html>
